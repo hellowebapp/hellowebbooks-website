@@ -16,13 +16,13 @@ analytics.page("Homepage");
         <h1>Learn a new skill</h1>
         <h2>Brief books and videos by Tracy Osborn to teach you how to build a web app, how to make better designs, or both.</h2>
 
-        <a href="{% url '/tutorial/intro.html' %}" class="btn btn-secondary-outline" data-loc="Jumbotron">Read Online</a>
+        <!--<a href="{% url '/tutorial/intro.html' %}" class="btn btn-secondary-outline" data-loc="Jumbotron">Read Online</a>-->
         <a href="{% url '/order.html' %}" class="btn btn-primary">Buy the books</a>
     </div>
 </div>
 
 <div class="container">
-    <div class="row packages">
+    <div class="row packages" id="packages">
         <div class="col-sm-4 text-center">
             <img src="{% static '/images/icons/design.svg' %}" width="50" height="50" alt="" class="vertical-margin" />
             <p class="small-sans"><small>Upcoming</small></p>
@@ -107,7 +107,7 @@ analytics.page("Homepage");
         </ul>
 
         <p class="text-center" style="margin-bottom: 3em;">
-            <a href="{% url '/news.html' %}" class="btn btn-secondary">More on the Hello Web App blog</a>
+            <a href="{% url '/news.html' %}" class="btn btn-secondary">More on the Hello Web Books blog</a>
         </p>
     </div>
 </div>

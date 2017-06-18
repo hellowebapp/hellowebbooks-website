@@ -10,13 +10,16 @@ featured: True
 {% extends "post.html" %}
 {% block body %}
 
-<figure class="full">
+{% filter markdown %}
+About a year ago, I ran a [Kickstarter for Hello Web App](https://www.kickstarter.com/projects/1868398473/hello-web-app-intro-to-building-web-apps-with-djan) — and now that [the book has officially launched](https://hellowebapp.com/preorder), I thought it would be useful to run down how much money the Kickstarter raised and where it went!
+{% endfilter %}
+
+<figure class="caption">
     <img src="/static/images/blog/2015/5/14/kickstarter.png" alt=""/>
+    <figcaption>The Hello Web App Kickstarter campaign page.</figcaption>
 </figure>
 
 {% filter markdown %}
-About a year ago, I ran a [Kickstarter for Hello Web App](https://www.kickstarter.com/projects/1868398473/hello-web-app-intro-to-building-web-apps-with-djan) — and now that [the book has officially launched](https://hellowebapp.com/preorder), I thought it would be useful to run down how much money the Kickstarter raised and where it went!
-
 __Note__: There will be another post after this one covering setting up the campaign and the regrets I have about the rewards and other details, but the economics of a project is such a long topic already that I wanted to devote an entire post to it.
 
 ([Big thanks to Cameron Moll for being the inspiration for this post.](https://medium.com/@cameronmoll/the-economics-of-a-kickstarter-project-5b374cfeb43c))
@@ -52,8 +55,9 @@ Kickstarter takes 5% and Amazon Payments (which Kickstarter used at the time of 
 As soon as I got my deposit, I squirreled away $2,000 for my eventual taxes. Unfortunately shipping the books happened in the next calendar year, so I had to pay taxes on my entire payment since I couldn't claim any deductions. Note that this is a guesstimate — my taxes were combined with my husband's.
 {% endfilter %}
 
-<figure class="full">
+<figure class="caption">
     <img src="/static/images/blog/2015/5/14/shipping.jpeg" alt=""/>
+    <figcaption>Piles of books at my home ready to be shipped.</figcaption>
 </figure>
 
 {% filter markdown %}
@@ -72,8 +76,9 @@ I ended up ordering 55 copies of the book for various backers, which cost overal
 Was it worth it? I'm not sure — Amazon didn't order enough from me to cover the launch day rush (and I didn't realize at the time I could ask for an increased order) so the books went out of stock immediately. I have no way of telling, but I am __pretty sure this negated the effect my book buying had on the ranking of the book.__
 {% endfilter %}
 
-<figure class="full">
+<figure class="caption">
     <img src="/static/images/blog/2015/5/14/packing.jpeg" alt=""/>
+    <figcaption>Hours of prepping and packing went into shipping the books.</figcaption>
 </figure>
 
 {% filter markdown %}
@@ -84,8 +89,9 @@ Was it worth it? I'm not sure — Amazon didn't order enough from me to cover th
 Also — you can't print Media Mail labels from USPS.com, but you can through Paypal. However, Paypal's system is really buggy and I kept getting random errors. I also tried stamps.com, but their system seemed even worse and they required me to call them to cancel my account (and answer a survey augh), which is a terrible business practice so they're now boycotted.
 {% endfilter %}
 
-<figure class="full">
+<figure class="caption">
     <img src="/static/images/blog/2015/5/14/boxes.jpeg" alt=""/>
+    <figcaption>The post office was more understanding than I thought they would be.</figcaption>
 </figure>
 
 {% filter markdown %}
@@ -97,8 +103,9 @@ I ended up sending a message to Kickstarter backers of the $25 tier, hat in hand
 
 The approximate total for international shipping ended up being around $844. I received around $100 in donations for shipping from various backers, which brings the total cost of shipping to $744.{% endfilter %}
 
-<figure class="full">
+<figure class="caption">
     <img src="/static/images/blog/2015/5/14/happ.jpeg" alt=""/>
+    <figcaption>Box ready to be taken to the post office.</figcaption>
 </figure>
 
 {% filter markdown %}
@@ -107,9 +114,11 @@ The approximate total for international shipping ended up being around $844. I r
 Of course I needed to buy supplies for packaging my books for shipment — toner, printing labels, bags, and bubble wrap came to approximately $100.
 {% endfilter %}
 
+<!--
 <figure class="full">
     <img src="/static/images/blog/2015/5/14/fullbook.jpeg" alt=""/>
 </figure>
+-->
 
 {% filter markdown %}
 ## $6,000 Profit?
