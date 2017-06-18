@@ -3542,7 +3542,8 @@ form input {
     #main-nav li a {
       padding: 10px 1.5em 10px 0; }
   #main-nav #home-link {
-    background-color: #fff; }
+    background-color: #fff;
+    z-index: 10; }
     #main-nav #home-link div {
       padding: 15px 10px 18px 10px; }
     #main-nav #home-link img {
