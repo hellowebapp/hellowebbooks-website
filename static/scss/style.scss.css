@@ -3994,7 +3994,7 @@ form input {
   color: #9d7e16; }
 
 .sharing .mc-field-group input[type="email"] {
-  width: 150px;
+  width: 195px;
   margin-right: 5px;
   float: left; }
 
@@ -4002,13 +4002,16 @@ form input {
   position: relative;
   top: -2px; }
 
-.top-sharing .mc-field-group {
-  display: inline-block; }
-
-.top-sharing input[type="submit"] {
-  top: -10px;
-  padding-left: 7px;
-  padding-right: 7px; }
+.top-sharing {
+  margin-bottom: 1em;
+  padding-top: 0.9em;
+  padding-right: 0; }
+  .top-sharing .mc-field-group {
+    display: inline-block; }
+  .top-sharing input[type="submit"] {
+    top: -10px;
+    padding-left: 7px;
+    padding-right: 7px; }
 
 #tutorial figure img {
   border: 1px solid #ccc; }
@@ -4052,7 +4055,8 @@ form input {
   background-position: center center; }
 
 #post header {
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  margin-right: 2em; }
   #post header h1 {
     margin-bottom: 1em; }
   #post header h2 {
@@ -4062,6 +4066,9 @@ form input {
 #post h2 {
   margin-bottom: 0.5em;
   margin-top: 1em; }
+
+#post #post-body img {
+  border: 1px solid #eceeef; }
 
 #post #post-body p a {
   overflow-wrap: break-word;
@@ -4077,7 +4084,7 @@ form input {
 #post blockquote {
   text-align: left;
   border-left: 1px solid #e6c24d;
-  padding-left: 2em;
+  padding-left: 1.5em;
   font-size: 1.3rem;
   margin: 2em 0; }
 
@@ -4126,11 +4133,11 @@ figure.video {
 @media (min-width: 75em) {
   #post figure.full {
     margin-left: -208px;
-    margin-right: -304px; }
+    margin-right: -208px; }
     #post figure.full figcaption {
       margin-left: 208px; }
   #post figure.caption {
-    margin-right: -304px; }
+    margin-right: -208px; }
     #post figure.caption figcaption {
       position: absolute;
       left: -208px;
@@ -4139,13 +4146,13 @@ figure.video {
 @media (min-width: 62em) {
   #post figure.full {
     margin-left: -208px;
-    margin-right: -288px; }
+    margin-right: -208px; }
   #post figure.caption {
-    margin-right: -255px; }
+    margin-right: -208px; }
     #post figure.caption figcaption {
       position: absolute;
       left: -208px;
-      max-width: 155px; } }
+      width: 155px; } }
 
 /* NAG BAR 
 #nag-bar {
