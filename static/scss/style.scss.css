@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -2649,6 +2650,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .fa-envelope:before {
   content: "\f0e0"; }
+
+.fa-rss:before {
+  content: ""; }
 
 /*
 .fa-glass:before { content: $fa-var-glass; }
