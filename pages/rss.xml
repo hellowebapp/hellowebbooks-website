@@ -1,0 +1,18 @@
+<?xml version= "1.0"?>
+
+<rss version= "2.0">
+  <channel>
+    <title>Hello Web Books</title>
+    <link>https://hellowebbooks.com</link>
+    <description>The Hello Web Books Blog.</description>
+    {% for post in posts|slice:":10" %}
+    <item>
+      <title>{{ post.title }}</title>
+      <description>
+        {{ post.body|escape }}
+      </description>
+      <link>https://hellowebbooks.com/{{ post.path }}</link>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
