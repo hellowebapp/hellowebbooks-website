@@ -30,7 +30,7 @@ analytics.page("Homepage");
             <h5>Web design fundamentals and shortcuts.</h5>
             {% comment %}<img src="{% static '/images/ic.jpg' %}" alt="Hello Web Design" class="vertical-margin" />{% endcomment %}
             <p>Design shortcuts and fundamentals aimed for programmers, developers, marketers, and non-designers. Learn just enough design to be dangerous.</p>
-            <p><a href="{% url '/learn-design.html' %}" class="btn btn-secondary btn-sm">More about Hello Web Design</a></p>
+            <p><a href="{% url '/learn-design.html' %}" class="btn btn-secondary btn-sm">More about <i>Hello Web Design</i></a></p>
         </div>
         <div class="col-sm-4 text-center">
             <img src="{% static '/images/icons/hwa.svg' %}" width="50" height="50" alt="" class="vertical-margin" />
@@ -39,7 +39,7 @@ analytics.page("Homepage");
             <h5>Learn how to build your first web app.</h5>
             {% comment %}<img src="{% static '/images/original.jpg' %}" alt="Hello Web App original" class="vertical-margin" />{% endcomment %}
             <p>Want to build your first web app? Hello Web App walks you through building and launching a simple web app using Python and Django.</p>
-            <p><a href="{% url '/learn-django.html' %}" class="btn btn-secondary btn-sm">More about Hello Web App</a></p>
+            <p><a href="{% url '/learn-django.html' %}" class="btn btn-secondary btn-sm">More about <i>Hello Web App</i></a></p>
         </div>
         <div class="col-sm-4 text-center">
             <img src="{% static '/images/icons/hwaic.svg' %}" width="50" height="50" alt="" class="vertical-margin" />
@@ -48,13 +48,15 @@ analytics.page("Homepage");
             <h5>Intermediate Django web app tutorials.</h5>
             {% comment %}<img src="{% static '/images/ic.jpg' %}" alt="Hello Web App: Intermediate Concepts" class="vertical-margin" />{% endcomment %}
             <p>Learn how to add more advanced features to your app, such as customer payments, user-uploaded images, proper database design, and more.</p>
-            <p><a href="{% url '/django-intermediate-concepts.html' %}" class="btn btn-secondary btn-sm">More about Hello Web App: IC</a></p>
+            <p><a href="{% url '/django-intermediate-concepts.html' %}" class="btn btn-secondary btn-sm">More about <i>Hello Web App: IC</i></a></p>
         </div>
     </div>
 
+    {% comment %}
     <p class="text-center super-vertical-margin">
         <a href="{% url '/order.html' %}" class="btn btn-primary">Buy the books</a>
     </p>
+    {% endcomment %}
 
 </div>
 
