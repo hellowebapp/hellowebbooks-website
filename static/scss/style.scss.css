@@ -3693,12 +3693,29 @@ form input {
 #home hr {
   margin: 4rem 0; }
 
-#home .packages h4 a {
-  color: #111;
-  text-decoration: none;
-  background-image: none; }
-  #home .packages h4 a:hover {
-    color: #caa11c; }
+#home .packages {
+  margin-bottom: 2.5rem; }
+  #home .packages h4 a {
+    color: #111;
+    text-decoration: none;
+    background-image: none; }
+    #home .packages h4 a:hover {
+      color: #caa11c; }
+  #home .packages .btn {
+    color: #fff;
+    border-width: 0; }
+  #home .packages .hwa .btn {
+    background-color: #d3bc1e; }
+    #home .packages .hwa .btn:hover {
+      background-color: #a69418; }
+  #home .packages .hwd .btn {
+    background-color: #5d8b90; }
+    #home .packages .hwd .btn:hover {
+      background-color: #496d71; }
+  #home .packages .hwaic .btn {
+    background-color: #e7ab40; }
+    #home .packages .hwaic .btn:hover {
+      background-color: #d9951b; }
 
 @media (max-width: 47.9em) {
   #home .jumbotron {

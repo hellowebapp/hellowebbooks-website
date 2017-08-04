@@ -16,6 +16,10 @@ $brand-primary-dark:         #a5bb00 !default;
 $brand-primary:              #e6c24d !default;
 $brand-secondary:            #498D90 !default;
 
+$hwa:                        #e1d342;
+$hwaic:                      #e7ab40;
+$hwd:                        #5d8b90;
+
 $gray-lightish:              #ccc !default;
 $gray-lightisher:            #aaa !default;
 $gray-superlight:            #e1e1e1;
@@ -496,12 +500,36 @@ form input {
         margin: 4rem 0;
     }
     .packages {
+        margin-bottom: 2.5rem;
         h4 a {
             color: #111;
             text-decoration: none;
             background-image: none;
+
             &:hover {
                 color: $link-color;
+            }
+        }
+        .btn {
+            color: #fff;
+            border-width: 0;
+        }
+        .hwa .btn { 
+            background-color: #d3bc1e;
+            &:hover {
+                background-color: darken(#d3bc1e, 10%);
+            }
+        }
+        .hwd .btn { 
+            background-color: $hwd;
+            &:hover {
+                background-color: darken($hwd, 10%);
+            }
+        }
+        .hwaic .btn { 
+            background-color: $hwaic; 
+            &:hover {
+                background-color: darken($hwaic, 10%);
             }
         }
     }
