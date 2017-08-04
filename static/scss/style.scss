@@ -221,7 +221,7 @@ a {
 
 .super-vertical-top-margin {
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .clear {
@@ -485,7 +485,7 @@ form input {
         // background-size: cover;
         background-color: #498D90; 
         // height: 30em;
-        padding: 8rem 2rem;
+        padding: 8rem 2rem 7rem 2rem;
         color: #fff;
         h1 {
             margin-bottom: 0.2em;
@@ -562,8 +562,10 @@ form input {
         h5 {
             margin-top: 0.5em;
             a {
+                font-style: normal;
+                font-weight: 600;
                 background-image: none; 
-                color: $link-color;
+                color: $body-color;
             }
         }
     }
@@ -654,6 +656,9 @@ form input {
             }
         }
     }
+}
+
+#design, #start {
     .gumroad-button {
         letter-spacing: 0.04em;
         color: #444 !important;

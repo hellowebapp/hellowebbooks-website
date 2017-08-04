@@ -13,7 +13,7 @@ analytics.page("Homepage");
 {% block content %}
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>Learn a new skill</h1>
+        <h1>Build and Design Your Side Project</h1>
         <h2>Brief books and videos by Tracy Osborn to teach you how to build a web app, how to make better designs, or both.</h2>
 
         <!--<a href="{% url '/tutorial/intro.html' %}" class="btn btn-secondary-outline" data-loc="Jumbotron">Read Online</a>-->
@@ -23,6 +23,7 @@ analytics.page("Homepage");
 
 <div class="container">
     <div class="row packages" id="packages">
+        <h2>Three books books released (so far!)</h2>
         <div class="col-sm-4 text-center">
             <img src="{% static '/images/icons/design.svg' %}" width="50" height="50" alt="" class="vertical-margin" />
             <p class="small-sans"><small>Upcoming</small></p>
@@ -80,7 +81,7 @@ analytics.page("Homepage");
 
 <div class="container">
     <div id="featured-post-list">
-        <h2 class="text-center">Featured Posts on the Blog</h2>
+        <h2 class="text-center">Recent news</h2>
         <ul class="list-unstyled row">
         {% for post in posts %}
             {% if post.featured == "True" %}
