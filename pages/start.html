@@ -15,14 +15,15 @@ analytics.page("Start");
 
 <div class="container">
     <div class="content-block">
+        {% comment %}
         <h1 class="text-center">Join 2,000+ other first-time programmers<span class="hidden-sm-down"> and other readers of Hello Web App.</span></h1>
+        {% endcomment %}
+        <h1 class="text-center">Build and design your side project with books by Tracy Osborn.</h1>
         <img src="{% static 'images/me.png' %}" alt="Tracy Osborn" class="pull-right"/>
         <p>Hi, I'm the author, Tracy.</p>
-        <p><strong>I taught myself how to program in 2009 because I wanted to launch a startup</strong> and I couldn't find a cofounder. I heard a lot about Python and Django and how easy they were to use, and after six weeks, I launched the first version of my new app, which eventually grew into my startup, <a href="//weddinglovely.com" target="_blank">WeddingLovely</a>.</p>
-
-        <p>It wasn't all magic and rainbows &#8212; I'm a visual learner and I had a hard time understanding most tutorials since I didn't have a technical background. Over five years, I slowly became a better programmer, and <strong>I realized that web app programming could be taught (and should be) taught in a different way to learners like myself.</strong></p>
-
-        <p><strong>Hello Web App is down-to-earth with no nonsense.</strong> The book is written in an informal and friendly tone with no jargon. Many programming books suffer from wordiness and bloat &#8212; <strong>Hello Web App is simply the basics in an easy-to-read and understand manner.</strong></p>
+        <p>I started writing books in 2014 after getting frustrated with the way that beginner concepts were being taught. <strong>I realized that web app programming could be taught (and should be) taught in a different way to learners like myself</strong> and <em>Hello Web App</em> was born. Three later, <em>Hello Web App</em> has helped thousands of beginner programmers launch their first web app.</p>
+        <p><strong><em>Hello Web App</em> is down-to-earth with no nonsense.</strong> The book is written in an informal and friendly tone with no jargon. Many programming books suffer from wordiness and bloat &#8212; <strong>this is simply the basics in an easy-to-read and understand manner.</strong></p>
+        <p>My third book, <em>Hello Web Design</em>, was successfully funded on Kickstarter in early 2017 and will be released mid-to-late 2017 as an eBook, paperback, and video package. <strong><a href="{% url '/learn-design.html' %}">Pre-order <em>Hello Web Design</em> today.</strong></a></p>
     </div>
 
     {% comment %}
@@ -41,8 +42,37 @@ analytics.page("Start");
     </div>
     {% endcomment %}
 
+    <div class="row text-center" id="hwd-packages">
+        <h2 class="text-center vertical-margin" style="font-size: 3rem;">Pre-order Hello Web Design</h2>
+        <div class="col-sm-4">
+            <h3 class="text-center">The eBooks</h3>
+            <p><strong>Hello Web Design in digital format</strong>, lovingly designed by Tracy herself. A brief book jam-packed with information. Comes in PDF, .mobi, and .ePub formals.</p>
+            <div class="text-center">
+                <script src="https://gumroad.com/js/gumroad.js"></script>
+                <a class="gumroad-button" href="https://gum.co/hwd-ebook">Pre-order for $14.95</a>
+            </div>
+            {% comment %}<p><small>$14.95</small></p>{% endcomment %}
+        </div>
+        <div class="col-sm-4">
+            <h3 class="text-center">The Video Package</h3>
+            <p><strong>The eBooks plus 15+ videos</strong> walking you through the theory and process parts of the book, plus extra "design critique" videos to help you train your design intuition. <em>Add the paperback book for $10 more.</em></p>
+            <div class="text-center">
+                <a class="gumroad-button gumroad-button-strong" href="https://gum.co/hwd-videos">Pre-order for $79</a>
+            </div>
+            {% comment %}<p><small>$79</small></p>{% endcomment %}
+        </div>
+        <div class="col-sm-4">
+            <h3 class="text-center">The Paperback Package</h3>
+            <p>Learn better with a physical book? I got you! This package contains the eBook (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
+            <div class="text-center">
+                <a class="gumroad-button" href="https://gum.co/hwd-pb">Pre-order for $24.95</a>
+            </div>
+            {% comment %}<p><small>$24.95</small></p>{% endcomment %}
+        </div>
+    </div>
+
     <div class="row">
-        <h2 class="text-center vertical-margin" style="font-size: 3rem;">Buy the books</h2>
+        <h2 class="text-center super-vertical-top-margin" style="font-size: 3rem;">Buy Hello Web App</h2>
         <div class="col-sm-5">
             <img src="{% static 'images/products/both-books.jpg' %}" alt="Both Hello Web App books" />
         </div>

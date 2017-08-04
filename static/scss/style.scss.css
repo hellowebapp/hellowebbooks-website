@@ -3484,7 +3484,7 @@ a {
 
 .super-vertical-top-margin {
   margin-top: 2em;
-  margin-bottom: 2em; }
+  margin-bottom: 1em; }
 
 .clear {
   clear: both; }
@@ -3685,7 +3685,7 @@ form input {
 
 #home .jumbotron {
   background-color: #498D90;
-  padding: 8rem 2rem;
+  padding: 8rem 2rem 7rem 2rem;
   color: #fff; }
   #home .jumbotron h1 {
     margin-bottom: 0.2em; }
@@ -3737,8 +3737,10 @@ form input {
   #featured-post-list li h5 {
     margin-top: 0.5em; }
     #featured-post-list li h5 a {
+      font-style: normal;
+      font-weight: 600;
       background-image: none;
-      color: #caa11c; }
+      color: #666; }
 
 #featured-post-list a {
   text-decoration: none; }
@@ -3799,12 +3801,12 @@ form input {
   #design .table-of-contents ul > li {
     margin-top: 0; }
 
-#design .gumroad-button {
+#design .gumroad-button, #start .gumroad-button {
   letter-spacing: 0.04em;
   color: #444 !important;
   box-shadow: rgba(0, 0, 0, 0.7) 0 0 2px !important; }
 
-#design a.gumroad-button-strong {
+#design a.gumroad-button-strong, #start a.gumroad-button-strong {
   background-color: #dab238 !important;
   box-shadow: #5e470a 0 0 2px !important;
   color: #fff !important; }
