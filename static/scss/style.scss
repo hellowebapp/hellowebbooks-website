@@ -710,6 +710,18 @@ form input {
             }
         }
     }
+    #hwd-packages {
+        margin-top: 3em;
+        .col-sm-4 {
+            margin: 1em 0 3em 0;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        img {
+            margin-bottom: 1em;
+        }
+    }
 }
 
 #design, #start {

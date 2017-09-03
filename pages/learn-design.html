@@ -20,11 +20,12 @@ analytics.page("Hello Web Design book landing page");
     </div>
 </div>
 
-<div class="container">
-    <h2 class="content-block text-center" style="font-size:3rem;">Learn design fundamentals and shortcuts to make you a better designer</h2>
-    <p class="content-block text-center">Beginner design books assume you want to become an expert designer. What if you want to learn just enough to complement your existing work? Hello Web Design will teach you the basics about design (no history!) and give you shortcuts <strong>so you can immediately become a better designer.</strong></p>
+<div class="container text-center">
+    <img src="{% static '/images/icons/computer.png' %}" alt=""  width="70" style="margin-top: 2.5em;"/>
+    <h2 class="content-block" style="font-size:3rem;">Learn design fundamentals and shortcuts to make you a better designer</h2>
+    <p class="content-block">Beginner design books assume you want to become an expert designer. What if you want to learn just enough to complement your existing work? Hello Web Design will teach you the basics about design (no history!) and give you shortcuts <strong>so you can immediately become a better designer.</strong></p>
 
-    <p class="text-center super-vertical-margin">
+    <p class="super-vertical-margin">
         <a href="#hwd-packages" class="btn btn-large btn-secondary">Pre-order the book</a>
     </p>
 
@@ -67,7 +68,10 @@ analytics.page("Hello Web Design book landing page");
     </div>
 
     <div class="table-of-contents content-block">
-        <h2 class="text-center">Table of Contents</h2>
+        <div class="text-center">
+            <img src="{% static '/images/icons/toc.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
+        </div>
+        <h2 class="text-center" style="font-size:3rem;">Table of Contents</h2>
         <ul class="list-unstyled">
             <li><span>0.0.</span> Introduction</li>
             <li><span>1.0.</span> If you only read one chapter, make it this one</li>
@@ -89,7 +93,7 @@ analytics.page("Hello Web Design book landing page");
                 <span>3.0.</span> The Process and Training Your Design Intuition
                 <ul class="list-unstyled">
                     <li><span>3.1.</span> Finding Inspiration</li>
-                    <li><span>3.2.</span> Planning</li>
+                    <li><span->3.2.</span> Planning</li>
                     <li><span>3.3.</span> Prototypes</li>
                     <li><span>3.4.</span> Getting Feedback</li>
                     <li><span>3.5.</span> Coding the Site</li>
@@ -105,29 +109,32 @@ analytics.page("Hello Web Design book landing page");
     </p>{% endcomment %}
 
     <div class="row text-center" id="hwd-packages">
-        <h2 class="text-center">Packages available</h2>
+        <h2 class="text-center" style="font-size: 3rem;">Packages available</h2>
         <div class="col-sm-4">
+            <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
             <h3 class="text-center">The eBooks</h3>
             <p><strong>Hello Web Design in digital format</strong>, lovingly designed by Tracy herself. A brief book jam-packed with information. Comes in PDF, .mobi, and .ePub formals.</p>
             <div class="text-center">
                 <script src="https://gumroad.com/js/gumroad.js"></script>
-                <a class="gumroad-button" href="https://gum.co/hwd-ebook">Pre-order for $14.95</a>
+                <a class="btn btn-secondary" href="https://gum.co/hwd-ebook">Pre-order for $14.95</a>
             </div>
             {% comment %}<p><small>$14.95</small></p>{% endcomment %}
         </div>
         <div class="col-sm-4">
-            <h3 class="text-center">The Video Package</h3>
+            <img src="{% static '/images/icons/video.png' %}" alt="" height="50" />
+            <h3 class="text-center">Videos + eBooks</h3>
             <p><strong>The eBooks plus 15+ videos</strong> walking you through the theory and process parts of the book, plus extra "design critique" videos to help you train your design intuition. <em>Add the paperback book for $10 more.</em></p>
             <div class="text-center">
-                <a class="gumroad-button gumroad-button-strong" href="https://gum.co/hwd-videos">Pre-order for $79</a>
+                <a class="btn btn-primary" href="https://gum.co/hwd-videos">Pre-order for $79</a>
             </div>
             {% comment %}<p><small>$79</small></p>{% endcomment %}
         </div>
         <div class="col-sm-4">
-            <h3 class="text-center">The Paperback Package</h3>
+            <img src="{% static '/images/icons/toc.png' %}" alt="" height="50" />
+            <h3 class="text-center">Paperback + eBooks</h3>
             <p>Learn better with a physical book? I got you! This package contains the eBook (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
             <div class="text-center">
-                <a class="gumroad-button" href="https://gum.co/hwd-pb">Pre-order for $24.95</a>
+                <a class="btn btn-secondary" href="https://gum.co/hwd-pb">Pre-order for $24.95</a>
             </div>
             {% comment %}<p><small>$24.95</small></p>{% endcomment %}
         </div>
