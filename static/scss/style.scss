@@ -270,6 +270,11 @@ form input {
     margin-bottom: 5px;
 }
 
+.font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 // new CSS bits
 .content-block {
     max-width: 800px;
@@ -346,6 +351,7 @@ form input {
         font-size: 5rem;
         font-weight: 700;
         margin-top: 0;
+        @extend .font-smoothing;
     }
     h2 {
         line-height: 1.6;
@@ -353,12 +359,14 @@ form input {
         font-style: normal;
         color: #fff;
         color: rgba(255,255,255,0.9);
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 400;
-        font-family: $font-family-display-alt;
+        font-family: $font-family-serif;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+        @extend .font-smoothing;
+        strong { color: rgba(255,255,255,0.9); } 
     }
     .btn-secondary-outline {
         color: #fff;
@@ -485,10 +493,8 @@ form input {
 // homepage
 #home {
     .jumbotron {
-        // background: url(../images/heros/home-yellow-grad.jpg) center center no-repeat;
-        // background-size: cover;
-        background-color: #498D90; 
-        // height: 30em;
+        background: url(../images/book-background.png) top left no-repeat;
+        background-color: $brand-secondary; 
         padding: 8rem 2rem 7rem 2rem;
         color: #fff;
         h1 {
@@ -666,21 +672,41 @@ form input {
         }
     }
     .table-of-contents {
-        ul {
-            margin-bottom: 0;
+        > ul {
             li {
-                line-height: 1.4;
-                margin: 0.5em 0;
+                font-family: $font-family-display;
+                color: #111;
+                ul {
+                    -moz-column-count: 2;
+                    -webkit-column-count: 2;
+                    column-count: 2;
+                    margin: 0.5em 0;
+                }
                 li {
-                    font-size: 1.2rem;
+                    font-family: $font-family-serif;
+                    border-bottom: 0;
+                    color: $body-color;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-left: 60px;
                     font-style: italic;
+                    font-size: 1.5rem;
+                    span {
+                        color: #ccc;
+                        font-family: $font-family-display;
+                        font-size: 1.1rem;
+                        font-style: normal;
+                        display: inline-block;
+                        width: 40px;
+                    }
                 }
                 ul > li {
-                    margin-top: 0.5em;
                 }
             }
-            &> li {
-                margin-top: 0;
+            &> li > span {
+                width: 50px;
+                display: inline-block;
+                color: #ccc;
             }
         }
     }

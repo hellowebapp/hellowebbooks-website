@@ -3521,6 +3521,10 @@ form input {
   font-size: 1rem;
   margin-bottom: 5px; }
 
+.font-smoothing, .jumbotron h1, .jumbotron h2 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 .content-block {
   max-width: 800px;
   margin-left: auto !important;
@@ -3586,12 +3590,14 @@ form input {
     font-style: normal;
     color: #fff;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 400;
-    font-family: "Open Sans Condensed", "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-family: "freight-text-pro", Georgia, "Times New Roman", Times, serif;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto; }
+    .jumbotron h2 strong {
+      color: rgba(255, 255, 255, 0.9); }
   .jumbotron .btn-secondary-outline {
     color: #fff;
     border-color: #fff;
@@ -3684,6 +3690,7 @@ form input {
   color: #818a91; }
 
 #home .jumbotron {
+  background: url(../images/book-background.png) top left no-repeat;
   background-color: #498D90;
   padding: 8rem 2rem 7rem 2rem;
   color: #fff; }
@@ -3805,18 +3812,35 @@ form input {
     display: block;
     font-style: normal; }
 
-#design .table-of-contents ul {
-  margin-bottom: 0; }
-  #design .table-of-contents ul li {
-    line-height: 1.4;
+#design .table-of-contents > ul li {
+  font-family: "MrsOnion-Regular", Georgia, cursive;
+  color: #111; }
+  #design .table-of-contents > ul li ul {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
     margin: 0.5em 0; }
-    #design .table-of-contents ul li li {
-      font-size: 1.2rem;
-      font-style: italic; }
-    #design .table-of-contents ul li ul > li {
-      margin-top: 0.5em; }
-  #design .table-of-contents ul > li {
-    margin-top: 0; }
+  #design .table-of-contents > ul li li {
+    font-family: "freight-text-pro", Georgia, "Times New Roman", Times, serif;
+    border-bottom: 0;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 60px;
+    font-style: italic;
+    font-size: 1.5rem; }
+    #design .table-of-contents > ul li li span {
+      color: #ccc;
+      font-family: "MrsOnion-Regular", Georgia, cursive;
+      font-size: 1.1rem;
+      font-style: normal;
+      display: inline-block;
+      width: 40px; }
+
+#design .table-of-contents > ul > li > span {
+  width: 50px;
+  display: inline-block;
+  color: #ccc; }
 
 #design .gumroad-button, #start .gumroad-button {
   letter-spacing: 0.04em;
