@@ -55,7 +55,7 @@ analytics.page("Hello Web Design book landing page");
 <div class="container">
     <div class="text-center">
         {% comment %}
-        <h2 class="super-vertical-top-margin">As based on the presentation given around the world</h2>
+        <h2 class="super-vertical-top-margin" style="margin-bottom:20px">As based on the presentation given around the world</h2>
         <figure class="full video">
             <iframe src="https://www.youtube.com/embed/lsPrhA_m6ss" frameborder="0" allowfullscreen></iframe>
         </figure>
@@ -65,6 +65,41 @@ analytics.page("Hello Web Design book landing page");
             <p>This may have been my favorite talk of the convention. What I loved most was that Tracy didn't waste time talking about meaningless theory. She told me exactly why my website was shite to look at, and even more importantly, how to fix it.</p>
             <cite>&#8212; Mark Knapik at PHP[Tek] in May 2017</cite>
         </blockquote>
+    </div>
+
+    <div class="super-vertical-margin">
+        <div class="text-center">
+            <img src="{% static '/images/icons/lamp.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
+            <h2 style="font-size: 3rem;">What you'll learn</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Walkthrough the stages of design</h3>
+                <p>Learn the steps of designing to help you go from idea, to blank paper, to prototypes, to launched project.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Shortcuts on choosing colors</h3>
+                <p>Forget choosing colors randomly on a color wheel &nbsp; find out the best shortcuts to get you a great color palette fast.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>The basics of fonts</h3>
+                <p>Learn the differences between fonts, basic typography, and where to find (and narrow down) great typefaces.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Demystifying white space</h3>
+                <p>You know it's important, but how to use it? We'll go through where white space can help your design the most.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Where to find images and icons</h3>
+                <p>Great imagery can make a design. Learn some easy tips on how to use imagery and great resources on where to find it.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>The importance of user experience</h3>
+                <p>Design isn't how it looks &nbsp; it's how it works. Learn how your visual design ties into the user-experience.</p>
+            </div>
+        </div>
     </div>
 
     <div class="table-of-contents content-block">
@@ -111,17 +146,7 @@ analytics.page("Hello Web Design book landing page");
 
     <div class="row text-center" id="hwd-packages">
         <h2 class="text-center" style="font-size: 3rem;">Packages available</h2>
-        <div class="col-sm-4">
-            <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
-            <h3 class="text-center">The eBooks</h3>
-            <p><strong>Hello Web Design in digital format</strong>, lovingly designed by Tracy herself. A brief book jam-packed with information. Comes in PDF, .mobi, and .ePub formals.</p>
-            <div class="text-center">
-                <script src="https://gumroad.com/js/gumroad.js"></script>
-                <a class="btn btn-secondary" href="https://gum.co/hwd-ebook">Pre-order for $14.95</a>
-            </div>
-            {% comment %}<p><small>$14.95</small></p>{% endcomment %}
-        </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 col-sm-push-4">
             <img src="{% static '/images/icons/video.png' %}" alt="" height="50" />
             <h3 class="text-center">Videos + eBooks</h3>
             <p><strong>The eBooks plus 15+ videos</strong> walking you through the theory and process parts of the book, plus extra "design critique" videos to help you train your design intuition. <em>Add the paperback book for $10 more.</em></p>
@@ -130,7 +155,7 @@ analytics.page("Hello Web Design book landing page");
             </div>
             {% comment %}<p><small>$79</small></p>{% endcomment %}
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 col-sm-push-4">
             <img src="{% static '/images/icons/toc.png' %}" alt="" height="50" />
             <h3 class="text-center">Paperback + eBooks</h3>
             <p>Learn better with a physical book? I got you! This package contains the eBook (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
@@ -138,6 +163,16 @@ analytics.page("Hello Web Design book landing page");
                 <a class="btn btn-secondary" href="https://gum.co/hwd-pb">Pre-order for $24.95</a>
             </div>
             {% comment %}<p><small>$24.95</small></p>{% endcomment %}
+        </div>
+        <div class="col-sm-4 col-sm-pull-8">
+            <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
+            <h3 class="text-center">The eBooks</h3>
+            <p><strong>Hello Web Design in digital format</strong>, lovingly designed by Tracy herself. A brief book jam-packed with information. Comes in PDF, .mobi, and .ePub formals.</p>
+            <div class="text-center">
+                <script src="https://gumroad.com/js/gumroad.js"></script>
+                <a class="btn btn-secondary" href="https://gum.co/hwd-ebook">Pre-order for $14.95</a>
+            </div>
+            {% comment %}<p><small>$14.95</small></p>{% endcomment %}
         </div>
     </div>
 

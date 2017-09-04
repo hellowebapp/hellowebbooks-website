@@ -3851,20 +3851,14 @@ form input {
   #design #hwd-packages img {
     margin-bottom: 1em; }
 
-#design .gumroad-button, #start .gumroad-button {
-  letter-spacing: 0.04em;
-  color: #444 !important;
-  box-shadow: rgba(0, 0, 0, 0.7) 0 0 2px !important; }
-
-#design a.gumroad-button-strong, #start a.gumroad-button-strong {
-  background-color: #dab238 !important;
-  box-shadow: #5e470a 0 0 2px !important;
-  color: #fff !important; }
-
 @media (max-width: 61.9em) {
   .book-pages .jumbotron {
     padding-top: 4em;
-    padding-bottom: 3em; } }
+    padding-bottom: 3em; }
+  #design .table-of-contents > ul li ul {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1; } }
 
 @media (max-width: 47.9em) {
   .book-pages .jumbotron {
