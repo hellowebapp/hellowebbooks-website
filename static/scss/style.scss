@@ -724,23 +724,15 @@ form input {
     }
 }
 
-#design, #start {
-    .gumroad-button {
-        letter-spacing: 0.04em;
-        color: #444 !important;
-        box-shadow: rgba(0, 0, 0, .7) 0 0 2px !important;
-    }
-    a.gumroad-button-strong {
-        background-color: $button-color !important;
-        box-shadow: #5e470a 0 0 2px !important;
-        color: #fff !important;
-    }
-}
-
 @include media-breakpoint-down(md) {
     .book-pages .jumbotron {
         padding-top: 4em;
         padding-bottom: 3em;
+    }
+    #design .table-of-contents > ul li ul {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
     }
 }
 
