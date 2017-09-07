@@ -320,11 +320,21 @@ form input {
     }
 }
 
+@include media-breakpoint-down(md) {
+    #main-nav {
+        li {
+            a { padding: 0; }
+        }
+    }
+}
+
+
 @include media-breakpoint-down(sm) {
     #main-nav {
         margin-bottom: -13px;
         li {
             margin-top: 7px;
+            a { padding: 0; }
         }
         #home-link {
             padding: 0;
@@ -649,9 +659,34 @@ form input {
 // design landing page
 #design {
     .jumbotron {
-        background: url(../images/book-background.png) top left no-repeat;
-        background-color: $brand-secondary; 
-        padding-top: 6em;
+        background-color: #e1e1e1; 
+        padding-top: 4em;
+        padding-bottom: 0;
+        height: auto;
+        h1 {
+            color: #004146;
+            font-size: 4rem;
+            margin-top: 0.5em;
+        }
+        h2 {
+            margin-top: 1em;
+            margin-bottom: 1.5em; 
+            color: #004146;
+        }
+        h2 strong {
+            color: #004146;
+        }
+        .btn-secondary-outline {
+            color: #004146;
+            border-color: #004146;
+            &:hover {
+                //color: #007179;
+                border-color: #007179;
+            }
+        }
+        .col-md-8 {
+            padding-left: 2em;
+        }
     }
     figure.video {
         padding-bottom: 55%;
@@ -724,7 +759,36 @@ form input {
     }
 }
 
+@include media-breakpoint-down(lg) {
+    #design .jumbotron {
+        h1 {
+            font-size: 3.5rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+        }
+        .col-md-8 {
+            margin-bottom: 2em;
+        }
+    }
+}
+
 @include media-breakpoint-down(md) {
+    #design .jumbotron {
+        padding-top: 1em;
+        h1 {
+            font-size: 3rem;
+        }
+        h2 {
+            font-size: 1.3rem;
+        }
+        .col-md-4 {
+            margin-top: 1.8em;
+        }
+        .btn {
+            margin-bottom: 5px;
+        }
+    }
     .book-pages .jumbotron {
         padding-top: 4em;
         padding-bottom: 3em;
@@ -737,6 +801,11 @@ form input {
 }
 
 @include media-breakpoint-down(sm) {
+    #design .jumbotron {
+        .col-md-8 {
+            padding-left: 0;
+        }
+    }
     .book-pages .jumbotron {
         padding-top: 2em;
         height: 25em;
@@ -746,6 +815,19 @@ form input {
         height: 26em;
     }
 }
+
+@include media-breakpoint-down(xs) {
+    #design .jumbotron {
+        padding-top: 1em;
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
+}
+
 
 // setup and tutorials page
 #setup, #tutorial {

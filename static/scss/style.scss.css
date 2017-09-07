@@ -3560,11 +3560,17 @@ form input {
     padding: 0 0 0 1.5em;
     text-align: right; }
 
+@media (max-width: 61.9em) {
+  #main-nav li a {
+    padding: 0; } }
+
 @media (max-width: 47.9em) {
   #main-nav {
     margin-bottom: -13px; }
     #main-nav li {
       margin-top: 7px; }
+      #main-nav li a {
+        padding: 0; }
     #main-nav #home-link {
       padding: 0; }
       #main-nav #home-link div {
@@ -3793,9 +3799,27 @@ form input {
   background: url(../images/heros/ic-2.jpg) top center no-repeat; }
 
 #design .jumbotron {
-  background: url(../images/book-background.png) top left no-repeat;
-  background-color: #498D90;
-  padding-top: 6em; }
+  background-color: #e1e1e1;
+  padding-top: 4em;
+  padding-bottom: 0;
+  height: auto; }
+  #design .jumbotron h1 {
+    color: #004146;
+    font-size: 4rem;
+    margin-top: 0.5em; }
+  #design .jumbotron h2 {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    color: #004146; }
+  #design .jumbotron h2 strong {
+    color: #004146; }
+  #design .jumbotron .btn-secondary-outline {
+    color: #004146;
+    border-color: #004146; }
+    #design .jumbotron .btn-secondary-outline:hover {
+      border-color: #007179; }
+  #design .jumbotron .col-md-8 {
+    padding-left: 2em; }
 
 #design figure.video {
   padding-bottom: 55%; }
@@ -3851,7 +3875,25 @@ form input {
   #design #hwd-packages img {
     margin-bottom: 1em; }
 
+@media (max-width: 74.9em) {
+  #design .jumbotron h1 {
+    font-size: 3.5rem; }
+  #design .jumbotron h2 {
+    font-size: 1.4rem; }
+  #design .jumbotron .col-md-8 {
+    margin-bottom: 2em; } }
+
 @media (max-width: 61.9em) {
+  #design .jumbotron {
+    padding-top: 1em; }
+    #design .jumbotron h1 {
+      font-size: 3rem; }
+    #design .jumbotron h2 {
+      font-size: 1.3rem; }
+    #design .jumbotron .col-md-4 {
+      margin-top: 1.8em; }
+    #design .jumbotron .btn {
+      margin-bottom: 5px; }
   .book-pages .jumbotron {
     padding-top: 4em;
     padding-bottom: 3em; }
@@ -3861,12 +3903,22 @@ form input {
     column-count: 1; } }
 
 @media (max-width: 47.9em) {
+  #design .jumbotron .col-md-8 {
+    padding-left: 0; }
   .book-pages .jumbotron {
     padding-top: 2em;
     height: 25em;
     margin-bottom: 0; }
   #ic .jumbotron {
     height: 26em; } }
+
+@media (max-width: 33.9em) {
+  #design .jumbotron {
+    padding-top: 1em; }
+    #design .jumbotron h1 {
+      font-size: 2rem; }
+    #design .jumbotron h2 {
+      font-size: 1rem; } }
 
 #setup .toc li li, #tutorial .toc li li {
   font-style: italic;
