@@ -20,7 +20,7 @@ analytics.page("Hello Web Design book landing page");
                 <h1>Get more comfortable with design</h1>
                 <h2>Hey programmers, developers, marketers, and non-designers &#8212; want to become a better designer? <strong>This short book has everything you need.</strong> Coming out late summer 2017.</h2>
 
-                <a href="#" class="btn btn-secondary-outline free-sample-link" data-loc="Jumbotron">Get a free sample</a>
+                <a href="#newsletter" class="btn btn-secondary-outline free-sample-link" data-loc="Jumbotron">Get a free sample</a>
                 <a href="#hwd-packages" class="btn btn-primary">Pre-order the book</a>
             </div>
         </div>
@@ -215,8 +215,24 @@ analytics.page("Hello Web Design book landing page");
 
 {% block scripts %}
 {{ block.super }}
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"65146251a5ccb429e109f902f","lid":"f0a7b0a10c"}) })</script>
+
+{% comment %}
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+{% endcomment %}
 <script type="text/javascript">
+    {% comment %}
+    function showMailingPopUp() {
+        require(["mojo/signup-forms/Loader"], function(L) {
+            L.start({
+                "baseUrl": "mc.us3.list-manage.com",
+                "uuid": "65146251a5ccb429e109f902f",
+                "lid": "f0a7b0a10c"
+            })
+        })
+        document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    };
+    {% endcomment %}
+
     $(document).ready(function() {
         $(".buy-button").each(function() {
             var link = $(this);
