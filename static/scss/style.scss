@@ -688,6 +688,13 @@ form input {
             padding-left: 2em;
         }
     }
+    .btn-primary {
+        background-color: #d29a56;
+        border-color: #d29a56;
+        &:hover {
+            background-color: darken(#d29a56, 10%);
+        }
+    }
     figure.video {
         padding-bottom: 55%;
     }
