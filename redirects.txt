@@ -2,7 +2,7 @@
 /free-sample http://goo.gl/ZTEyoy;
 /sample http://goo.gl/ZTEyoy;
 /ic-sample https://goo.gl/sp5pTn;
-/hwd-sample https://hellobks.com/hwd-sample;
+/hwd-sample https://goo.gl/syXjNg;
 /preorder /order;
 /install-django https://hellowebapp.com/setup/#setup-django;
 /install-python https://hellowebapp.com/setup/;
