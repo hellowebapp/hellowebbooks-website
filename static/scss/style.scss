@@ -766,6 +766,10 @@ form input {
     }
 }
 
+.design-headline {
+    font-size: 3rem;
+}
+
 @include media-breakpoint-down(lg) {
     #design .jumbotron {
         h1 {
@@ -820,6 +824,12 @@ form input {
     }
     #ic .jumbotron {
         height: 26em;
+    }
+    .design-headline {
+        font-size: 2rem;
+    }
+    #design blockquote p {
+        font-size: 1.4rem;
     }
 }
 

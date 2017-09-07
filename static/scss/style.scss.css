@@ -3881,6 +3881,9 @@ form input {
   #design #hwd-packages img {
     margin-bottom: 1em; }
 
+.design-headline {
+  font-size: 3rem; }
+
 @media (max-width: 74.9em) {
   #design .jumbotron h1 {
     font-size: 3.5rem; }
@@ -3916,7 +3919,11 @@ form input {
     height: 25em;
     margin-bottom: 0; }
   #ic .jumbotron {
-    height: 26em; } }
+    height: 26em; }
+  .design-headline {
+    font-size: 2rem; }
+  #design blockquote p {
+    font-size: 1.4rem; } }
 
 @media (max-width: 33.9em) {
   #design .jumbotron {

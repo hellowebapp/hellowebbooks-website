@@ -29,7 +29,7 @@ analytics.page("Hello Web Design book landing page");
 
 <div class="container text-center">
     <img src="{% static '/images/icons/computer.png' %}" alt=""  width="70" style="margin-top: 2.5em;"/>
-    <h2 class="content-block" style="font-size:3rem;">Learn design fundamentals and shortcuts to make you a better designer</h2>
+    <h2 class="content-block design-headline">Learn design fundamentals and shortcuts to make you a better designer</h2>
     <p class="content-block">Beginner design books assume you want to become an expert designer. What if you want to learn just enough to complement your existing work? Hello Web Design will teach you the basics about design (no history!) and give you shortcuts <strong>so you can immediately become a better designer.</strong></p>
 
     <p class="super-vertical-margin">
@@ -77,7 +77,7 @@ analytics.page("Hello Web Design book landing page");
     <div class="super-vertical-margin">
         <div class="text-center">
             <img src="{% static '/images/icons/lamp.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
-            <h2 style="font-size: 3rem;">What you'll learn</h2>
+            <h2 class="design-headline">What you'll learn</h2>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -113,7 +113,7 @@ analytics.page("Hello Web Design book landing page");
         <div class="text-center">
             <img src="{% static '/images/icons/toc.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
         </div>
-        <h2 class="text-center" style="font-size:3rem; margin-bottom: 10px; margin-top: 1em;">Table of Contents</h2>
+        <h2 class="text-center design-headline" style="margin-bottom: 10px; margin-top: 1em;">Table of Contents</h2>
         <p style="text-align: center; color: #999; font-size: 1.2rem; font-style:italic; margin-bottom: 2em;">Five chapters, two mega sections, 170 pages, over a hundred examples and shortcuts.</p>
         <ul class="list-unstyled">
             <li><span>0.0.</span> Introduction</li>
@@ -152,7 +152,7 @@ analytics.page("Hello Web Design book landing page");
     </p>{% endcomment %}
 
     <div class="row text-center" id="hwd-packages">
-        <h2 class="text-center" style="font-size: 3rem;">Packages available</h2>
+        <h2 class="text-center design-headline">Packages available</h2>
         <div class="col-sm-4 col-sm-push-4">
             <img src="{% static '/images/icons/video.png' %}" alt="" height="50" />
             <h3 class="text-center">Videos + eBooks</h3>
@@ -185,7 +185,7 @@ analytics.page("Hello Web Design book landing page");
 
 {% comment %}
     <div class="row">
-        <h2 class="text-center vertical-margin" style="font-size: 3rem;">Buy the book</h2>
+        <h2 class="text-center vertical-margin design-headline">Buy the book</h2>
         <div class="col-sm-5">
             <img src="{% static 'images/products/original-videos.jpg' %}" alt="Hello Web App complete video package" />
         </div>
@@ -215,19 +215,8 @@ analytics.page("Hello Web Design book landing page");
 
 {% block scripts %}
 {{ block.super }}
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"65146251a5ccb429e109f902f","lid":"f0a7b0a10c"}) })</script>
 <script type="text/javascript">
-    function showMailingPopUp() {
-        require(["mojo/signup-forms/Loader"], function(L) {
-            L.start({
-                "baseUrl": "mc.us3.list-manage.com",
-                "uuid": "65146251a5ccb429e109f902f",
-                "lid": "f0a7b0a10c"
-            })
-        })
-        document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-    };
-
     $(document).ready(function() {
         $(".buy-button").each(function() {
             var link = $(this);
