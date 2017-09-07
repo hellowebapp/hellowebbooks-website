@@ -11,12 +11,19 @@ analytics.page("Hello Web Design book landing page");
 
 {% block content %}
 <div class="jumbotron">
-    <div class="container text-center">
-        <h1>Design for<br/>Non-Designers</h1>
-        <h2>Hey programmers, developers, marketers, and non-designers &#8212; want to become a better designer? <strong>This short book has everything you need.</strong> Coming out late summer 2017.</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 hidden-sm-down">
+                <img src="{% static '/images/COVER.png' %}" alt="Hello Web Design book" />
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <h1>Get more comfortable with design</h1>
+                <h2>Hey programmers, developers, marketers, and non-designers &#8212; want to become a better designer? <strong>This short book has everything you need.</strong> Coming out late summer 2017.</h2>
 
-        <a href="{% url '/tutorial/intro.html' %}" class="btn btn-secondary-outline" data-loc="Jumbotron">Get a free sample</a>
-        <a href="#hwd-packages" class="btn btn-primary">Pre-order the book</a>
+                <a href="{% url '/tutorial/intro.html' %}" class="btn btn-secondary-outline" data-loc="Jumbotron">Get a free sample</a>
+                <a href="#hwd-packages" class="btn btn-primary">Pre-order the book</a>
+            </div>
+        </div>
     </div>
 </div>
 
