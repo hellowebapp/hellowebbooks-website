@@ -3821,6 +3821,12 @@ form input {
   #design .jumbotron .col-md-8 {
     padding-left: 2em; }
 
+#design .btn-primary {
+  background-color: #d29a56;
+  border-color: #d29a56; }
+  #design .btn-primary:hover {
+    background-color: #c18134; }
+
 #design figure.video {
   padding-bottom: 55%; }
 
