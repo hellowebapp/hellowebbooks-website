@@ -211,7 +211,7 @@
 /hwd/52 http://danmall.me;
 /hwd/53 http://www.istockphoto.com;
 /hwd/54 http://thenewcode.com/944/Responsive-Images-For-Retina-Using-srcset-and-the-x-Designator;
-/hwd/55 kite.com;
+/hwd/55 http://kite.com;
 /hwd/56 https://unsplash.com;
 /hwd/57 http://photopin.com;
 /hwd/58 https://thenounproject.com;
