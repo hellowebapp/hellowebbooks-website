@@ -1,0 +1,40 @@
+title: Hello Web Design's pre-order available - will be released November 7th, 2017  
+# headline: An introduction
+excerpt: On November 7th, Hello Web Design will be released into the world! Pre-order your book if you haven't already.
+author: Tracy Osborn 
+featuredimage: /images/blog/2017/9/hwd-banner.png
+date: 29-9-2017
+category: announcements
+featured: True
+
+{% extends "post.html" %}
+{% block body %}
+
+{% filter markdown %}
+**On November 7th, Hello Web Design will be released into the world!**
+
+Pricing and pre-order links:
+
+{% endfilter %}
+
+<div class="row">
+    <div class="col-sm-3">
+        <img src="/static/images/blog/2017/9/COVER.png" alt=""/>
+</div>
+<div class="col-sm-9">
+
+{% filter markdown %}
+* **[$79: Complete Hello Web Design eBook + videos bundle](http://gum.co/hwd-videos)** — includes video walkthroughs of each of the design chapters as well as bonus videos with web design breakdowns and critiques. $10 extra to receive the print paperback as well.
+* **[$29.95: Hello Web App eBook + paperback book bundle](https://gum.co/hwd-pb)** — All eBook files below plus the paperback book.
+* **[$19.95: Paperback only via Amazon](http://amzn.to/2xLVAVq)** - the paperback via Amazon.com.
+* **[$14.95: Hello Web App eBook bundle](https://gum.co/hwd-ebook)** — fully designed PDF, .mobi, and .ePub files.
+* **[$14.95: Leanpub bundle](https://leanpub.com/hellowebdesign/)** — Leanpub designed PDF, .mobi, and .ePub files. Not as pretty as the official PDF but I know some people prefer Leanpub.
+* **[$9.95: Kindle on Amazon](http://amzn.to/2xLVAVq)** 
+{% endfilter %}
+
+</div>
+</div>
+
+<p>Pre-order your book if you haven't already!</p>
+
+{% endblock body %}
