@@ -3993,7 +3993,7 @@ form input {
     max-width: 600px; }
 
 #order .jumbotron {
-  background: url(../images/heros/both-books.jpg) center center no-repeat;
+  background: url(../images/heros/hwd.jpg) center center no-repeat;
   background-size: cover;
   height: 15em; }
 
@@ -4018,9 +4018,9 @@ form input {
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 3em; }
 
-#order #original, #order #ic, #order #both {
+#order #original, #order #ic, #order #both, #order #hwd {
   display: none; }
-  #order #original:target, #order #ic:target, #order #both:target {
+  #order #original:target, #order #ic:target, #order #both:target, #order #hwd:target {
     display: block; }
 
 #order figure.video {
