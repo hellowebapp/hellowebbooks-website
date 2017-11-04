@@ -922,7 +922,7 @@ form input {
 // order landing page
 #order {
     .jumbotron {
-        background: url(../images/heros/both-books.jpg) center center no-repeat;
+        background: url(../images/heros/hwd.jpg) center center no-repeat;
         background-size: cover;
         height: 15em;
     }
@@ -951,7 +951,7 @@ form input {
         border-bottom: 1px solid $gray-superlight;
         padding-bottom: 3em;
     }
-    #original, #ic, #both {
+    #original, #ic, #both, #hwd {
         display: none;
         &:target {
             display: block;
