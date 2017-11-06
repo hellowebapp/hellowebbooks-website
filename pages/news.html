@@ -73,7 +73,7 @@ analytics.page("Blog Home");
 
             <div class="sub-categories">
                 <h2 class="text-center">Posts by category</h2>
-                <h3 class="text-center">Case Studies</h3>
+                <h3>Case Studies</h3>
                 <ul class="list-unstyled">
                 {% for post in posts %}
                     {% if post.category == "casestudy" %}
@@ -81,7 +81,7 @@ analytics.page("Blog Home");
                     {% endif %}
                 {% endfor %}
                 </ul>
-                <h3 class="text-center">Tutorials</h3>
+                <h3>Tutorials</h3>
                 <ul class="list-unstyled">
                 {% for post in posts %}
                     {% if post.category == "tutorial" %}
@@ -91,7 +91,7 @@ analytics.page("Blog Home");
                     {% endif %}
                 {% endfor %}
                 </ul>
-                <h3 class="text-center">Interviews</h3>
+                <h3>Interviews</h3>
                 <ul class="list-unstyled">
                 {% for post in posts %}
                     {% if post.category == "interview" %}
@@ -101,7 +101,7 @@ analytics.page("Blog Home");
                     {% endif %}
                 {% endfor %}
                 </ul>
-                <h3 class="text-center">Production</h3>
+                <h3>Production</h3>
                 <ul class="list-unstyled">
                 {% for post in posts %}
                     {% if post.category == "production" %}
@@ -111,7 +111,7 @@ analytics.page("Blog Home");
                     {% endif %}
                 {% endfor %}
                 </ul>
-                <h3 class="text-center">Design</h3>
+                <h3>Design</h3>
                 <ul class="list-unstyled">
                 {% for post in posts %}
                     {% if post.category == "design" %}
@@ -122,7 +122,7 @@ analytics.page("Blog Home");
                     {% endif %}
                 {% endfor %}
                 </ul>
-                <h2 class="text-center">Other links</h2>
+                <h2>Other links</h2>
                 <ul class="list-unstyled">
                     <li><a href="{% url '/archive.html' %}">All articles</a></li>
                 </ul>

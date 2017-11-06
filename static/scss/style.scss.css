@@ -3781,6 +3781,10 @@ form input {
 #featured-post-list li:nth-child(1n+7) {
   display: none; }
 
+#faq dt {
+  font-size: 1.6rem;
+  line-height: 1.2; }
+
 .book-pages .jumbotron {
   background-size: cover;
   height: 33em;
@@ -4087,7 +4091,8 @@ form input {
         background-image: none;
         font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
         font-size: 1.1rem;
-        color: #caa11c; }
+        color: black;
+        border-bottom: 1px solid #e1e1e1; }
 
 .sharing h5 {
   color: #818a91;
