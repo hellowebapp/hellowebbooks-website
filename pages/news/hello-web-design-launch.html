@@ -1,0 +1,79 @@
+title: Hello Web Design is here!
+# headline: An introduction
+excerpt: I'm so excited to announce that Hello Web Design is out today! I've been thinking about this book for at least two years. These thoughts lead to a conference talk I gave at many conferences, including...
+author: Tracy Osborn 
+featuredimage: /images/heros/hwd.jpg
+date: 07-11-2017
+category: announcements
+featured: True
+
+{% extends "post.html" %}
+{% block body %}
+
+{% comment %}
+<figure class="full">
+    <img src="/static/images/blog/2015/4/13/workshops.png" alt=""/>
+</figure>
+{% endcomment %}
+
+{% filter markdown %}
+
+**I'm so excited to announce that *[Hello Web Design](https://hellowebbooks.com/learn-design)* is out today!**
+
+I've been thinking about this book for at least two years. With [Hello Web App](https://hellowebbooks.com/learn-django), I taught beginner programming the way I thought it should be taught to those without programming experience. After thousands of orders and readers around the world, naturally I started thinking about **how I could teach design fundamentals and shortcuts to folks without design experience**.
+
+These thoughts lead to a conference talk I gave at many conferences, including [Mozilla's View Source Conference in Berlin 2016](https://www.youtube.com/watch?v=lsPrhA_m6ss) and [O'Reilly's Fluent Conference 2016](https://www.youtube.com/watch?v=IyHTYmSYJz8).
+{% endfilter %}
+
+<figure class="caption video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lsPrhA_m6ss" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+    <figcaption>My conference talk at Mozilla's View Source</figcaption>
+</figure>
+
+{% filter markdown %}
+
+After raising almost [$23,000 on Kickstarter last January](https://www.kickstarter.com/projects/1868398473/hello-web-design-design-basics-for-non-designers/), I've been hard at work writing, designing, and publishing my third book. And you can buy it today!
+
+**Three package options are available:**
+
+{% endfilter %}
+
+<figure class="caption">
+    <div class="row" id="hwd" name="hwd">
+        <div class="col-md-4 text-center">
+            <a href="https://gum.co/hwd-pb">
+                <img src="https://hellowebbooks.com/static/images/products/hwd-books.jpg" alt="Hello Web Design paperback package" style="margin-bottom:10px;"/>
+            </a>
+            <h3>Paperback Package</h3>
+            <p>The eBook in three formats (PDF, .mobi, and .ePub) as well as the gorgeous paperback book.</p>
+            <a href="https://gum.co/hwd-pb" class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-price="29.95">Buy for $29.95</a>
+        </div>
+        <div class="col-md-4 text-center">
+            <a href="https://gum.co/hwd-videos">
+                <img src="https://hellowebbooks.com/static/images/products/hwd-videos.jpg" alt="Hello Web Design video package" style="margin-bottom:10px;"/>
+            </a>
+            <h3>Video Package</h3>
+            <p>All eBook files <em>and</em> 17 screencasts and videos, walking you through every chapter of the book.</p>
+            <a href="https://gum.co/hwd-videos" class="btn btn-primary buy-button" data-title="Hello Web Design Videos" data-price="79">Buy for $79</a>
+            <p><small>Add the paperback for $10 + shipping</small></p>
+        </div>
+        <div class="col-md-4 text-center">
+            <a href="https://gum.co/hwd-ebook">
+                <img src="https://hellowebbooks.com/static/images/products/hwd-ebook.jpg" alt="Hello Web Design ebook package" style="margin-bottom:10px;"/>
+            </a>
+            <h3>eBook Package</h3>
+            <p>The eBook in three formats (custom designed PDF, .mobi/Kindle, and .ePub).</p>
+            <a href="https://gum.co/hwd-ebook" class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-price="14.95">Buy for $14.95</a>
+        </div>
+    </div>
+</figure>
+
+{% filter markdown %}
+
+You can read more about [Hello Web Design here](https://hellowebbooks.com/learn-design).
+
+Thanks for everyone who has supported me in writing this book &#8212; it's been a long journey and I am so excited to bring this book to the world!
+
+{% endfilter %}
+
+{% endblock body %}
