@@ -624,6 +624,13 @@ form input {
     }
 }
 
+// faq
+
+#faq dt {
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
 // book landing pages
 .book-pages {
     .jumbotron {
@@ -1041,7 +1048,8 @@ form input {
                 background-image: none;
                 font-family: $font-family-sans-serif;
                 font-size: 1.1rem;
-                color: $link-color;
+                color: black;
+                border-bottom: 1px solid #e1e1e1;
             }
         }
     }
