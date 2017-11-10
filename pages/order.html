@@ -199,7 +199,7 @@ analytics.page("Order");
             </a>
             <h3>eBook Package</h3>
             <p>Three eBook files (custom designed PDF, .mobi, and .ePub) to help you take your web design skills to the next level.</p>
-            <a href="https://gum.co/hwd-ebook" class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design"  data-price="14.95">Buy for $14.95</a>
+            <a href="https://gum.co/hwd-ebook" class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95">Buy for $14.95</a>
         </div>
     </div>
 
@@ -250,7 +250,8 @@ analytics.page("Order");
                 name: $(link).data("title"),
                 price: $(link).data("price"),
                 revenue: $(link).data("price"),
-                category: $(link).data("category")
+                label: $(link).text(),
+                category: $(link).data("title")
             });
         });
     });
