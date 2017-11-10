@@ -248,8 +248,8 @@ analytics.page("Order");
             var link = $(this);
             analytics.trackLink(link, 'Clicked Buy Link', {
                 name: $(link).data("title"),
-                price: $(link).data("price")
-                revenue: $(link).data("price")
+                price: $(link).data("price"),
+                revenue: $(link).data("price"),
                 category: $(link).data("category")
             });
         });
