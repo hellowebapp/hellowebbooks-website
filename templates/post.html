@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% block title %}{{ title }} - {{ block.super }}{% endblock title %}
+
+{% block analytics %}
+analytics.page("Blog: {{ title }}");
+{% endblock %}
+
 {% block bodyclass %}
 <body id="post" class="{{ title|slugify }}">
 {% endblock %}
-{% block content %}
 
+{% block content %}
 <section id="wrapper" class="group">
     {% if featuredimage %}
     <div class="jumbotron" style="background-image: url('/static/{{ featuredimage }}'); height: 10em; filter: brightness(80%);"></div>
