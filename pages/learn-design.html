@@ -159,7 +159,7 @@ analytics.page("Hello Web Design book landing page");
             <h3 class="text-center">Videos + eBooks</h3>
             <p><strong>The eBooks plus 15+ videos</strong> walking you through the theory and process parts of the book, plus extra "design critique" videos to help you train your design intuition. <em>Add the paperback book for $10 more.</em></p>
             <div class="text-center">
-                <a class="btn btn-primary" href="https://gum.co/hwd-videos">Buy for $79</a>
+                <a class="btn btn-primary buy-button" data-title="Hello Web Design Videos" data-category="Hello Web Design" data-price="79" href="https://gum.co/hwd-videos">Buy for $79</a>
             </div>
             {% comment %}<p><small>$79</small></p>{% endcomment %}
         </div>
@@ -168,7 +168,7 @@ analytics.page("Hello Web Design book landing page");
             <h3 class="text-center">Paperback + eBooks</h3>
             <p>Learn better with a physical book? I got you! This package contains the eBook (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
             <div class="text-center">
-                <a class="btn btn-secondary" href="https://gum.co/hwd-pb">Buy for $24.95</a>
+                <a class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="24.95" href="https://gum.co/hwd-pb">Buy for $24.95</a>
             </div>
             {% comment %}<p><small>$24.95</small></p>{% endcomment %}
         </div>
@@ -178,7 +178,7 @@ analytics.page("Hello Web Design book landing page");
             <p><strong>Hello Web Design in digital format</strong>, lovingly designed by Tracy herself. A brief book jam-packed with information. Comes in PDF, .mobi, and .ePub formats.</p>
             <div class="text-center">
                 <script src="https://gumroad.com/js/gumroad.js"></script>
-                <a class="btn btn-secondary" href="https://gum.co/hwd-ebook">Buy for $14.95</a>
+                <a class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95" href="https://gum.co/hwd-ebook">Buy for $14.95</a>
             </div>
             {% comment %}<p><small>$14.95</small></p>{% endcomment %}
         </div>
@@ -238,8 +238,11 @@ analytics.page("Hello Web Design book landing page");
         $(".buy-button").each(function() {
             var link = $(this);
             analytics.trackLink(link, 'Clicked Buy Link', {
-                title: $(link).data("title"),
+                name: $(link).data("title"),
                 price: $(link).data("price"),
+                revenue: $(link).data("price"),
+                label: $(link).text(),
+                category: $(link).data("title")
             });
         });
 
