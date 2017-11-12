@@ -148,39 +148,237 @@ analytics.page("Hello Web Design book landing page");
         </ul>
     </div>
 
-    {% comment %}<p class="text-center super-vertical-margin">
-        <a href="{% url '/order.html' %}" class="btn btn-large btn-primary">Pre-order the book</a>
-    </p>{% endcomment %}
-
-    <div class="row text-center" id="hwd-packages">
+    <div class="row" id="hwd-packages">
         <h2 class="text-center design-headline">Packages available</h2>
-        <div class="col-sm-4 col-sm-push-4">
-            <img src="{% static '/images/icons/video.png' %}" alt="" height="50" />
-            <h3 class="text-center">Videos + eBooks</h3>
-            <p><strong>The eBooks plus 15+ videos</strong> walking you through the theory and process parts of the book, plus extra "design critique" videos to help you train your design intuition. <em>Add the paperback book for $10 more.</em></p>
-            <div class="text-center">
-                <a class="btn btn-primary buy-button" data-title="Hello Web Design Videos" data-category="Hello Web Design" data-price="79" href="https://hellowebbooks.withcoach.com/hello-web-design-video-course">Buy for $79</a>
+
+        <div class="col-lg-10 col-lg-offset-1 col-md-12 package-container">
+            <div class="text-center" style="margin-bottom: 1em;">
+                <img src="{% static '/images/icons/video.png' %}" alt="" height="50" class="text-center" />
+                <h3>The Videos + eBooks</h3>
             </div>
-            {% comment %}<p><small>$79</small></p>{% endcomment %}
-        </div>
-        <div class="col-sm-4 col-sm-push-4">
-            <img src="{% static '/images/icons/toc.png' %}" alt="" height="50" />
-            <h3 class="text-center">Paperback + eBooks</h3>
-            <p>Learn better with a physical book? I got you! This package contains the eBook (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
-            <div class="text-center">
-                <a class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="24.95" href="https://gum.co/hwd-pb">Buy for $24.95</a>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div style="margin-left: 20px">
+                        <a href="https://hellowebbooks.withcoach.com/hello-web-design-video-course/buy" title="Buy on Coach">
+                            <img src="{% static '/images/products/videopreview.jpg' %}" alt="Preview of the Hello Web Design videos"/>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+
+                    <p><strong>Learn web design fundamentals and shortcuts with the complete <em>Hello Web Design</em> package.</strong> Aimed at developers, programmers, marketers &#8212; anyone who isn't a designer &#8212; the <em>Hello Web Design</em> books and screencasts will help anyone get confident to start doing design themselves.</p>
+
+                    <p>Package contains:</p>
+
+                    <ul>
+                        <li><strong>17 videos and screencasts</strong> &#8212; go through the book with the author, Tracy, introducing you to each chapter and screencasting all recommendations from the book.</li>
+                        <li>Hosted on the Coach platform so you can keep track of your progress.</li>
+                        <li><strong>The eBook in three formats</strong> &#8212; the PDF (designed by Tracy), .ePub, and .mobi/Kindle.</li>
+                    </ul>
+
+                    <div class="super-vertical-top-margin">
+                        <a class="btn btn-primary buy-button" data-title="Hello Web Design Videos" data-category="Hello Web Design" data-price="79" href="https://hellowebbooks.withcoach.com/hello-web-design-video-course/buy">Buy the video package for $79</a>
+                        <p><small><em>You'll be redirected to withcoach.com to finish your purchase.</em></small></p>
+                    </div>
+                </div>
             </div>
-            {% comment %}<p><small>$24.95</small></p>{% endcomment %}
         </div>
-        <div class="col-sm-4 col-sm-pull-8">
-            <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
-            <h3 class="text-center">The eBooks</h3>
-            <p><strong>Hello Web Design in digital format</strong>, lovingly designed by Tracy herself. A brief book jam-packed with information. Comes in PDF, .mobi, and .ePub formats.</p>
+
+        <div class="col-lg-offset-1 col-lg-7 col-md-8">
+            <div class="package-container" style="margin-left: -.9375rem; padding-left: .9375rem;">
+                <div class="text-center" style="margin-bottom: 1em;">
+                    <img src="{% static '/images/icons/toc.png' %}" alt="" height="50" />
+                    <h3>The Paperback + eBook</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="{% static 'images/hwd/1.jpg' %}" alt="Hello Web Design paperback" />
+                    </div>
+                    <div class="col-md-7">
+                        <p>Learn better with a physical book? I got you! <strong>This package contains the eBook</strong> (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="24.95" href="https://gum.co/hwd-pb">Buy for $24.95</a>
+                    </div>
+                </div>
+            </div>
+
+                    {% comment %}UGH SHOPIFY
+                <div id='product-component-0fa3e8b6c67'></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'hello-web-books.myshopify.com',
+      apiKey: 'ef623232bb5e39d6b90c7b453d0135f4',
+      appId: '6',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: [385464303648],
+        node: document.getElementById('product-component-0fa3e8b6c67'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "buttonDestination": "checkout",
+    "variantId": "all",
+    "width": "240px",
+    "contents": {
+      "img": false,
+      "imgWithCarousel": false,
+      "title": false,
+      "variantTitle": false,
+      "price": false,
+      "description": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "Buy for $24.95"
+    },
+    "styles": {
+      "product": {
+        "text-align": "left",
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
+        }
+      },
+      "button": {
+        "background-color": "#d29a56",
+        ":hover": {
+          "background-color": "#bd8b4d"
+        },
+        ":focus": {
+          "background-color": "#bd8b4d"
+        }
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "button": {
+        "background-color": "#d29a56",
+        ":hover": {
+          "background-color": "#bd8b4d"
+        },
+        ":focus": {
+          "background-color": "#bd8b4d"
+        }
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#d29a56",
+        ":hover": {
+          "background-color": "#bd8b4d"
+        },
+        ":focus": {
+          "background-color": "#bd8b4d"
+        }
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#d29a56",
+        ":hover": {
+          "background-color": "#bd8b4d"
+        },
+        ":focus": {
+          "background-color": "#bd8b4d"
+        }
+      },
+      "count": {
+        "color": "#ffffff",
+        ":hover": {
+          "color": "#ffffff"
+        }
+      },
+      "iconPath": {
+        "fill": "#ffffff"
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  }
+}
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>{% endcomment %}
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 package-container">
+            <div class="text-center" style="margin-bottom: 1em;">
+                <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
+                <h3>Just the eBook</h3>
+            </div>
+            <p><strong>The digital book</strong>, lovingly designed by Tracy herself. Comes in PDF, .mobi, and .ePub formats.</p>
             <div class="text-center">
                 <script src="https://gumroad.com/js/gumroad.js"></script>
-                <a class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95" href="https://gum.co/hwd-ebook">Buy for $14.95</a>
+                <a class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95" href="https://hellowebbooks.withcoach.com/hello-web-design-ebook/buy">Buy for $14.95</a>
+                <p style="line-height:1.2; margin-top: 10px;"><small><em>You'll be redirected to withcoach.com to finish your purchase.</em></small></p>
             </div>
-            {% comment %}<p><small>$14.95</small></p>{% endcomment %}
         </div>
     </div>
 </div>
