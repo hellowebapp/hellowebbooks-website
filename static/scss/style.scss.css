@@ -3884,6 +3884,12 @@ form input {
     font-size: 2rem; }
   #design #hwd-packages img {
     margin-bottom: 1em; }
+  #design #hwd-packages .package-container {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em; }
 
 .design-headline {
   font-size: 3rem; }
