@@ -4,6 +4,7 @@
 /ic-sample https://goo.gl/sp5pTn;
 /hwd-sample https://goo.gl/syXjNg;
 /preorder /order;
+/web-design /learn-design;
 /install-django https://hellowebapp.com/setup/#setup-django;
 /install-python https://hellowebapp.com/setup/;
 /kickstarter https://www.kickstarter.com/projects/1868398473/hello-web-app-intermediate-concepts;
