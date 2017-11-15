@@ -695,9 +695,10 @@ form input {
             padding-left: 2em;
         }
     }
-    .btn-primary {
+    .btn-cta {
         background-color: #d29a56;
         border-color: #d29a56;
+        color: #fff;
         &:hover {
             background-color: darken(#d29a56, 10%);
         }
