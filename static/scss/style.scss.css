@@ -3825,10 +3825,11 @@ form input {
   #design .jumbotron .col-md-8 {
     padding-left: 2em; }
 
-#design .btn-primary {
+#design .btn-cta {
   background-color: #d29a56;
-  border-color: #d29a56; }
-  #design .btn-primary:hover {
+  border-color: #d29a56;
+  color: #fff; }
+  #design .btn-cta:hover {
     background-color: #c18134; }
 
 #design figure.video {
