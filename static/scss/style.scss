@@ -1165,6 +1165,10 @@ form input {
         background-size: cover;
         background-position: center center;
     }
+    .featuredimage {
+        height: 10em;
+        filter: brightness(80%);
+    }
     header {
         margin-bottom: 2em;
         margin-right: 2em;
@@ -1175,10 +1179,15 @@ form input {
             font-size: 1.5rem;
             color: $gray;
         }
+        h2.headline {
+            margin-top: -1em;
+            font-size: 1.8rem;
+            line-height: 1.4;
+        }
     }
     h2 {
         margin-bottom: 0.5em; 
-        margin-top: 1em;
+        margin-top: 2em;
     }
     #post-body {
         img {
@@ -1349,4 +1358,9 @@ body {
         background-image: none !important;
         height: 3em !important;
     }
+}
+
+// reducing the darkness of the image
+.design-for-non-designers-part-1 .featuredimage {
+    filter: brightness(100%) !important;
 }

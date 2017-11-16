@@ -4177,6 +4177,10 @@ form input {
   background-size: cover;
   background-position: center center; }
 
+#post .featuredimage {
+  height: 10em;
+  filter: brightness(80%); }
+
 #post header {
   margin-bottom: 2em;
   margin-right: 2em; }
@@ -4185,10 +4189,14 @@ form input {
   #post header h2 {
     font-size: 1.5rem;
     color: #55595c; }
+  #post header h2.headline {
+    margin-top: -1em;
+    font-size: 1.8rem;
+    line-height: 1.4; }
 
 #post h2 {
   margin-bottom: 0.5em;
-  margin-top: 1em; }
+  margin-top: 2em; }
 
 #post #post-body img {
   border: 1px solid #eceeef; }
@@ -4329,3 +4337,6 @@ body {
 .hello-web-app-has-a-new-website .jumbotron {
   background-image: none !important;
   height: 3em !important; }
+
+.design-for-non-designers-part-1 .featuredimage {
+  filter: brightness(100%) !important; }
