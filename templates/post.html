@@ -12,7 +12,7 @@ analytics.page("Blog: {{ title }}");
 {% block content %}
 <section id="wrapper" class="group">
     {% if featuredimage %}
-    <div class="jumbotron" style="background-image: url('/static/{{ featuredimage }}'); height: 10em; filter: brightness(80%);"></div>
+    <div class="jumbotron featuredimage" style="background-image: url('/static/{{ featuredimage }}');"></div>
     {% else %}
     <div class="jumbotron"></div>
     {% endif %}
@@ -77,7 +77,7 @@ analytics.page("Blog: {{ title }}");
                 </section>
 
                 <footer id="post-meta" class="clearfix">
-                    <div><span>Posted on </span> {{ date|date:"M j" }}</div>
+                    <div><span>Posted on </span> {{ date|date:"M j, Y" }}</div>
                     <div><span>Written by</span> {{ author }}</div>
                     {% comment %}
                     {% endcomment %}
