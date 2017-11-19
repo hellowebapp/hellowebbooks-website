@@ -4212,15 +4212,12 @@ form input {
     display: inline-block;
     width: 300px;
     vertical-align: top; }
-    #post #post-meta #mc_embed_signup form {
+    #post #post-meta #mc_embed_signup form input[type="email"] {
+      padding: 0.1em 0.3em; }
+    #post #post-meta #mc_embed_signup form .btn-sm {
+      padding: 2px 6px 2px 6px;
       position: relative;
-      top: -15px; }
-      #post #post-meta #mc_embed_signup form input[type="email"] {
-        padding: 0.1em 0.3em; }
-      #post #post-meta #mc_embed_signup form .btn-sm {
-        padding: 2px 6px 2px 6px;
-        position: relative;
-        top: 0px; }
+      top: 0px; }
 
 /* a couple other places have a video so removed from the .post scope */
 figure.video {
