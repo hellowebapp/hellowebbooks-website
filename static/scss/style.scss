@@ -1049,13 +1049,6 @@ form input {
     a:hover {
         color: darken($link-color, 10%);
     }
-    .mc-field-group {
-        input[type="email"] {
-            width: 195px;
-            margin-right: 5px;
-            float: left;
-        }
-    }
     input[type="submit"] {
         position: relative;
         top: -2px;
@@ -1066,9 +1059,6 @@ form input {
     margin-bottom: 1em;
     padding-top: 0.9em;
     padding-right: 0;
-    .mc-field-group {
-        display: inline-block;
-    }
     input[type="submit"] {
         top: -10px;
         padding-left: 7px;
@@ -1197,6 +1187,7 @@ form input {
         }
         i { margin-right: 5px; }
         #mc_embed_signup {
+            /* This says MC but has been converted to ConvertKit */
             display: inline-block;
             width: 300px;
             vertical-align: top;
@@ -1307,14 +1298,6 @@ body {
 /* CONVERTKIT */
 
 // ConvertKit Embedded Form
-
-#newsletter-iframe {
-    border: 0 !important;
-    width: 100%;
-    height: 130px;
-    //overflow: hidden;
-}
-
 .newsletter {
     background-color: $brand-secondary;
     padding: 2em 0;
@@ -1331,12 +1314,6 @@ body {
         color: rgba(255,255,255,0.8);
         letter-spacing: 0.03em;
     }
-    .mc-field-group {
-        display: inline-block;
-        margin-bottom: 5px;
-        input { width: 250px; }
-    }
-
     .ck_form.ck_naked p {
         padding: 0px;
     }
