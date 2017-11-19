@@ -20,7 +20,7 @@ analytics.page("Hello Web Design book landing page");
               <h1>Learn how <br/>to design</h1>
                 <h2>Programmers, developers, marketers, and non-designers &#8212; want to become a better designer? <strong>This short book has everything you need.</strong> Launched November 7th, 2017.</h2>
 
-                <a href="#newsletter" class="btn btn-secondary-outline free-sample-link" data-loc="Jumbotron">Get a free sample</a>
+                <a rel="ck_modal" href="#ck_modal" class="btn btn-secondary-outline free-sample-link" data-loc="Jumbotron">Get a free sample</a>
                 <a href="#hwd-packages" class="btn btn-cta">Order the book</a>
             </div>
         </div>
@@ -34,7 +34,7 @@ analytics.page("Hello Web Design book landing page");
     <p class="content-block">Raised <strong>over $22,000</strong> on <a href="https://www.kickstarter.com/projects/1868398473/hello-web-design-design-basics-for-non-designers/">Kickstarter</a> from over <strong>700</strong> backers. </p>
 
     <p class="super-vertical-margin">
-        <a href="#hwd-packages" class="btn btn-large btn-secondary">Order the book</a>
+        <a href="#hwd-packages" class="btn btn-large btn-primary">Order the book</a>
     </p>
 
 </div>
@@ -432,31 +432,16 @@ analytics.page("Hello Web Design book landing page");
             </div>
         </div>
     </div>
-</div>
+  </div>
+
+{% include 'includes/convertkit-modal.html' %}
 
 {% endblock content %}
 
 {% block scripts %}
 {{ block.super }}
-
-{% comment %}
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-{% endcomment %}
 <script async src="https://assets.convertkit.com/assets/CKJS4.js?v=21"></script>
 <script type="text/javascript">
-    {% comment %}
-    function showMailingPopUp() {
-        require(["mojo/signup-forms/Loader"], function(L) {
-            L.start({
-                "baseUrl": "mc.us3.list-manage.com",
-                "uuid": "65146251a5ccb429e109f902f",
-                "lid": "f0a7b0a10c"
-            })
-        })
-        document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-    };
-    {% endcomment %}
-
     $(document).ready(function() {
         $(".buy-button").each(function() {
             var link = $(this);
@@ -474,11 +459,6 @@ analytics.page("Hello Web Design book landing page");
             analytics.trackLink(link, 'Clicked Free Sample Link', {
                 title: $(link).data("loc"),
             });
-        });
-
-        $('.free-sample-link').click(function(e) {
-            e.preventDefault();
-            showMailingPopUp();
         });
     });
 </script>
