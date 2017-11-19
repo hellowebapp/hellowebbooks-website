@@ -4091,11 +4091,6 @@ form input {
 .sharing a:hover {
   color: #9d7e16; }
 
-.sharing .mc-field-group input[type="email"] {
-  width: 195px;
-  margin-right: 5px;
-  float: left; }
-
 .sharing input[type="submit"] {
   position: relative;
   top: -2px; }
@@ -4104,8 +4099,6 @@ form input {
   margin-bottom: 1em;
   padding-top: 0.9em;
   padding-right: 0; }
-  .top-sharing .mc-field-group {
-    display: inline-block; }
   .top-sharing input[type="submit"] {
     top: -10px;
     padding-left: 7px;
@@ -4209,6 +4202,7 @@ form input {
   #post #post-meta i {
     margin-right: 5px; }
   #post #post-meta #mc_embed_signup {
+    /* This says MC but has been converted to ConvertKit */
     display: inline-block;
     width: 300px;
     vertical-align: top; }
@@ -4291,11 +4285,6 @@ body {
 }
 */
 /* CONVERTKIT */
-#newsletter-iframe {
-  border: 0 !important;
-  width: 100%;
-  height: 130px; }
-
 .newsletter {
   background-color: #498D90;
   padding: 2em 0;
@@ -4311,11 +4300,6 @@ body {
     padding-top: 0.8em;
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: 0.03em; }
-  .newsletter .mc-field-group {
-    display: inline-block;
-    margin-bottom: 5px; }
-    .newsletter .mc-field-group input {
-      width: 250px; }
   .newsletter .ck_form.ck_naked p {
     padding: 0px; }
   .newsletter .ck_form, .newsletter .ck_form * {
