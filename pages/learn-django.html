@@ -16,7 +16,7 @@ analytics.page("Original book landing page");
         <h2>Design and build your own custom web app using Python and Django. <br/>
             Tailored for non-programmers, written by a designer.</h2>
 
-        <a href="" class="btn btn-secondary-outline free-sample-link" data-loc="Jumbotron">Free Sample</a>
+        <a rel="ck_modal" href="#ck_modal" class="btn btn-secondary-outline free-sample-link" data-loc="Jumbotron">Free Sample</a>
         <a href="{% url '/order.html' %}" class="btn btn-primary">Get the book</a>
     </div>
 </div>
@@ -172,24 +172,15 @@ analytics.page("Original book landing page");
         </div>
     </div>
 </div>
+
+{% include 'includes/convertkit-modal.html' with book_name="Hello Web App" book_image="https://s3.amazonaws.com/convertkit/subscription_forms/images/005/110/499/standard/IMG_6404-lowres.jpg?1511130784" form_id="298672" %}
+
 {% endblock content %}
 
 {% block scripts %}
 {{ block.super }}
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 <script src="https://assets.convertkit.com/assets/CKJS4.js?v=21"></script>
 <script type="text/javascript">
-    function showMailingPopUp() {
-        require(["mojo/signup-forms/Loader"], function(L) {
-            L.start({
-                "baseUrl": "mc.us3.list-manage.com",
-                "uuid": "65146251a5ccb429e109f902f",
-                "lid": "f0a7b0a10c"
-            })
-        })
-        document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-    };
-
     $(document).ready(function() {
         $(".buy-button").each(function() {
             var link = $(this);
@@ -204,11 +195,6 @@ analytics.page("Original book landing page");
             analytics.trackLink(link, 'Clicked Free Sample Link', {
                 title: $(link).data("loc"),
             });
-        });
-
-        $('.free-sample-link').click(function(e) {
-            e.preventDefault();
-            showMailingPopUp();
         });
     });
 </script>
