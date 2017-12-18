@@ -139,6 +139,8 @@ First, add a couple new URLs to our *urls.py* file:
 <pre><code class="python">
 # add this to the top
 <b>from collection.backends import MyRegistrationView</b>
+
+# add this to your URL definitions
 <b>url(r'^accounts/register/$', 
     MyRegistrationView.as_view(),
     name='registration_register'),
@@ -381,6 +383,8 @@ needs, and how to keep data secure on your website.
 *One last thing* — we set up the templates to do a password update for logged
 in users (that's the *password_change* templates we set up before). Can you
 figure out how to add that yourself?
+
+([Here's a walkthrough if you can't figure it out!](https://hellowebbooks.com/news/tutorial-password-change-views/))
 
 Commit your work before moving forward!
 {% endfilter %}
