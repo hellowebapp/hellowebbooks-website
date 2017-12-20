@@ -54,11 +54,11 @@
 /42 http://python.meetup.com/;
 /43 http://djangogirls.org/;
 /44 https://www.python.org/dev/peps/pep-0008/;
-/45 http://docs.writethedocs.org/writing/beginners-guide-to-docs/;
-/46 http://www.djangobook.com/en/2.0/chapter20.html;
+/45 http://www.writethedocs.org/guide/writing/beginners-guide-to-docs/;
+/46 https://djangobook.com/security-in-django/
 /47 http://amzn.to/13sLUh6;
 /48 http://amzn.to/1GrwlUF;
-/49 http://gettingstartedwithdjango.com/;
+/49 https://tutorial.djangogirls.org/en/;
 /50 https://docs.djangoproject.com/en/dev/intro/tutorial01/;
 /51 http://www.tangowithdjango.com/;
 /52 http://www.codecademy.com/;

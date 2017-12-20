@@ -20,7 +20,7 @@ analytics.page("Chapter 7: Displaying Dynamic Information in the Templates");
         <div class="col-md-3 text-right hidden-sm-down" style="padding-right: 40px;">
                     <section class="sharing">
                         <div>
-                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebapp.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
+                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebbooks.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
 
                             <a class="facebook" href="#" onclick="
                                 window.open(
@@ -29,7 +29,7 @@ analytics.page("Chapter 7: Displaying Dynamic Information in the Templates");
                                 'width=626,height=436'); 
                                 return false;"><i class="fa fa-facebook"></i> 
                             </a>
-                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebapp.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
+                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebbooks.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
                         </div>
                     </section> 
             <h3>Next chapter:</h3>
@@ -108,7 +108,7 @@ we've added an import statement to the top of the page (that's the `from
 collection.models import Thing`).
 
 Then in the index view, we're using QuerySets (More info:
-[http://hellowebapp.com/18](http://hellowebapp.com/18)) to ask for all `Thing`
+[http://hellobks.com/18](http://hellobks.com/18)) to ask for all `Thing`
 objects from the database. 
 
 Head back to the template, where we were having fun with template tags before.
@@ -244,7 +244,7 @@ things = Thing.objects.all().order_by('?')
 {% filter markdown %}
 This is just an overview of the basic queries we can make with Django. For more
 (a lot more, but it's pretty interesting), check out Django's documentation of
-QuerySets: [http://hellowebapp.com/18](http://hellowebapp.com/18).
+QuerySets: [http://hellobks.com/18](http://hellobks.com/18).
 
 Before you forget, change the query in your view back to grabbing all objects:
 

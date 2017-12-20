@@ -20,7 +20,7 @@ analytics.page("Chapter 5: Fun With Template Tags");
         <div class="col-md-3 text-right hidden-sm-down" style="padding-right: 40px;">
                     <section class="sharing">
                         <div>
-                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebapp.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
+                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebbooks.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
 
                             <a class="facebook" href="#" onclick="
                                 window.open(
@@ -29,7 +29,7 @@ analytics.page("Chapter 5: Fun With Template Tags");
                                 'width=626,height=436'); 
                                 return false;"><i class="fa fa-facebook"></i> 
                             </a>
-                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebapp.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
+                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebbooks.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
                         </div>
                     </section> 
             <h3>Next chapter:</h3>
@@ -418,7 +418,7 @@ which was passed into the template.</p>
 Django’s templates also allow you to use basic logic similar to Python's within
 the templates — most importantly, *if-else statements* and *for loops*. (Can’t
 remember what these are? Refer to Learn Python The Hard Way
-([http://hellowebapp.com/13](http://hellowebapp.com/13)) for a refresher.)
+([http://hellobks.com/13](http://hellobks.com/13)) for a refresher.)
 
 Check out an *if-else statement* in action:
 {% endfilter %}
@@ -455,7 +455,7 @@ And another example:
 
 {% filter markdown %}
 Django also has a lot of fun template tags
-([http://hellowebapp.com/14](http://hellowebapp.com/14)). For example, if you
+([http://hellobks.com/14](http://hellobks.com/14)). For example, if you
 were passing in the number of dogs in your website, you could make a word plural
 if the number is more than one:
 {% endfilter %}
@@ -532,7 +532,7 @@ INSTALLED_APPS = (
 {% filter markdown %}
 Note that what was displayed as "6" before is now "six". Read more about
 humanize and the other fun options it has here:
-[http://hellowebapp.com/15](http://hellowebapp.com/15)
+[http://hellobks.com/15](http://hellobks.com/15)
 
 There are also a bunch of template tags that work on strings. Let’s change our
 view:
@@ -614,7 +614,7 @@ Perhaps it's too long of a name for you? Truncate it.
 I hope at this point you can see how Django’s template system has a bunch of
 powerful features that knock a static website out of the water. Check out the
 full list of included Django template tags here:
-[http://hellowebapp.com/14](http://hellowebapp.com/14). It gets even more fun
+[http://hellobks.com/14](http://hellobks.com/14). It gets even more fun
 when you have real dynamic data to work with, which is coming up in the next
 section.
 

@@ -20,7 +20,7 @@ analytics.page("Chapter 10: Adding a Registration Page");
         <div class="col-md-3 text-right hidden-sm-down" style="padding-right: 40px;">
                     <section class="sharing">
                         <div>
-                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebapp.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
+                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebbooks.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
 
                             <a class="facebook" href="#" onclick="
                                 window.open(
@@ -29,7 +29,7 @@ analytics.page("Chapter 10: Adding a Registration Page");
                                 'width=626,height=436'); 
                                 return false;"><i class="fa fa-facebook"></i> 
                             </a>
-                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebapp.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
+                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebbooks.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
                         </div>
                     </section> 
             <h3>Next chapter:</h3>
@@ -60,7 +60,7 @@ number of plugins that developers created to make others' (and our) lives
 easier.
 
 We're going to install a plugin called *django-registration-redux*
-([http://hellowebapp.com/23](http://hellowebapp.com/23)) that'll help us set up
+([http://hellobks.com/23](http://hellobks.com/23)) that'll help us set up
 everything we need for user registration.
 
 We're going to use pip to install. Make sure you're in your virtual environment,
@@ -97,7 +97,7 @@ INSTALLED_APPS = (
 {% filter markdown %}
 We'll also need to add more setting to our *settings.py* file, according to
 django-registration-redux's documentation
-([http://hellowebapp.com/24](http://hellowebapp.com/24)). Add this line at the
+([http://hellobks.com/24](http://hellobks.com/24)). Add this line at the
 bottom of *settings.py*:
 
 {% endfilter %}
@@ -189,7 +189,7 @@ LOGIN_REDIRECT_URL = "home"
 
 django-registration-redux also assumes that we have several templates already
 added to our app (More info:
-[http://hellowebapp.com/25](http://hellowebapp.com/25)). We're going to create a
+[http://hellobks.com/25](http://hellobks.com/25)). We're going to create a
 new folder in our templates directory to hold these new templates:
 {% endfilter %}
 

@@ -20,7 +20,7 @@ analytics.page("Chapter 13: Quick Hits: 404 Pages, requirements.txt, and Testing
         <div class="col-md-3 text-right hidden-sm-down" style="padding-right: 40px;">
                     <section class="sharing">
                         <div>
-                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebapp.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
+                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebbooks.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
 
                             <a class="facebook" href="#" onclick="
                                 window.open(
@@ -29,7 +29,7 @@ analytics.page("Chapter 13: Quick Hits: 404 Pages, requirements.txt, and Testing
                                 'width=626,height=436'); 
                                 return false;"><i class="fa fa-facebook"></i> 
                             </a>
-                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebapp.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
+                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebbooks.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
                         </div>
                     </section> 
             <h3>Next chapter:</h3>
@@ -264,7 +264,7 @@ homepage pops up, as well as testing whether a simple no-logic page (our "about"
 page) works as well. For each, we're "grabbing" the page and assigning it to the
 variable `r`, and then asserting whether the page's status code equals 200
 (which, as you know, means OK. More info:
-[http://hellowebapp.com/30](http://hellowebapp.com/30))
+[http://hellobks.com/30](http://hellobks.com/30))
 
 To run the test, head back to your command line and run `python manage.py test`,
 and you should see the below output:
@@ -338,7 +338,7 @@ Destroying test database for alias 'default'...
 {% filter markdown %}
 
 Nifty, right? Make sure to fix the typo and commit your work. Read more about
-Django tests here: [http://hellowebapp.com/31](http://hellowebapp.com/31)
+Django tests here: [http://hellobks.com/31](http://hellobks.com/31)
 
 Get into the practice of running your tests often, and especially before
 deploying your web app live. Might save your bacon! 
