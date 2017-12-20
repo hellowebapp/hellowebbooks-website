@@ -20,7 +20,7 @@ analytics.page("Chapter 9: Forms.py Funsies");
         <div class="col-md-3 text-right hidden-sm-down" style="padding-right: 40px;">
                     <section class="sharing">
                         <div>
-                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebapp.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
+                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebbooks.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
 
                             <a class="facebook" href="#" onclick="
                                 window.open(
@@ -29,7 +29,7 @@ analytics.page("Chapter 9: Forms.py Funsies");
                                 'width=626,height=436'); 
                                 return false;"><i class="fa fa-facebook"></i> 
                             </a>
-                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebapp.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
+                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebbooks.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
                         </div>
                     </section> 
             <h3>Next chapter:</h3>
@@ -185,7 +185,7 @@ class ThingForm(ModelForm):
 
 A part of Django's "magic" is the ability to create forms directly from your
 model — thus, the *ModelForm* (More info:
-[http://hellowebapp.com/20](http://hellowebapp.com/20)). We just need to tell it
+[http://hellobks.com/20](http://hellobks.com/20)). We just need to tell it
 which model to base itself on, as well as (optionally) which fields we want it
 to include. This way we don't allow updating of the slug in the form because it
 should be set automatically from the `Thing` name.
@@ -236,14 +236,14 @@ A couple of things to note:
 * What's that whole `{% verbatim %}{% csrf_token %}{% endverbatim %}` stuff? Django requires this added to
     every form that submits via POST. Long story short, it's *Cross Site Request
     Forgery* protection (More info:
-    [http://hellowebapp.com/21](http://hellowebapp.com/21)) that ships with
+    [http://hellobks.com/21](http://hellobks.com/21)) that ships with
     Django. The website will complain if you don't have it because it's a
     security measure.
 * Adding `.as_p` to our form variable is optional — it'll render the form fields
     wrapped in `<p>` tags. You can also do `.as_ul` (wrapped in `<li>` tags,
     you'll still need to add the surrounding `<ul>` tag) or as `.as_table`
     (you'll still need to add surrounding `<table>` tags.) Read more about that
-    here: [http://hellowebapp.com/22](http://hellowebapp.com/22).
+    here: [http://hellobks.com/22](http://hellobks.com/22).
 
 To make it easy to access this page, add a link to this page from our object
 view:

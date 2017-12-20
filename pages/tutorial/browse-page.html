@@ -20,7 +20,7 @@ analytics.page("Chapter 12: Setting Up Basic Browse Pages");
         <div class="col-md-3 text-right hidden-sm-down" style="padding-right: 40px;">
                     <section class="sharing">
                         <div>
-                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebapp.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
+                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebbooks.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
 
                             <a class="facebook" href="#" onclick="
                                 window.open(
@@ -29,7 +29,7 @@ analytics.page("Chapter 12: Setting Up Basic Browse Pages");
                                 'width=626,height=436'); 
                                 return false;"><i class="fa fa-facebook"></i> 
                             </a>
-                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebapp.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
+                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebbooks.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
                         </div>
                     </section> 
             <h3>Next chapter:</h3>
@@ -56,7 +56,7 @@ web app contains is by going to your homepage. Let's set up a basic browse page.
 ***Note:** We won't be setting up text search, like Google, due to it being way
 more complex and beyond the scope of this book. If you're interested in learning
 more about how to do this, check out Haystack
-([http://hellowebapp.com/28](http://hellowebapp.com/28)).*
+([http://hellobks.com/28](http://hellobks.com/28)).*
 
 As we only have a few fields on our model, let's build a page that just lists
 every `Thing` we have by name.
@@ -129,7 +129,7 @@ do, whether we are passing something in or not.
 
 We're also using `name__istartswith`, another queryset filter like `contains`
 which we used before (More info:
-[http://hellowebapp.com/29](http://hellowebapp.com/29)). Note that we don't
+[http://hellobks.com/29](http://hellobks.com/29)). Note that we don't
 *have* to use a single letter to search — this code will work whether you
 searched for 'a' or 'hello', grabbing everything in your database that starts
 with your query.

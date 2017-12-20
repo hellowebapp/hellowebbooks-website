@@ -20,7 +20,7 @@ analytics.page("Chapter 15: Deploying Your Web App");
         <div class="col-md-3 text-right hidden-sm-down" style="padding-right: 40px;">
                     <section class="sharing">
                         <div>
-                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebapp.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
+                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebbooks.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
 
                             <a class="facebook" href="#" onclick="
                                 window.open(
@@ -29,7 +29,7 @@ analytics.page("Chapter 15: Deploying Your Web App");
                                 'width=626,height=436'); 
                                 return false;"><i class="fa fa-facebook"></i> 
                             </a>
-                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebapp.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
+                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebbooks.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
                         </div>
                     </section> 
             <h3>Next chapter:</h3>
@@ -56,7 +56,7 @@ steps in order to launch your website on Heroku, which is the easiest-to-use
 hosting solution, but the steps here are still going to be slightly complicated.
 Stick with it, it'll be worth it. If you get stuck, head to the Hello Web App
 discussion forum for help:
-[http://discuss.hellowebapp.com](http://discuss.hellowebapp.com)
+[http://discuss.hellobks.com](http://discuss.hellobks.com)
 
 In order to use Heroku, we'll need to install some extra utilities and set up
 some extra files. After everything is set up, you can continue to develop
@@ -69,7 +69,7 @@ don't play nicely together.*
 ## Setting up Heroku
 
 You'll first need to create a free account with Heroku
-([http://hellowebapp.com/32](http://hellowebapp.com/32)), and eventually end up
+([http://hellobks.com/32](http://hellobks.com/32)), and eventually end up
 at your dashboard:
 {% endfilter %}
 
@@ -79,7 +79,7 @@ at your dashboard:
 
 {% filter markdown %}
 Click on the Python button, and Heroku will prompt you to install the Heroku
-Toolbelt  ([http://hellowebapp.com/33](http://hellowebapp.com/33)), which lets
+Toolbelt  ([http://hellobks.com/33](http://hellobks.com/33)), which lets
 you log in to Heroku and run other Heroku commands from your command line. The
 next page of instructions will instruct you to clone an existing project to
 learn deployment - ignore these and just move on below. 
@@ -203,7 +203,7 @@ A "Procfile" is something Heroku defined to let users run all kinds of different
 applications on their platform. Way back when, you could only run Ruby
 applications on Heroku, but thanks to the Procfile you can run your Django
 application there too (More info:
-[http://hellowebapp.com/34](http://hellowebapp.com/34)).
+[http://hellobks.com/34](http://hellobks.com/34)).
 
 Let's make a Procfile in our top level directory (the one with *manage.py*) to
 tell Heroku how to run our app: 
@@ -411,7 +411,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 We're basically copy and pasting directly from Heroku's documentation on how to
 create a PostgreSQL database (More info:
-[http://hellowebapp.com/35](http://hellowebapp.com/35)).
+[http://hellobks.com/35](http://hellobks.com/35)).
 
 We also need to tell Heroku to use this settings file instead. Paste this into
 your command line (make sure you're in the same folder as *manage.py*):

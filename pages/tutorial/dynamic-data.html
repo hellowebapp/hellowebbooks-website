@@ -20,7 +20,7 @@ analytics.page("Chapter 6: Adding Dynamic Data");
         <div class="col-md-3 text-right hidden-sm-down" style="padding-right: 40px;">
                     <section class="sharing">
                         <div>
-                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebapp.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
+                            <a class="twitter" href="http://twitter.com/home/?status={{ title }} https://hellowebbooks.com/{{ path|cut:".html" }}/ (via @hellowebapp)"><i class="fa fa-twitter"></i></a>
 
                             <a class="facebook" href="#" onclick="
                                 window.open(
@@ -29,7 +29,7 @@ analytics.page("Chapter 6: Adding Dynamic Data");
                                 'width=626,height=436'); 
                                 return false;"><i class="fa fa-facebook"></i> 
                             </a>
-                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebapp.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
+                            <a class="mail" href="mailto:?subject={{ title }}&amp;body=Here's the link: https://hellowebbooks.com/{{ path|cut:".html" }}/"><i class="fa fa-envelope"></i></a>
                         </div>
                     </section> 
             <h3>Next chapter:</h3>
@@ -57,7 +57,7 @@ basically, the *things* in our *collection*.
 ## Your local database
 
 Back when we were setting up Django (the instructions that live in our GitHub
-online repository: [http://hellowebapp.com/16](http://hellowebapp.com/16)),
+online repository: [http://hellobks.com/16](http://hellobks.com/16)),
 Django already created our database for us using *SQLite3*.
 
 We're using SQLite3 on our computer because it's quick and easy, but it's not an
@@ -142,7 +142,7 @@ As for the rest of the model, this is basically what we're defining:
 * A *description* field with a text field (which doesn't require a limit — think
     of these like HTML forms, such `<input>`s versus `<textareas>`.)
 * A *slug* field using Django's SlugField
-    ([http://hellowebapp.com/17](http://hellowebapp.com/17)) that'll add some
+    ([http://hellobks.com/17](http://hellobks.com/17)) that'll add some
     automatic checking to make sure it's always in the right format, and ensures
     uniqueness against other objects because we use it in each unique object's
     URL.
