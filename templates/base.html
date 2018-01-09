@@ -4,12 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="6qgsnShfjPXfY1ujiQBVnf-BK8dywp_atWp0bvz2Zb8" />
-    <meta name="google-site-verification" content="UCY_UR08IOIkky9jBQ0kYwnCGrrUA-S_nQ9IcD5cVOc" />
-    <meta name="p:domain_verify" content="082cf97b49f140588b479c2098ce4765"/>
-    {% block header %}
     <title>{% block title %}Hello Web Books{% endblock %}</title>
-    {% endblock header %}
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
     <link rel="apple-touch-icon" sizes="57x57" href="{% static '/images/favicons/apple-touch-icon-57x57.png' %}">
     <link rel="apple-touch-icon" sizes="60x60" href="{% static '/images/favicons/apple-touch-icon-60x60.png' %}">
@@ -26,6 +21,8 @@
     <link rel="icon" type="image/png" href="{% static '/images/favicons/favicon-16x16.png' %}" sizes="16x16">
     <link rel="canonical" href="{{ CURRENT_PAGE.absolute_final_url }}" />
     <link rel="stylesheet" href="{% static '/scss/style.scss.css' %}?v=19">
+    {% block header %}
+    {% endblock header %}
     <!--
     /**
      * @license
@@ -61,6 +58,9 @@
     {% endblock %}
     }}();
     </script>
+    <meta name="google-site-verification" content="6qgsnShfjPXfY1ujiQBVnf-BK8dywp_atWp0bvz2Zb8" />
+    <meta name="google-site-verification" content="UCY_UR08IOIkky9jBQ0kYwnCGrrUA-S_nQ9IcD5cVOc" />
+    <meta name="p:domain_verify" content="082cf97b49f140588b479c2098ce4765"/>
 </head>
 
 {% block bodyclass %}
