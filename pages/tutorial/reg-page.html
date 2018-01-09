@@ -69,7 +69,7 @@ then type this into your command line:
 {% endfilter %}
 
 <pre><code class="sh">
-<span class="cmd">$</span> pip install django-registration-redux==1.3
+<span class="cmd">$</span> pip install django-registration-redux==2.0
 </code></pre>
 
 {% filter markdown %}
@@ -139,11 +139,11 @@ Head over to *urls.py* and add the lines indicated:
 {% endfilter %}
 
 <pre><code class="python">
-from django.conf.urls import url, <b>include</b>
+from django.conf.urls import path, <b>include</b>
 
-    <b>url(r'^accounts/', 
+    <b>path('accounts/', 
         include('registration.backends.simple.urls')),</b>
-    url(r'^admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
 </code></pre>
 
@@ -492,16 +492,18 @@ content.
 
 {% verbatim %}
 <pre><code class="markdown">
-{% autoescape off %}
-You're receiving this email because you requested a password
-reset. Please go to the following page and choose a new 
-password:
-{% block reset_link %}
-{{ protocol }}://localhost:8000{% url 
-    'django.contrib.auth.views.password_reset_confirm'
-    uidb64=uid token=token %}
-{% endblock %}
-Your username, in case you've forgotten: {{ user.username }}
+{% autoescape off %} You're receiving this email because you requested a
+password reset for your user account at {{ site_name }}.{% endblocktrans %}
+
+Please go to the following page and choose a new password: {% block reset_link
+%} {{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid
+token=token %} {% endblock %}
+
+Your username, in case you've forgotten: {{ user.get_username }}
+
+Thanks for using our site!
+
+The {{ site_name }} team
 {% endautoescape %}
 </code></pre>
 {% endverbatim %}
@@ -553,29 +555,29 @@ these URLs to your *urls.py*:
 
 <pre><code class="python">
     # the new password reset URLs
-    <b>url(r'^accounts/password/reset/$', 
+    <b>path('accounts/password/reset/', 
         password_reset,
         {'template_name':
         'registration/password_reset_form.html'},
         name="password_reset"),
-    url(r'^accounts/password/reset/done/$',
+    path('accounts/password/reset/done/',
         password_reset_done,
         {'template_name':
         'registration/password_reset_done.html'},
         name="password_reset_done"),
-    url(r'^accounts/password/reset/(?P&lt;uidb64&gt;[0-9A-Za-z]+)-(?P&lt;token&gt;.+)/$', 
+    path('accounts/password/reset/&lt;uidb64&gt;/&lt;token&gt;/', 
         password_reset_confirm,
         {'template_name':
         'registration/password_reset_confirm.html'},
         name="password_reset_confirm"),
-    url(r'^accounts/password/done/$', 
+    path('accounts/password/done/', 
         password_reset_complete,
         {'template_name':
         'registration/password_reset_complete.html'},
         name="password_reset_complete"),</b>
-    url(r'^accounts/',
+    path('accounts/',
         include('registration.backends.simple.urls')),
-    url(r'^admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
 </code></pre>
 
@@ -668,6 +670,11 @@ Paste the link into your browser to complete the password reset process:
 {% filter markdown %}
 Now you see how password resetting functionality is built into Django and just
 needs a few templates created to access it. 
+
+*One last thing* — we set up the templates to do a password update for logged in
+users (that's the *password_change* templates we set up before). Can you figure
+out how to add that yourself? Here's a hint:
+[hellobks.com/19](http://hellobks.com/19)
 
 Next chapter, we're going to tie these new users to objects in our database, so
 someone can create an account and a new object at the same time, as well as log

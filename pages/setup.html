@@ -83,24 +83,16 @@ way, the books won't go out of date as quickly!)</p>
 {% filter markdown %}
 Unfortunately, unlike making web pages with HTML, we need to install Python before our computers can run the files that we're building.
 
-Head over to these links to install Python 2.7 onto your computer:
+Head over to these links to install Python 3 onto your computer:
 
-* [Mac OSX](https://github.com/limedaring/HelloWebApp/blob/master/installation-instructions/python-installation-mac.md)
-* [Windows](https://github.com/limedaring/HelloWebApp/blob/master/installation-instructions/python-installation-windows.md)
-* [Linux](http://docs.python-guide.org/en/latest/starting/install/linux/)
+* [Mac OSX](http://docs.python-guide.org/en/latest/starting/install3/osx/)
+* [Windows](http://docs.python-guide.org/en/latest/starting/install3/win/)
+  * Also install [Git for Windows](https://git-for-windows.github.io/) to give yourself the ability to use UNIX commands used in the books (like `touch`) in your command line.
+* [Linux](http://docs.python-guide.org/en/latest/starting/install3/linux/)
 
-Windows users, make sure you follow the instructions to install [Git for Windows](https://git-for-windows.github.io/) to give yourself the ability to use UNIX commands used in the books (like `touch`) in your command line.
+(Having trouble? Ask questions on the [Hello Web App Discussion Forum](http://discuss.hellowebapp.com/).)
 
 {% endfilter %}
-        </div>
-        <div class="col-md-3 col-md-pull-9 text-right" style="padding-right: 40px;">
-            <p><small style="display:block"><i>Why Python 2.7 and not Python 3+? This is beginner material and while a lot of projects have been ported to Python 3, I prefer to teach Python 2.7 first. If you're experienced and already know the differences between 2 and 3, feel free to use Python 3+.</i></small></p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-9 col-md-offset-3">
-
 <h3 id="install-pip">Do you have pip installed?</h3>
 
 {% filter markdown %}
@@ -222,7 +214,7 @@ environment is activated:
 {% endfilter %}
 
 <pre><code class="sh">
-<span class="cmd">$</span> pip install Django==1.9.6
+<span class="cmd">$</span> pip install Django==2.0
 </code></pre>
 
 {% filter markdown %}
@@ -272,8 +264,6 @@ here](https://github.com/limedaring/HelloWebApp/tree/master/git-tips).
 
 
 {% filter markdown %}
-
-
 ### Start your Django project
 
 We installed Django, now we can use Django to build all the starting files we
@@ -445,7 +435,7 @@ Validating models...
 
 0 errors found
 March 26, 2014 - 15:50:53
-Django version 1.7.8, using settings 'mysite.settings'
+Django version 2.0, using settings 'mysite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 </code></pre>

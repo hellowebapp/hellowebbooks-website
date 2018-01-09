@@ -77,11 +77,18 @@ class Thing(models.Model):
     description = models.TextField()
     slug = models.SlugField(unique=True)
     # the new line we're adding
-    <b>user = models.OneToOneField(User, blank=True, null=True)</b>
+    <b>user = models.OneToOneField(User, on_delete=models.CASCADE, 
+        blank=True, null=True)</b>
 </code></pre>
 
 {% filter markdown %}
-We're in a tiny bit of a pickle. We're saying that each `Thing` needs to have a
+We're creating a new database row for our `Thing`: A `OneToOneField` associated
+with `User` (an aptly named field that'll associate only one `User` to one
+`Thing`), which can be empty (the `blank=True` and `null=True` bits), and when
+a `User` is deleted, the associated `Thing` will be deleted too (the
+`on_delete=models.CASCADE` bit).
+
+Now we're in a tiny bit of a pickle. We're saying that each `Thing` needs to have a
 unique `User`. Remember the migrations stuff we did earlier? We'll need to
 migrate the database to this new schema. Visualize a spreadsheet of `Thing`s
 with all their attributes — we need to add a new column for the `Thing`'s
@@ -105,7 +112,7 @@ Migrations for 'collection':
 </code></pre>
 
 {% filter markdown %}
-And then apply the migration...
+Then apply the migration...
 {% endfilter %}
 
 <pre><code class="sh">
@@ -141,14 +148,14 @@ First, add a couple new URLs to our *urls.py* file:
 <b>from collection.backends import MyRegistrationView</b>
 
 # add this to your URL definitions
-<b>url(r'^accounts/register/$', 
+<b>path('accounts/register/', 
     MyRegistrationView.as_view(),
     name='registration_register'),
-url(r'^accounts/create_thing/$', views.create_thing, 
+path('accounts/create_thing/', views.create_thing, 
     name='registration_create_thing'),</b>
-url(r'^accounts/', 
+path('accounts/', 
     include('registration.backends.default.urls')),
-url(r'^admin/', admin.site.urls),
+path('admin/', admin.site.urls),
 </code></pre>
 
 {% filter markdown %}
@@ -267,10 +274,9 @@ from registration.backends.simple.views import RegistrationView
 # my new registration view, subclassing RegistrationView
 # from our plugin
 class MyRegistrationView(RegistrationView):
-    def get_success_url(self, request, user):
-        # the named URL that we want to redirect to after
-        # successful registration
-        return ('registration_create_thing')
+    # the named URL that we want to redirect to after
+    # successful registration
+    success_url = 'registration_create_thing'
 </code></pre>
 
 {% filter markdown %}
@@ -376,17 +382,9 @@ doing is checking the `Thing` we're grabbing the edit page for, and creating a
 instance. You, as admin, can still update/edit info for your users from your
 admin panel, but this prevents users from editing other users' information. 
 
-Our longest, most intense chapter yet! I hope this chapter gave you a better
-idea on how you can extend open-source plugins, update them to satisfy your
-needs, and how to keep data secure on your website. 
-
-*One last thing* — we set up the templates to do a password update for logged
-in users (that's the *password_change* templates we set up before). Can you
-figure out how to add that yourself?
-
-([Here's a walkthrough if you can't figure it out!](https://hellowebbooks.com/news/tutorial-password-change-views/))
-
-Commit your work before moving forward!
+I hope this chapter gave you a better idea on how you can extend open-source
+plugins, update them to satisfy your needs, and how to keep data secure on your
+website. Commit your work before moving forward!
 {% endfilter %}
 
 {% include 'includes/tutorial-footer.html' with github="https://github.com/hellowebapp/hellowebapp-code/tree/chapter-11" nextname="Setting Up Basic Browse Pages" nextlink="/tutorial/browse-page.html" prevname="Adding a Registration Page" prevlink="/tutorial/reg-page.html" title="Associating Users with Objects" path="/tutorial/user-objects.html" %}

@@ -56,8 +56,8 @@ basically, the *things* in our *collection*.
 
 ## Your local database
 
-Back when we were setting up Django (the instructions that live in our GitHub
-online repository: [http://hellobks.com/16](http://hellobks.com/16)),
+Back when we were setting up Django (the instructions that live in on the Hello
+Web Books website: [http://hellobks.com/16](http://hellobks.com/16)),
 Django already created our database for us using *SQLite3*.
 
 We're using SQLite3 on our computer because it's quick and easy, but it's not an
@@ -180,7 +180,7 @@ And this is what you should see as a result:
 
 <pre><code class="sh">
 Migrations for 'collection':
-  0001_initial.py:
+  collection/migrations/0001_initial.py
     - Create model Thing
 </code></pre>
 
@@ -192,7 +192,7 @@ manage.py migrate` next:
 <pre><code class="sh">
 <span class="cmd">$</span> python manage.py migrate
 Operations to perform:
-  Apply all migrations: admin, contenttypes, collection, auth, sessions
+  Apply all migrations: admin, auth, collection, contenttypes, sessions
 Running migrations:
   Applying collection.0001_initial... OK
 </code></pre>

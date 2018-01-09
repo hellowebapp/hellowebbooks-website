@@ -65,23 +65,21 @@ and add the indicated line:
 *urls.py*
 {% endfilter %}
 
-{% comment %}CHECK ME {% endcomment %}
 <pre><code class="python">
 urlpatterns = [
-    url(r'^$', views.index, name='home'),
-    url(r'^about/$', 
+    path('', views.index, name='home'),
+    path('about/', 
         TemplateView.as_view(template_name='about.html'),
         name='about'),
-    url(r'^contact/$', 
+    path('contact/', 
         TemplateView.as_view(template_name='contact.html'),
         name='contact'),
-    url(r'^things/(?P&lt;slug&gt;[-\w]+)/$', views.thing_detail,
+    path('things/&lt;slug&gt;/', views.thing_detail,
         name='thing_detail'),
     # new line we're adding!
-    <b>url(r'^things/(?P&lt;slug&gt;[-\w]+)/edit/$', 
-        views.edit_thing,
+    <b>path('things/&lt;slug&gt;/edit/', views.edit_thing,
         name='edit_thing'),</b>
-    url(r'^admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
 </code></pre>
 
@@ -297,7 +295,7 @@ What's up with that? It's actually quite smart — if this page was on the
 Internet with people linking to it, and the slug (ergo the URL) changed, all of
 the links would break. Django, by default, keeps the slugs the same as when they
 were created to make sure all external links continue to work. You can manually
-override this in your admin, however.*
+change the slugs in your admin if you'd like to update them to match.*
 
 {% endfilter %}
 

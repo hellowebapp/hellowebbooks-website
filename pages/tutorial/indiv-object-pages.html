@@ -65,41 +65,34 @@ line:
 
 <pre><code class="python">
 urlpatterns = [
-    url(r'^$', views.index, name='home'),
-    url(r'^about/$', 
+    path('', views.index, name='home'),
+    path('about/', 
         TemplateView.as_view(template_name='about.html'),
         name='about'),
-    url(r'^contact/$', 
+    path('contact/', 
         TemplateView.as_view(template_name='contact.html'),
         name='contact'),
-    <b>url(r'^things/(?P&lt;slug&gt;[-\w]+)/$', views.thing_detail, 
+    <b>path('things/&lt;slug&gt;/', views.thing_detail, 
         name='thing_detail'),</b>
-    url(r'^admin/', admin.site.urls),
+    path(r'^admin/', admin.site.urls),
 ]
 </code></pre>
 
 {% filter markdown %}
-Whoa, holy scary regular expression, right?
-
-To be honest, if you stopped me and asked me to write that line from scratch, I
-wouldn't be able to. I copy and paste it from project to project, and just
-update the small things that matter, leaving the regular expression ("regex")
-alone. Learning regex, while handy, is definitely not required for basic web app
-development (you can learn more here if you want, though:
-[http://hellobks.com/19](http://hellobks.com/19))
+Cool, we have a new way to define our URLs that have dynamic content!
 
 Going over the bits in the new line:
 
-* `url(`: Beginning of the url definition.
-* `r'^things/`: Basically says "starts with 'things.'" You can update this to
-    match your model, so `r'profiles/` or `r'surfboards/` for example. r stands
-    for "raw" and ensures the regex is executed literally.
-* `(?P<slug>[-\w]+)/$`: Basically means "matches any word and call it 'slug.'"
-    The only important part to remember is that you can change 'slug' for other
-    uses, but for this use, we should call it slug.
-* `'collection.views.thing_detail',`: We're using the soon-to-be-created
-    `thing_detail` view.
-* `, name='thing_detail'),`: And this URL is named `thing_detail`.
+* `path()`: The path definition.
+* `'things/<slug>/'`: This path will always start with "**things/**" and accepts
+any word after, which we will name "slug" and send it onto the view. The
+less-than and greater-than symbols indicates that variable content will be
+accepted. So this'll match paths like
+"**www.example.com/things/title-of-thing**",
+"**www.example.com/things/title-of-different-thing**", and any other slug of the
+objects in our database. 
+* `views.thing_detail`: We're using the soon-to-be-created `thing_detail` view.
+* `name='thing_detail`: And this URL is named `thing_detail`.
 
 ## Create the view
 

@@ -178,14 +178,14 @@ command line (make sure you're in your virtual environment first):
 
 <pre><code class="python">
 <span class="cmd">$</span> pip freeze
-Django==1.9.1
-django-registration-redux==1.3
-wsgiref==0.1.2
+Django==2.0
+django-registration-redux==2.0
+pytz==2017.3
 </code></pre>
 
 {% filter markdown %}
-We installed the first two, and the last (`wsgiref`) is something installed by
-virtualenv. To set up your *requirements.txt*, make sure you're in the top level
+We installed the first two, and the last (`pytz`) is something installed by
+Django. To set up your *requirements.txt*, make sure you're in the top level
 directory (the same one as *manage.py*) and pipe the contents of `pip freeze`
 into the new file:
 {% endfilter %}
@@ -199,11 +199,10 @@ Check out your new *requirements.txt* file, which should look like the below:
 
 *requirements.txt*
 {% endfilter %}
-
 <pre><code class="python">
-Django==1.9.1
-django-registration-redux==1.3
-wsgiref==0.1.2
+Django==2.0
+django-registration-redux==2.0
+pytz==2017.3
 </code></pre>
 
 {% filter markdown %}
@@ -213,9 +212,9 @@ requirements.txt`, and pip will let you know everything is installed already:
 
 <pre><code class="sh">
 <span class="cmd">$</span> pip install -r requirements.txt 
-Requirement already satisfied (use --upgrade to upgrade): Django==1.9.1 in ./venv/lib/python2.7/site-packages (from -r requirements.txt (line 1))
-Requirement already satisfied (use --upgrade to upgrade): django-registration-redux==1.3 in ./venv/lib/python2.7/site-packages (from -r requirements.txt (line 2))
-Requirement already satisfied (use --upgrade to upgrade): wsgiref==0.1.2 in /usr/local/Cellar/python/2.7.8_1/Frameworks/Python.framework/Versions/2.7/lib/python2.7 (from -r requirements.txt (line 3))
+Requirement already satisfied (use --upgrade to upgrade): Django==2.0 in ./venv/lib/python3.4/site-packages (from -r requirements.txt (line 1))
+Requirement already satisfied (use --upgrade to upgrade): django-registration-redux==2.0 in ./venv/lib/python3.4/site-packages (from -r requirements.txt (line 2))
+Requirement already satisfied (use --upgrade to upgrade): pytz==2017.3 in /usr/local/Cellar/python/3.4.8_1/Frameworks/Python.framework/Versions/3.4/lib/python3.4 (from -r requirements.txt (line 3))
 Cleaning up...
 </code></pre>
 

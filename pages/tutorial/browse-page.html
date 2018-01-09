@@ -55,8 +55,8 @@ web app contains is by going to your homepage. Let's set up a basic browse page.
 
 ***Note:** We won't be setting up text search, like Google, due to it being way
 more complex and beyond the scope of this book. If you're interested in learning
-more about how to do this, check out Haystack
-([http://hellobks.com/28](http://hellobks.com/28)).*
+more about how to do this, check out Haystack:
+[http://hellobks.com/28](http://hellobks.com/28).*
 
 As we only have a few fields on our model, let's build a page that just lists
 every `Thing` we have by name.
@@ -76,13 +76,13 @@ Back to the familiar URLs-views-templates routine. Add in this new line:
 
 <pre><code class="python">
 # our new browse flow
-<b>url(r'^browse/name/$',
+<b>path('browse/name/',
     views.browse_by_name, name='browse'),
-url(r'^browse/name/(?P&lt;initial&gt;[-\w]+)/$', 
+path('browse/name/&lt;initial&gt;/', 
     views.browse_by_name, name='browse_by_name'),</b>
 
 # password reset URLs
-url(r'^accounts/password/reset/$', 
+path('accounts/password/reset/', 
     password_reset,
     {'template_name': 'registration/password_reset_form.html'},
     name="password_reset"),
@@ -265,9 +265,9 @@ from django.views.generic import (TemplateView,
 
 <pre><code class="python">
 # our new redirect view
-<b>url(r'^browse/$', RedirectView.as_view(pattern_name='browse', permanent=True)),</b>
-url(r'^browse/name/$', views.browse_by_name, name='browse'),
-url(r'^browse/name/(?P&lt;initial&gt;[-\w]+)/$', views.browse_by_name, name='browse_by_name'),
+<b>path('browse/', RedirectView.as_view(pattern_name='browse', permanent=True)),</b>
+path('browse/name/', views.browse_by_name, name='browse'),
+path('browse/name/&lt;initial&gt;/', views.browse_by_name, name='browse_by_name'),
 </code></pre>
 
 {% filter markdown %}
@@ -282,9 +282,9 @@ redirect */things/* to our browse page as well:
 {% endfilter %}
 
 <pre><code class="python">
-<b>url(r'^things/$', RedirectView.as_view(pattern_name='browse', permanent=True)),</b>
-url(r'^things/(?P&lt;slug&gt;[-\w]+)/$', views.thing_detail, name='thing_detail'),
-url(r'^things/(?P&lt;slug&gt;[-\w]+)/edit/$', views.edit_thing, name='edit_thing'),
+<b>path('things/', RedirectView.as_view(pattern_name='browse', permanent=True)),</b>
+path('things/&lt;slug&gt;/', views.thing_detail, name='thing_detail'),
+path('things/&lt;slug&gt;/edit/$', views.edit_thing, name='edit_thing'),
 </code></pre>
 
 {% filter markdown %}

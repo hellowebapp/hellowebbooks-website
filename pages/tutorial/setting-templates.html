@@ -105,22 +105,24 @@ pre-existing comments, and add in the lines indicated:
 {% endfilter %}
 
 <pre><code class="python">
-from django.conf.urls import url
+from django.conf.urls import path
 from django.contrib import admin
 
 <b>from collection import views</b>
 
 urlpatterns = [
-    <b>url(r'^$', views.index, name='home'),</b>
-    url(r'^admin/', admin.site.urls),
+    <b>path('', views.index, name='home'),</b>
+    path('admin/', admin.site.urls),
 ]
 </code></pre>
 
 {% filter markdown %}
 There are essentially four parts to this new line:
-* `url()` encases the entry to indicate it's a URL entry.
-* `r'^$'`  is the beginning of the URL pattern. Might look confusing, but just
-    remember the pattern for now.
+* `path()` encloses the path information.
+* `''` is where we indicate what route we're targeting after the domain. Since
+  this is empty, we're targeting the homepage with our new template
+  (**"www.example.com"**). For comparison, you can see that the second line (provided
+  by Django) is targeting the admin path (**"www.example.com/admin"**).
 * `views.index` means that we’ll use the index view in views.py in our app
     `collection` (imported at the top). We’ll create this soon.
 * Last, `name='home'` is optional, but allows us to assign a name to this URL so
@@ -136,7 +138,7 @@ you, you can layout the URL definition like this:
 <pre><code class="python">
 urlpatterns = [
     url(
-        regex=r'^$', 
+        route=r'^$', 
         view=views.index,
         name='home',
     ),
@@ -149,10 +151,10 @@ This will help you keep track of which bit is what. I'm going to keep using the
 previous configuration in this book though, since it's how it's usually laid out
 in Django.
 
-Apologies if URL configuration sounds complicated. The most you need to remember
-here is that there is a regular expression for the path, then the view
-definition, and then we gave the URL a name. We can easily copy and paste from
-this template in the future for new URL entries.
+Apologies if URL configuration sounds complicated. The most you need to
+remember here is that there is path, then the view definition, and then we gave
+the URL a name. We can easily copy and paste from this template in the future
+for new URL entries.
 
 ## Creating your first view
 
