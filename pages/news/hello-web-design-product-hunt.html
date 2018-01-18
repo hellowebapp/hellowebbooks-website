@@ -1,0 +1,27 @@
+title: Hello Web Design is on Product Hunt today!
+# headline: An introduction
+excerpt: Hello Web Design is on Product Hunt today, check it out! It's a great place to find awesome new things, so it's an honor to be up for voting today.
+author: Tracy Osborn 
+featuredimage: /images/blog/2018/product-hunt.jpg
+date: 18-1-2018
+category: announcements
+featured: False
+
+
+{% extends "post.html" %}
+{% block body %}
+
+{% filter markdown %}
+[Hello Web Design is on Product Hunt today, check it out!](http://www.producthunt.com/posts/hello-web-design)
+{% endfilter %}
+
+<figure class="caption">
+    <a href="http://www.producthunt.com/posts/hello-web-design"><img src="/static/images/blog/2018/product-hunt.jpg" alt=""/></a>
+    <figcaption>Woohoo!</figcaption>
+</figure>
+
+{% filter markdown %}
+[Product Hunt](http://producthunt.com/) is a community celebrating new products and they're incredible in sending a ton of traffic and new users. It's a great place to find awesome new things, so it's an honor to be up for voting today. [If you get a chance, please check out the discussion too!](http://www.producthunt.com/posts/hello-web-design)
+{% endfilter %}
+
+{% endblock body %}
