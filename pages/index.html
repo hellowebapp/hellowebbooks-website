@@ -27,8 +27,6 @@ analytics.page("Homepage");
     <div class="container text-center">
         <h1>Build and Design Your Side Project</h1>
         <h2>Brief books and videos by Tracy Osborn to teach you how to build a web app, how to make better designs, or both.</h2>
-
-        <!--<a href="{% url '/tutorial/intro.html' %}" class="btn btn-secondary-outline" data-loc="Jumbotron">Read Online</a>-->
         <a href="{% url '/order.html' %}" class="btn btn-primary">Buy the books</a>
     </div>
 </div>
@@ -36,64 +34,28 @@ analytics.page("Homepage");
 <div class="container">
     <div class="row packages" id="packages">
         <h2 class="text-center">Three books released (so far!)</h2>
-        <div class="col-sm-4 text-center hwd">
+        <div class="col-sm-6 text-center">
             <img src="{% static '/images/icons/design.svg' %}" width="50" height="50" alt="" class="vertical-margin" />
-            <p class="small-sans"><small>Released November 7th, 2017</small></p>
             <h4><a href="{% url '/learn-design.html' %}">Hello Web Design</a></h4>
             <h5>Web design fundamentals and shortcuts.</h5>
             {% comment %}<img src="{% static '/images/ic.jpg' %}" alt="Hello Web Design" class="vertical-margin" />{% endcomment %}
             <p>Design shortcuts and fundamentals aimed for programmers, developers, marketers, and non-designers. Learn just enough design to be dangerous.</p>
             <p><a href="{% url '/learn-design.html' %}" class="btn btn-secondary btn-sm">More about <i>Hello Web Design</i></a></p>
         </div>
-        <div class="col-sm-4 text-center hwa">
+        <div class="col-sm-6 text-center">
             <img src="{% static '/images/icons/hwa.svg' %}" width="50" height="50" alt="" class="vertical-margin" />
-            <p class="small-sans"><small>Released May 4th, 2015</small></p>
             <h4><a href="{% url '/learn-django.html' %}">Hello Web App</a></h4>
             <h5>Learn how to build your first web app.</h5>
             {% comment %}<img src="{% static '/images/original.jpg' %}" alt="Hello Web App original" class="vertical-margin" />{% endcomment %}
             <p>Want to build your first web app? Hello Web App walks you through building and launching a simple web app using Python and Django.</p>
             <p><a href="{% url '/learn-django.html' %}" class="btn btn-secondary btn-sm">More about <i>Hello Web App</i></a></p>
         </div>
-        <div class="col-sm-4 text-center hwaic">
-            <img src="{% static '/images/icons/hwaic.svg' %}" width="50" height="50" alt="" class="vertical-margin" />
-            <p class="small-sans"><small>Released December 7th, 2015</small></p>
-            <h4><a href="{% url '/django-intermediate-concepts.html' %}">Hello Web App: <span style="font-size: 14px">Intermediate Concepts</span></a></h4>
-            <h5>Intermediate Django web app tutorials.</h5>
-            {% comment %}<img src="{% static '/images/ic.jpg' %}" alt="Hello Web App: Intermediate Concepts" class="vertical-margin" />{% endcomment %}
-            <p>Learn how to add more advanced features to your app, such as customer payments, user-uploaded images, proper database design, and more.</p>
-            <p><a href="{% url '/django-intermediate-concepts.html' %}" class="btn btn-secondary btn-sm">More about <i>Hello Web App: IC</i></a></p>
-        </div>
-    </div>
-
-    {% comment %}
-    <p class="text-center super-vertical-margin">
-        <a href="{% url '/order.html' %}" class="btn btn-primary">Buy the books</a>
-    </p>
-    {% endcomment %}
-
-</div>
-
-<div class="container-fluid photo-row">
-    <div class="row">
-        <div class="col-sm-3">
-            <img src="{% static 'images/products/both-books.jpg' %}" alt="Both Hello Web App books" />
-        </div>
-        <div class="col-sm-3">
-            <img src="{% static 'images/original/1.jpg' %}" alt="" />
-        </div>
-        <div class="col-sm-3">
-            <img src="{% static 'images/original/2.jpg' %}" alt="" />
-        </div>
-        <div class="col-sm-3">
-            <img src="{% static 'images/both/1.jpg' %}" alt="" />
-        </div>
-
     </div>
 </div>
 
 <div class="container">
     <div id="featured-post-list">
-        <h2 class="text-center">Recent news</h2>
+        <h2 class="text-center">Recent articles</h2>
         <ul class="list-unstyled row">
         {% for post in posts %}
             {% if post.featured == "True" %}

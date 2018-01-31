@@ -12,8 +12,8 @@ analytics.page("Blog Home");
         <!-- main col -->
         <div class="col-md-9">
             <div class="blog-home-header">
-              <h1><span class="highlight">Articles + Tutorials</span></h1>
-              <p>I often write tutorials on fun, beginner web stuff as well as about how I produce my books and videos.</p>
+              <h1><span class="highlight">Tutorials</span></h1>
+              <p>All of my tutorial posts.</p>
               <ul class="list-inline social-media">
                   <li><a href="//twitter.com/hellowebapp"><i class="fa fa-twitter"></i></a></li>
                   <li><a href="//facebook.com/hellowebapp"><i class="fa fa-facebook"></i></a></li>
@@ -25,7 +25,7 @@ analytics.page("Blog Home");
 
             <ul class="list-unstyled" id="archive-list">
                 {% for post in posts %}
-                {% if forloop.counter0 < 20 %}
+                {% if "tutorial" in post.category %}
                 {% include 'includes/post-link.html' with post=post %}
                 {% endif %}
                 {% endfor %}

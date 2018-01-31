@@ -11,17 +11,9 @@ analytics.page("Hello Web Design book landing page");
 
 {% block content %}
 <div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 hidden-sm-down">
-                <img src="{% static '/images/COVER.png' %}" alt="Hello Web Design book" />
-            </div>
-            <div class="col-md-8 col-sm-12 col-xs-12">
-              <h1>Learn how <br/>to design</h1>
-              <h2><strong>Learn basic design theory, design thinking, and shortcuts, aimed at developers, marketers, and non-designers.</strong> Available as eBooks, paperback, and videos.</h2>
-
-                <a rel="ck_modal" href="#ck_modal" class="btn btn-secondary-outline free-sample-link" data-loc="Jumbotron">Get the sample</a>
-                <a href="#hwd-packages" class="btn btn-cta">Order the book</a>
+              <h1>Learn design</h1>
+              <h2>Written for programmers and non-designers, this <strong>brief but information-packed course</strong> will help you feel comfortable doing design.</h2>
+                <a href="#hwd-packages" class="btn btn-primary">Jump to buying options</a>
             </div>
         </div>
     </div>
@@ -54,13 +46,6 @@ analytics.page("Hello Web Design book landing page");
 
 <div class="container">
     <div class="text-center">
-        {% comment %}
-        <h2 class="super-vertical-top-margin" style="margin-bottom:20px">As based on the presentation given around the world</h2>
-        <figure class="full video">
-            <iframe src="https://www.youtube.com/embed/lsPrhA_m6ss" frameborder="0" allowfullscreen></iframe>
-        </figure>
-        {% endcomment %}
-
         <blockquote>
             <p>This may have been my favorite talk of the convention. What I loved most was that Tracy didn't waste time talking about meaningless theory. She told me exactly why my website was shite to look at, and even more importantly, how to fix it.</p>
             <cite>&#8212; Mark Knapik at PHP[Tek] in May 2017</cite>
@@ -69,28 +54,9 @@ analytics.page("Hello Web Design book landing page");
 
 </div>
 
-<div class="container-fluid photo-row">
-    <div class="row">
-        <div class="col-sm-3">
-            <img src="{% static 'images/hwd/4.jpg' %}" alt="" />
-        </div>
-
-        <div class="col-sm-3">
-            <img src="{% static 'images/hwd/2.jpg' %}" alt="" />
-        </div>
-
-        <div class="col-sm-3">
-            <img src="{% static 'images/hwd/3.jpg' %}" alt="" />
-        </div>
-        <div class="col-sm-3">
-            <img src="{% static 'images/hwd/1.jpg' %}" alt="" />
-        </div>
-    </div>
-</div>
-
 <div class="container">
 
-    <div class="super-vertical-margin">
+    <div>
         <div class="text-center">
             <img src="{% static '/images/icons/lamp.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
             <h2 class="design-headline">What you'll learn</h2>
@@ -125,6 +91,7 @@ analytics.page("Hello Web Design book landing page");
         </div>
         <p><h3 class="text-center">And more!</h3></p>
     </div>
+
     <div class="table-of-contents content-block">
         <div class="text-center">
             <img src="{% static '/images/icons/toc.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
@@ -219,168 +186,6 @@ analytics.page("Hello Web Design book landing page");
                     </div>
                 </div>
             </div>
-
-                    {% comment %}UGH SHOPIFY
-                <div id='product-component-0fa3e8b6c67'></div>
-<script type="text/javascript">
-/*<![CDATA[*/
-
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: 'hello-web-books.myshopify.com',
-      apiKey: 'ef623232bb5e39d6b90c7b453d0135f4',
-      appId: '6',
-    });
-
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('product', {
-        id: [385464303648],
-        node: document.getElementById('product-component-0fa3e8b6c67'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "buttonDestination": "checkout",
-    "variantId": "all",
-    "width": "240px",
-    "contents": {
-      "img": false,
-      "imgWithCarousel": false,
-      "title": false,
-      "variantTitle": false,
-      "price": false,
-      "description": false,
-      "buttonWithQuantity": false,
-      "quantity": false
-    },
-    "text": {
-      "button": "Buy for $24.95"
-    },
-    "styles": {
-      "product": {
-        "text-align": "left",
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
-        }
-      },
-      "button": {
-        "background-color": "#d29a56",
-        ":hover": {
-          "background-color": "#bd8b4d"
-        },
-        ":focus": {
-          "background-color": "#bd8b4d"
-        }
-      }
-    }
-  },
-  "cart": {
-    "contents": {
-      "button": true
-    },
-    "styles": {
-      "button": {
-        "background-color": "#d29a56",
-        ":hover": {
-          "background-color": "#bd8b4d"
-        },
-        ":focus": {
-          "background-color": "#bd8b4d"
-        }
-      },
-      "footer": {
-        "background-color": "#ffffff"
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "variantTitle": false,
-      "buttonWithQuantity": true,
-      "button": false,
-      "quantity": false
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "background-color": "#d29a56",
-        ":hover": {
-          "background-color": "#bd8b4d"
-        },
-        ":focus": {
-          "background-color": "#bd8b4d"
-        }
-      }
-    }
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "background-color": "#d29a56",
-        ":hover": {
-          "background-color": "#bd8b4d"
-        },
-        ":focus": {
-          "background-color": "#bd8b4d"
-        }
-      },
-      "count": {
-        "color": "#ffffff",
-        ":hover": {
-          "color": "#ffffff"
-        }
-      },
-      "iconPath": {
-        "fill": "#ffffff"
-      }
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  }
-}
-      });
-    });
-  }
-})();
-/*]]>*/
-</script>{% endcomment %}
-
         </div>
 
         <div class="col-lg-3 col-md-4 package-container">
