@@ -33,8 +33,8 @@ analytics.page("Homepage");
 
 <div class="container">
     <div class="row packages" id="packages">
-        <h2 class="text-center">Three books released (so far!)</h2>
-        <div class="col-sm-6 text-center">
+        <h2 class="text-center">My books and courses:</h2>
+        <div class="col-sm-6 text-center hwd">
             <img src="{% static '/images/icons/design.svg' %}" width="50" height="50" alt="" class="vertical-margin" />
             <h4><a href="{% url '/learn-design.html' %}">Hello Web Design</a></h4>
             <h5>Web design fundamentals and shortcuts.</h5>
@@ -42,7 +42,7 @@ analytics.page("Homepage");
             <p>Design shortcuts and fundamentals aimed for programmers, developers, marketers, and non-designers. Learn just enough design to be dangerous.</p>
             <p><a href="{% url '/learn-design.html' %}" class="btn btn-secondary btn-sm">More about <i>Hello Web Design</i></a></p>
         </div>
-        <div class="col-sm-6 text-center">
+        <div class="col-sm-6 text-center hwa">
             <img src="{% static '/images/icons/hwa.svg' %}" width="50" height="50" alt="" class="vertical-margin" />
             <h4><a href="{% url '/learn-django.html' %}">Hello Web App</a></h4>
             <h5>Learn how to build your first web app.</h5>

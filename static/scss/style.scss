@@ -156,7 +156,7 @@ span.highlight { background-color: $highlight; }
 
 figure.video {
     position: relative;
-    padding-bottom: 90%; /* to fit original ks video */
+    padding-bottom: 50%; /* to fit original ks video */
     padding-top: 25px;
     height: 0;
     iframe {
@@ -242,6 +242,17 @@ figure.video {
     }
 }
 
+// courses page
+
+.courses h2 {
+    a {
+        color: $body-color;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
 // all posts page
 
 .blog-home-header {
@@ -255,7 +266,7 @@ figure.video {
 
 #archive-list {
     li {
-        margin-bottom: 3em;
+        margin-bottom: 4em;
         h2 {
             margin: 0;
             font-style: normal;
@@ -403,5 +414,53 @@ figure.video {
             color: $gray-light;
             padding-top: 0.5em;
         }
+    }
+}
+
+// setup and tutorials page
+#setup, #tutorial {
+    .toc li li {
+        font-style: italic;
+        font-size: 80%;
+        margin-top: 2px;
+    }
+    pre {
+        margin: 1em 0 1em -15px;
+        code {
+            background-color: #f7f7f7;
+            padding: 13px 15px !important;
+            span.cmd {
+                color: #999;
+                color: rgba(0,0,0,0.4);
+            }
+            .hljs-built_in { color: #4d4d4c !important; }
+        }
+    }
+    h3 {
+        font-size: 1.6rem;
+        margin: 1.5em 0 0.5em 0;
+    }
+    li code {
+        font-size: 80%;
+    }
+}
+
+// Misc
+
+.hwa .btn, .hwd .btn {
+    color: #fff;
+    border-width: 0;
+    font-weight: 600;
+}
+.hwa .btn { 
+    background-color: #d3bc1e;
+    &:hover {
+        background-color: darken(#d3bc1e, 10%);
+    }
+}
+.hwd .btn { 
+    background-color: $hwd;
+    &:hover {
+        background-color: darken($hwd, 10%);
     }
 }

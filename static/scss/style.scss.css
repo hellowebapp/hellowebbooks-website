@@ -3918,7 +3918,7 @@ span.highlight {
 
 figure.video {
   position: relative;
-  padding-bottom: 90%;
+  padding-bottom: 50%;
   /* to fit original ks video */
   padding-top: 25px;
   height: 0; }
@@ -3984,6 +3984,11 @@ figure.video {
 #order figure.video {
   padding-bottom: 50%; }
 
+.courses h2 a {
+  color: #333; }
+  .courses h2 a:hover {
+    text-decoration: none; }
+
 .blog-home-header p {
   margin-bottom: 0.5em; }
 
@@ -3991,7 +3996,7 @@ figure.video {
   margin-bottom: 3em; }
 
 #archive-list li {
-  margin-bottom: 3em; }
+  margin-bottom: 4em; }
   #archive-list li h2 {
     margin: 0;
     font-style: normal;
@@ -4104,3 +4109,41 @@ figure.video {
     font-size: 1rem;
     color: #818a91;
     padding-top: 0.5em; }
+
+#setup .toc li li, #tutorial .toc li li {
+  font-style: italic;
+  font-size: 80%;
+  margin-top: 2px; }
+
+#setup pre, #tutorial pre {
+  margin: 1em 0 1em -15px; }
+  #setup pre code, #tutorial pre code {
+    background-color: #f7f7f7;
+    padding: 13px 15px !important; }
+    #setup pre code span.cmd, #tutorial pre code span.cmd {
+      color: #999;
+      color: rgba(0, 0, 0, 0.4); }
+    #setup pre code .hljs-built_in, #tutorial pre code .hljs-built_in {
+      color: #4d4d4c !important; }
+
+#setup h3, #tutorial h3 {
+  font-size: 1.6rem;
+  margin: 1.5em 0 0.5em 0; }
+
+#setup li code, #tutorial li code {
+  font-size: 80%; }
+
+.hwa .btn, .hwd .btn {
+  color: #fff;
+  border-width: 0;
+  font-weight: 600; }
+
+.hwa .btn {
+  background-color: #d3bc1e; }
+  .hwa .btn:hover {
+    background-color: #a69418; }
+
+.hwd .btn {
+  background-color: #5d8b90; }
+  .hwd .btn:hover {
+    background-color: #496d71; }

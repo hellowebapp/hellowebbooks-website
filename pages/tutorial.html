@@ -11,7 +11,6 @@ analytics.page("Introduction");
 {% endblock %}
 
 {% block content %}
-<div class="jumbotron"></div>
 <div class="container">
         <div class="row">
         <div class="col-md-9 col-md-offset-3">
@@ -213,7 +212,7 @@ I hope you enjoy!
 {% block scripts %}
 {{ block.super }}
 {% include 'includes/newsletter-analytics.html' %}
-<link rel="stylesheet" href="{% static '/css/tomorrow.css' %}">
+<link rel="stylesheet" href="{% static '/css/tomorrow-night-blue.css' %}">
 <script src="{% static '/js/highlight.pack.js' %}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 {% endblock scripts %}
