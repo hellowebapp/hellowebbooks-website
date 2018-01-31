@@ -11,7 +11,7 @@ featured: True
 {% block body %}
 
 {% filter markdown %}
-*This tutorial is intended as a follow-on to my book, [Hello Web App](https://hellowebbooks.com/learn-django/), which teaches the basics of web app development — from ideation to deployment. [You can order the book here (starting at $14.95).](https://hellowebbooks.com/order/)*
+*This tutorial is intended as a follow-on to my book, _[Hello Web App](https://hellowebbooks.com/learn-django/)_, which teaches the basics of web app development — from ideation to deployment. [You can order the book here (starting at $14.95).](https://hellowebbooks.com/order/)*
 
 In this walkthrough, we're going to build something relatively easy: **a simple contact form where your users can enter their name, email address, and message**, and your website will email you the message (with the user's email as the reply-to.)
 
@@ -19,9 +19,8 @@ In this walkthrough, we're going to build something relatively easy: **a simple 
 
 Pretty much every new feature that'll go into your web app will go through the same process: set up the URL, set up the logic, set up the template. For the URL, we're going to set up a simple page under contact, so: *http://localhost.com/contact/*. Add the below to your *urls.py*:
 
-*urls.py*
 {% endfilter %}
-
+<p class="code-page">urls.py</p>
 <pre><code class="python">
 # add to the top
 from collection import views
@@ -37,9 +36,8 @@ urlpatterns = [
 
 Now in *views.py*, we need to start setting up the logic. Let's set it up to just display a form for now, and we'll do the rest of the logic for after the form is submitted in a bit:
 
-*views.py*
 {% endfilter %}
-
+<p class="code-page">views.py</p>
 <pre><code class="python">
 # add to the top
 from collection.forms import ContactForm
@@ -58,14 +56,12 @@ We're just grabbing a form (which we haven't defined yet) and passing it over in
 
 ## Set up the form
 
-In Hello Web App, we went over creating forms with `ModelForm`s, but skipped creating basic forms without a model. It's just as simple!
+In _[Hello Web App](https://hellowebbooks.com/learn-django/)_, we went over creating forms with `ModelForm`s, but skipped creating basic forms without a model. It's just as simple!
 
 In our *forms.py*, add the below form code:
 
-*forms.py*
-
 {% endfilter %}
-
+<p class="code-page">forms.py</p>
 <pre><code class="python">
 # make sure this is at the top if it isn't already
 from django import forms
@@ -82,17 +78,16 @@ class ContactForm(forms.Form):
 
 {% filter markdown %}
 
-We're going to define the fields we want in our form, which'll be just **the contact's name, their email, and what they're like to say to you.**
+We're going to define the fields we want in our form, which'll be just **the contact's name, their email, and what they'd like to say to you.**
 
 All those form fields were grabbed from [Django's Form fields documentation](https://docs.djangoproject.com/en/1.8/ref/forms/fields/), which is pretty easy to read to see what other fields are available. We're making all the form fields required, using an `EmailField` for the email so we can take advantage of the additional email formatting checks, and making the "content" field a larger `Textarea`.
 
 ## Create the template
 
-Now we need to create the *template.html* page to display the contact form on our website. We're going to extend the base layout we created in the Hello Web App tutorial, and then create the form using the form passed in from our view. 
+Now we need to create the *template.html* page to display the contact form on our website. We're going to extend the base layout we created in the _[Hello Web App](https://hellowebbooks.com/learn-django/)_ tutorial, and then create the form using the form passed in from our view. 
 
-*contact.html*
 {% endfilter %}
-
+<p class="code-page">contact.html</p>
 {% verbatim %}
 <pre><code class="django">
 {% extends 'layouts/base.html' %}
@@ -122,11 +117,10 @@ Nice! Now let's start adding the logic in the back end to handle the information
 
 ## Set up our local email server...
 
-This will be redundant for you if you've finished the Hello Web App tutorial. In case you haven't, all you need to do to set up a local email server is add these lines to the bottom of your *settings.py*:
-
-*settings.py*
+This will be redundant for you if you've finished the _[Hello Web App](https://hellowebbooks.com/learn-django/)_ tutorial. In case you haven't, all you need to do to set up a local email server is add these lines to the bottom of your *settings.py*:
 {% endfilter %}
 
+<p class="code-page">settings.py</p>
 <pre><code class="python">
 EMAIL_BACKEND =
   'django.core.mail.backends.console.EmailBackend' 
@@ -145,9 +139,8 @@ This tells Django to output the "email" to your console, where you ran your `pyt
 
 Let's fill out the rest of the email logic. Here's the view from before, now filled in:
 
-*views.py*
 {% endfilter %}
-
+<p class="code-page">views.py</p>
 {% verbatim %}
 <pre><code class="python">
 # new imports that go at the top of the file
@@ -221,9 +214,8 @@ def contact(request):
 
 Before we can test our logic, we need to create an email template. Our email template is going to be simple, just showing the sections that our user filled out. Create a new file in your templates directory (`touch contact_template.txt`) and fill it in with the info below:
 
-*contact_template.txt*
 {% endfilter %}
-
+<p class="code-page">contact_template.txt</p>
 {% verbatim %}
 <pre><code class="python">
 Contact Name:
@@ -244,9 +236,8 @@ In the screenshot of the form above, we can see that the labels of the form aren
 
 Django creates these names automatically from your field names, but we can set our own pretty label names in the form definition in *forms.py*. Update your code to the below:
 
-*forms.py*
 {% endfilter %}
-
+<p class="code-page">forms.py</p>
 <pre><code class="python">
 class ContactForm(forms.Form):
     contact_name = forms.CharField(required=True)
@@ -290,7 +281,7 @@ The local email server will output "emails" to your local server, so you can con
 
 You can do this by setting up something like [Sendgrid](https://sendgrid.com/) or [Mandrill](http://mandrill.com/) — freemium email servers where you should just need to sign up for an account, and set the details of your account in your settings.py. 
 
-[Sendgrid has a great short walkthrough here.](https://sendgrid.com/docs/Integrate/Frameworks/django.html) If you're at the point in Hello Web App where we've set up a production settings file, you can stick the email server stuff in there, and keep your local/test emails (using the Django console) in your normal *settings.py* file. This way you can "send emails" as you're developing your app, but you don't have to worry about going over the daily email limit that these email delivery products have in their freemium accounts.
+[Sendgrid has a great short walkthrough here.](https://sendgrid.com/docs/Integrate/Frameworks/django.html) If you're at the point in _[Hello Web App](https://hellowebbooks.com/learn-django/)_ where we've set up a production settings file, you can stick the email server stuff in there, and keep your local/test emails (using the Django console) in your normal *settings.py* file. This way you can "send emails" as you're developing your app, but you don't have to worry about going over the daily email limit that these email delivery products have in their freemium accounts.
 
 ## Things that could be improved
 
@@ -303,7 +294,7 @@ I mentioned above that we're, upon successful form submission, redirecting to ou
 
 You now have a working contact form that allows visitors to your web app to email you messages, and hopefully you learned some new skills about creating forms in Django and working with email.
 
-If you haven't taken a look at my book, [Hello Web App](https://hellowebbooks.com/learn-django/), teaching beginner web app development using Django yet, I highly encourage you to: [https://hellowebbooks.com/learn-django/](https://hellowebbooks.com/learn-django/])
+If you haven't taken a look at my book, _[Hello Web App](https://hellowebbooks.com/learn-django/)_, teaching beginner web app development using Django yet, I highly encourage you to: [https://hellowebbooks.com/learn-django/](https://hellowebbooks.com/learn-django/])
 
 Thanks everyone, and happy to answer any questions in the comments!
 {% endfilter %}
@@ -311,7 +302,7 @@ Thanks everyone, and happy to answer any questions in the comments!
 {% endblock body %}
 
 {% block scripts %}
-<link rel="stylesheet" href="{% static '/css/tomorrow.css' %}">
-<script async src="{% static '/js/highlight.pack.js' %}"></script>
+<link rel="stylesheet" href="{% static '/css/tomorrow-night-blue.css' %}">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 {% endblock scripts %}
