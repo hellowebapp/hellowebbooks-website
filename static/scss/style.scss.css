@@ -3863,15 +3863,25 @@ ul {
 
 pre {
   margin-bottom: 2em;
-  margin-top: -1em; }
+  margin-top: -1em;
+  overflow: initial; }
   pre code {
-    font-size: 1rem;
-    padding: 0 !important; }
+    font-size: 1rem; }
   pre code:first-line {
     line-height: 0px; }
 
 thead {
   font-weight: bold; }
+
+dt {
+  color: #111;
+  font-weight: normal;
+  font-size: 1.5rem;
+  font-style: italic; }
+
+dd {
+  margin-top: 0.5em;
+  margin-bottom: 2em; }
 
 .vertical-margin {
   margin-top: 1em;
@@ -3901,6 +3911,10 @@ span.highlight {
 .font-smoothing {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.code-page {
+  font-style: italic;
+  color: #666; }
 
 figure.video {
   position: relative;
@@ -3988,7 +4002,10 @@ figure.video {
         color: #498D90;
         text-decoration: none; }
   #archive-list li img {
-    border: 1px solid #e1e1e1; }
+    border: 1px solid #e1e1e1;
+    object-fit: cover;
+    height: 129px;
+    width: 100%; }
   #archive-list li aside.date, #archive-list li aside.category {
     display: inline-block; }
   #archive-list li aside.date {
@@ -4046,12 +4063,40 @@ figure.video {
   #post .top-meta .category {
     font-style: italic;
     font-size: 1rem; }
+    #post .top-meta .category a {
+      color: #666; }
 
 #post #post-body a {
   font-weight: 700; }
 
 #post #post-body img {
   border: 1px solid #e1e1e1; }
+
+#post #post-meta {
+  border-top: 1px solid #eceeef;
+  border-bottom: 1px solid #eceeef;
+  margin-bottom: 2em;
+  padding: 1.5em 0 1.3em 0;
+  color: #818a91;
+  font-size: 1rem; }
+  #post #post-meta span {
+    font-weight: bold;
+    width: 100px;
+    display: inline-block;
+    clear: left; }
+  #post #post-meta i {
+    margin-right: 5px; }
+  #post #post-meta #mc_embed_signup {
+    /* This says MC but has been converted to ConvertKit */
+    display: inline-block;
+    width: 300px;
+    vertical-align: top; }
+    #post #post-meta #mc_embed_signup form input[type="email"] {
+      padding: 0.1em 0.3em; }
+    #post #post-meta #mc_embed_signup form .btn-sm {
+      padding: 2px 6px 2px 6px;
+      position: relative;
+      top: 0px; }
 
 #post figure, #tutorial figure {
   margin: 1em 0 2em 0; }

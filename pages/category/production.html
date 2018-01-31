@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}Case Studies - {{ block.super }}{% endblock %}
+{% block title %}Production Posts - {{ block.super }}{% endblock %}
 
 {% block analytics %}
-analytics.page("Case Study Category");
+analytics.page("Production Category");
 {% endblock %}
 
 {% block content %}
@@ -12,8 +12,8 @@ analytics.page("Case Study Category");
         <!-- main col -->
         <div class="col-md-9">
             <div class="blog-home-header">
-              <h1><span class="highlight">Case Studies</span></h1>
-              <p>Recaps on how I run marketing, how launches go, that sort of thing.</p>
+              <h1><span class="highlight">Production</span></h1>
+              <p>Posts about how I produce my books, videos, and courses..</p>
               <ul class="list-inline social-media">
                   <li><a href="//twitter.com/hellowebapp"><i class="fa fa-twitter"></i></a></li>
                   <li><a href="//facebook.com/hellowebapp"><i class="fa fa-facebook"></i></a></li>
@@ -25,7 +25,7 @@ analytics.page("Case Study Category");
 
             <ul class="list-unstyled" id="archive-list">
                 {% for post in posts %}
-                {% if "casestudy" in post.category %}
+                {% if "production" in post.category %}
                 {% include 'includes/post-link.html' with post=post %}
                 {% endif %}
                 {% endfor %}

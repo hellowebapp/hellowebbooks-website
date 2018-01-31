@@ -98,15 +98,26 @@ ul { list-style-type: circle; }
 pre {
     margin-bottom: 2em;
     margin-top: -1em;
+    overflow: initial;
     code { 
         font-size: 1rem;
-        padding: 0 !important;
     }
     code:first-line { line-height: 0px; }
 }
 
 thead {
     font-weight: bold;
+}
+
+dt {
+    color: $headings-color;
+    font-weight: normal;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+dd {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
 }
 
 .vertical-margin {
@@ -136,6 +147,11 @@ span.highlight { background-color: $highlight; }
 .font-smoothing {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.code-page {
+    font-style: italic;
+    color: #666;
 }
 
 figure.video {
@@ -254,6 +270,9 @@ figure.video {
         }
         img {
             border: 1px solid #e1e1e1;
+            object-fit: cover;
+            height: 129px;
+            width: 100%;
         }
         aside.date, aside.category {
             display: inline-block;
@@ -331,6 +350,7 @@ figure.video {
         .category { 
             font-style: italic;
             font-size: 1rem;
+            a { color: #666; }
         }
     }
     #post-body {
@@ -339,6 +359,37 @@ figure.video {
         }
         img {
             border: 1px solid #e1e1e1;
+        }
+    }
+    #post-meta {
+        border-top: 1px solid $gray-lighter;
+        border-bottom: 1px solid $gray-lighter;
+        margin-bottom: 2em;
+        padding: 1.5em 0 1.3em 0;
+        color: $gray-light;
+        font-size: 1rem;
+        span {
+            font-weight: bold;
+            width: 100px;
+            display: inline-block;
+            clear: left;
+        }
+        i { margin-right: 5px; }
+        #mc_embed_signup {
+            /* This says MC but has been converted to ConvertKit */
+            display: inline-block;
+            width: 300px;
+            vertical-align: top;
+            form {
+                //position: relative;
+                //top: -15px;
+                input[type="email"] { padding: 0.1em 0.3em; }
+                .btn-sm {
+                    padding: 2px 6px 2px 6px;
+                    position: relative;
+                    top: 0px;
+                }
+            }
         }
     }
 }
