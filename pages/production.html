@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - {{ block.super }}{% endblock %}
+
+{% block analytics %}
+analytics.page("Blog Home");
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <!-- main col -->
+        <div class="col-md-9">
+            <div class="blog-home-header">
+              <h1><span class="highlight">Production</span></h1>
+              <p>My writing on how I produce my books, videos, and courses.</p>
+              <ul class="list-inline social-media">
+                  <li><a href="//twitter.com/hellowebapp"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="//facebook.com/hellowebapp"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="//github.com/hellowebapp"><i class="fa fa-github"></i></a></li>
+                  <li><a href="mailto:tracy@hellowebapp.com"><i class="fa fa-envelope"></i></a></li>
+                  <li><a href="/rss.xml"><i class="fa fa-rss"></i></a></li>
+              </ul>
+            </div>
+
+            <ul class="list-unstyled" id="archive-list">
+                {% for post in posts %}
+                {% if "production" in post.category %}
+                {% include 'includes/post-link.html' with post=post %}
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="col-md-3">
+            <div class="sidebar-twitter-follow">
+              <a href="https://twitter.com/hellowebbooks?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @hellowebbooks</a>
+              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+            <div class="sub-categories">
+                <h2>Categories</h2>
+                <h3>Case Studies</h3>
+                <ul class="list-unstyled">
+                {% for post in posts %}
+                    {% if post.category == "casestudy" %}
+                    <li><a href='{{ post.page.link_url|cut:".html" }}/'>{{ post.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+                <h3>Tutorials</h3>
+                <ul class="list-unstyled">
+                {% for post in posts %}
+                    {% if post.category == "tutorial" %}
+                    <li><a href='{{ post.page.link_url|cut:".html" }}/'>
+                        {{ post.title|cut:"Tutorial: " }}
+                    </a></li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+                <h3>Interviews</h3>
+                <ul class="list-unstyled">
+                {% for post in posts %}
+                    {% if post.category == "interview" %}
+                    <li><a href='{{ post.page.link_url|cut:".html" }}/'>
+                        {{ post.title }}
+                    </a></li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+                <h3>Production</h3>
+                <ul class="list-unstyled">
+                {% for post in posts %}
+                    {% if post.category == "production" %}
+                    <li><a href='{{ post.page.link_url|cut:".html" }}/'>
+                        {{ post.title }}
+                    </a></li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+                <h3>Design</h3>
+                <ul class="list-unstyled">
+                {% for post in posts %}
+                    {% if post.category == "design" %}
+                    <li><a href='{{ post.page.link_url|cut:".html" }}/'>
+                        {{ post.title }}
+                        {% comment %}<h2>{{ post.excerpt }}</h2>{% endcomment %}
+                    </a></li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+                <h2>Other links</h2>
+                <ul class="list-unstyled">
+                    <li><a href="{% url '/archive.html' %}">All articles</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'includes/newsletter.html' %}
+{% endblock content %}
+
+{% block scripts %}
+{{ block.super }}
+{% include 'includes/newsletter-analytics.html' %}
+{% endblock scripts %}

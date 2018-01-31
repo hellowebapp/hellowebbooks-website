@@ -12,12 +12,9 @@ analytics.page("Original book landing page");
 {% block content %}
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>Build your first web app</h1>
-        <h2>Design and build your own custom web app using Python and Django. <br/>
-            Tailored for non-programmers, written by a designer.</h2>
-
-        <a rel="ck_modal" href="#ck_modal" class="btn btn-secondary-outline free-sample-link" data-loc="Jumbotron">Free Sample</a>
-        <a href="{% url '/order.html' %}" class="btn btn-primary">Get the book</a>
+        <h1>Learn how to build a web app</h1>
+        <h2><strong>Design and build your own custom web app using Python and Django.</strong> Tailored for non-programmers, written by a designer.</h2>
+        <a href="{% url '/order.html' %}" class="btn btn-primary">Jump to buying options</a>
     </div>
 </div>
 
@@ -31,26 +28,6 @@ analytics.page("Original book landing page");
         <p>Hello Web App teaches the basics of web app programming using Python and Django. In less than 150 pages, you'll learn how to choose a project, set up a database, create your templates, and launch your app.</p>
 
         <p><a href="{% url '/tutorial.html' %}" class="btn btn-secondary free-sample-link" data-loc="After intro">Read the book online for free</a></p>
-    </div>
-    
-</div>
-
-<div class="container-fluid photo-row">
-    <div class="row">
-        <div class="col-sm-3">
-            <img src="{% static 'images/original/1.jpg' %}" alt="" />
-        </div>
-
-        <div class="col-sm-3">
-            <img src="{% static 'images/original/2.jpg' %}" alt="" />
-        </div>
-
-        <div class="col-sm-3">
-            <img src="{% static 'images/original/3.jpg' %}" alt="" />
-        </div>
-        <div class="col-sm-3">
-            <img src="{% static 'images/original/4.jpg' %}" alt="" />
-        </div>
     </div>
 </div>
 

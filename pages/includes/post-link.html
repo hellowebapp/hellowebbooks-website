@@ -1,0 +1,22 @@
+<li class="row">
+    {% if post.featuredimage %}
+    <div class="thumbnail col-sm-3">
+        <a href="{{ post.page.link_url|cut:".html" }}">
+            <img src="{% static post.featuredimage %}" alt="{{ post.title }}" />
+        </a>
+    </div>
+    {% endif %}
+    <div class="col-sm-9">
+      <h2><a href='{{ post.page.link_url|cut:".html" }}/'>{{ post.title }}</a></h2>
+      <aside class="date small-sans">{{ post.date|date:"F j, Y" }}</aside>
+      <aside class="category">{% include 'includes/category-link.html' with category=post.category %}</aside>
+      {% if post.headline %}
+      <p>{{ post.headline }}</p>
+      {% endif %}
+      {% if post.excerpt %}
+      <p class="excerpt">{{ post.excerpt|truncatewords:50 }} <span class="readmore"><a href="{{ post.page.link_url|cut:".html" }}/">Read more...</a></span></p>
+      {% else %}
+      <p class="readmore"><a href="{{ post.page.link_url|cut:".html" }}/">Read more</a></p>
+      {% endif %}
+    </div>
+</li>
