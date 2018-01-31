@@ -45,10 +45,13 @@ analytics.page("Blog: {{ title }}");
           </section>
 
           <footer id="post-meta" class="clearfix">
+              <div class="vertical-margin">
+                <a href="https://twitter.com/hellowebbooks?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @hellowebbooks</a>
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+              </div>
+
               <div><span>Posted on </span> {{ date|date:"M j, Y" }}</div>
               <div><span>Written by</span> {{ author }}</div>
-              {% comment %}
-              {% endcomment %}
 
               <section class="sharing">
                   <div>
