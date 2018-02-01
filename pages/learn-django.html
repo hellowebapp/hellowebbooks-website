@@ -6,16 +6,14 @@ analytics.page("Original book landing page");
 {% endblock %}
 
 {% block bodyclass %}
-<body id="original"  class="book-pages">
+<body id="original"  class="product-page">
 {% endblock %}
 
 {% block content %}
 <div class="jumbotron">
-    <div class="container text-center">
-        <h1>Learn how to build a web app</h1>
-        <h2><strong>Design and build your own custom web app using Python and Django.</strong> Tailored for non-programmers, written by a designer.</h2>
-        <a href="{% url '/order.html' %}" class="btn btn-primary">Jump to buying options</a>
-    </div>
+    <h1><span class="hl"><span>Learn how to </span></span><span class="hl"><span>build a web app</span></span></h1>
+    <h2><strong>Design and build your own custom web app using Python and Django.</strong> Tailored for non-programmers, written by a designer.</h2>
+    <a href="{% url '/order.html' %}" class="btn btn-primary">Jump to buying options</a>
 </div>
 
 <div class="container">
