@@ -1785,30 +1785,30 @@ fieldset[disabled] a.btn {
     border-color: #dab238; }
 
 .btn-secondary {
-  color: #373a3c;
-  background-color: #fff;
-  border-color: #ccc; }
+  color: #daa520;
+  background-color: #fafad2;
+  border-color: #fafad2; }
   .btn-secondary:focus, .btn-secondary.focus, .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
-    color: #373a3c;
-    background-color: #e6e6e6;
-    border-color: #adadad; }
+    color: #daa520;
+    background-color: #f5f5a4;
+    border-color: #f4f49b; }
   .btn-secondary:hover {
-    color: #373a3c;
-    background-color: #e6e6e6;
-    border-color: #adadad; }
+    color: #daa520;
+    background-color: #f5f5a4;
+    border-color: #f4f49b; }
   .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
     background-image: none; }
   .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus,
   fieldset[disabled] .btn-secondary:focus,
   fieldset[disabled] .btn-secondary.focus {
-    background-color: #fff;
-    border-color: #ccc; }
+    background-color: #fafad2;
+    border-color: #fafad2; }
   .btn-secondary.disabled:hover, .btn-secondary:disabled:hover,
   fieldset[disabled] .btn-secondary:hover {
-    background-color: #fff;
-    border-color: #ccc; }
+    background-color: #fafad2;
+    border-color: #fafad2; }
 
 .btn-info {
   color: #fff;
@@ -1937,19 +1937,19 @@ fieldset[disabled] a.btn {
     border-color: #ead38e; }
 
 .btn-secondary-outline {
-  color: #ccc;
+  color: #fafad2;
   background-image: none;
   background-color: transparent;
-  border-color: #ccc; }
+  border-color: #fafad2; }
   .btn-secondary-outline:focus, .btn-secondary-outline.focus, .btn-secondary-outline:active, .btn-secondary-outline.active,
   .open > .btn-secondary-outline.dropdown-toggle {
     color: #fff;
-    background-color: #ccc;
-    border-color: #ccc; }
+    background-color: #fafad2;
+    border-color: #fafad2; }
   .btn-secondary-outline:hover {
     color: #fff;
-    background-color: #ccc;
-    border-color: #ccc; }
+    background-color: #fafad2;
+    border-color: #fafad2; }
   .btn-secondary-outline.disabled:focus, .btn-secondary-outline.disabled.focus, .btn-secondary-outline:disabled:focus, .btn-secondary-outline:disabled.focus,
   fieldset[disabled] .btn-secondary-outline:focus,
   fieldset[disabled] .btn-secondary-outline.focus {
