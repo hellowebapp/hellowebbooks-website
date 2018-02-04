@@ -12,199 +12,259 @@ analytics.page("Hello Web Design book landing page");
 {% block content %}
 <div class="jumbotron">
     <h1><span class="hl"><span>Learn design</span></span></h1>
-    <h2>Written for programmers and non-designers, this <strong>brief but information-packed course</strong> will help you feel comfortable doing design.</h2>
+    <h2>Written for programmers and non-designers, this <strong>brief but information-packed book and course</strong> will help you feel comfortable doing design.</h2>
     <a href="#hwd-packages" class="btn btn-primary">Jump to buying options</a>
 </div>
 
 <div class="container">
+  <hr/>
+
+  {# The introduction area #}
   <div class="row">
-    <div class="col-md-10 col-md-offset-1 text-center">
-      <img src="{% static '/images/icons/computer.png' %}" alt=""  width="70"/>
+    <div class="col-md-7">
+      {# <img src="{% static '/images/icons/computer.png' %}" alt=""  width="70"/> #}
       <h2>Design fundamentals and shortcuts for non-designers.</h2>
       <p>Beginner design books assume you want to become an expert designer. What if you want to learn just enough to complement your existing work? Hello Web Design will teach you the basics about design (no history!) and give you shortcuts <strong>so you can immediately become a better designer.</strong></p>
       <p>Raised <strong>over $22,000</strong> on <a href="https://www.kickstarter.com/projects/1868398473/hello-web-design-design-basics-for-non-designers/">Kickstarter</a> from over <strong>700</strong> backers. </p>
     </div>
+    <div class="col-md-5">
+      <img src="{% static '/images/hwd/mockup.jpg' %}" alt="Hello Web Design" />
+      {# some sort of pretty computer / video illustration goes here? #}
+    </div>
   </div>
 
   <hr/>
 
+  {# The video and features area #}
   <div class="row">
-    <div class="col-sm-6 col-md-4 col-md-offset-2">
+    <div class="col-md-8">
+      <figure class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Re_G20COq7s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </figure>
+    </div>
+    <div class="col-md-4">
+      <h3>Features include</h3>
+      <ul>
+        <li><b>17</b> videos and screencasts</li>
+        <li><b>164 page</b> eBook</li>
+        <li><b>Three eBook formats</b>: PDF, ePub, and .mobi/Kindle</li>
+        <li><b>Paperback included</b></li>
+        <li><b>Dozens of real-world examples</b></li>
+        <li><b>Everything you need</b> to start designing today.</li>
+      </ul>
+    </div>
+  </div>
+
+  {# The big column features area #}
+  <div class="text-center super-vertical-top-margin">
+      <img src="{% static '/images/icons/lamp.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
+      <h2 class="design-headline">What you'll learn</h2>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+          <h3>Walkthrough the stages of design</h3>
+          <p>Learn the steps of designing to help you go from idea, to blank paper, to prototypes, to launched project.</p>
+      </div>
+      <div class="col-md-4">
+          <h3>Shortcuts on choosing colors</h3>
+          <p>Forget choosing colors randomly on a color wheel &nbsp; find out the best shortcuts to get you a great color palette fast.</p>
+      </div>
+      <div class="col-md-4">
+          <h3>The basics of fonts</h3>
+          <p>Learn the differences between fonts, basic typography, and where to find (and narrow down) great typefaces.</p>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+          <h3>Demystifying white space</h3>
+          <p>You know it's important, but how to use it? We'll go through where white space can help your design the most.</p>
+      </div>
+      <div class="col-md-4">
+          <h3>Where to find images and icons</h3>
+          <p>Great imagery can make a design. Learn some easy tips on how to use imagery and great resources on where to find it.</p>
+      </div>
+      <div class="col-md-4">
+          <h3>The importance of user experience</h3>
+          <p>Design isn't how it looks &nbsp; it's how it works. Learn how your visual design ties into the user-experience.</p>
+      </div>
+  </div>
+</div>
+
+{# Book banner area #}
+<div id="book-banner">
+</div>
+
+<div class="container">
+  {# The big quote area #}
+  <blockquote>
+      <p>This may have been my favorite talk of the convention. What I loved most was that Tracy didn't waste time talking about meaningless theory. She told me exactly why my website was shite to look at, and even more importantly, how to fix it.</p>
+      <cite>&#8212; Mark Knapik at PHP[Tek] in May 2017</cite>
+  </blockquote>
+
+  <hr/>
+
+  {# The ToC area #}
+  <div class="table-of-contents content-block">
+      <div class="text-center">
+          <img src="{% static '/images/icons/toc.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
+      </div>
+      <h2 class="text-center design-headline" style="margin-bottom: 10px; margin-top: 1em;">Table of Contents</h2>
+      <p style="text-align: center; color: #999; font-size: 1.2rem; font-style:italic; margin-bottom: 2em;">Five chapters, two mega sections, 170 pages, over a hundred examples and shortcuts.</p>
+      <ul class="list-unstyled">
+          <li><span>0.0.</span> Introduction</li>
+          <li><span>1.0.</span> If You Only Read One Chapter, Make It This One</li>
+          <li>
+              <span>2.0.</span> Theory and Design Principles
+              <ul class="list-unstyled">
+                  <li><span>2.1.</span> Grid</li>
+                  <li><span>2.2.</span> Color</li>
+                  <li><span>2.3.</span> Typography</li>
+                  <li><span>2.4.</span> White Space</li>
+                  <li><span>2.5.</span> Layout &amp; Hierarchy</li>
+                  <li><span>2.6.</span> Content</li>
+                  <li><span>2.7.</span> User Experience</li>
+                  <li><span>2.8.</span> Images and Imagery</li>
+                  <li><span>2.9.</span> Extra Tidbits</li>
+              </ul>
+          </li>
+          <li>
+              <span>3.0.</span> The Process and Training Your Design Intuition
+              <ul class="list-unstyled">
+                  <li><span>3.1.</span> Finding Inspiration</li>
+                  <li><span>3.2.</span> Planning</li>
+                  <li><span>3.3.</span> Prototypes</li>
+                  <li><span>3.4.</span> Getting Feedback</li>
+                  <li><span>3.5.</span> Coding the Site</li>
+              </ul>
+          </li>
+          <li><span>4.0.</span> Reassurances</li>
+          <li><span>5.0.</span> Additional Resources</li>
+      </ul>
+  </div>
+
+  {# The buy area #}
+  <div class="row" id="hwd-packages">
+      {# <h2 class="text-center">Start your design journey today</h2> #}
+
+      <div class="col-lg-10 col-lg-offset-1 col-md-12 package-container video-area">
+          <div class="text-center" style="margin-bottom: 1em;">
+              <img src="{% static '/images/icons/video.png' %}" alt="" height="50" />
+              <h3><span class="highlight">The Videos + eBooks</span></h3>
+              <p class="quiet">Optional paperback for $10 USD + shipping extra</p>
+          </div>
+
+          <div class="row">
+              <div class="col-md-4">
+                  <div style="margin-left: 20px">
+                      <a href="https://hellowebbooks.withcoach.com/courses/hello-web-design-video-course/9122-videos/20258-introduction" title="Buy on Coach">
+                          <img src="{% static '/images/products/videopreview.jpg' %}" alt="Preview of the Hello Web Design videos"/>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="col-md-8">
+
+                  <p><strong>Learn web design fundamentals and shortcuts with the complete <em>Hello Web Design</em> package.</strong> Aimed at developers, programmers, marketers &#8212; anyone who isn't a designer &#8212; the <em>Hello Web Design</em> books and screencasts will help anyone get confident to start doing design themselves.</p>
+
+                  <p>Package contains:</p>
+
+                  <ul>
+                      <li><strong>17 videos and screencasts</strong> &#8212; go through the book with the author, Tracy, introducing you to each chapter and screencasting all recommendations from the book.</li>
+                      <li><strong>Hosted on the Podia platform</strong> so you can keep track of your progress.</li>
+                      <li><strong>The eBook in three formats</strong> &#8212; the PDF (designed by Tracy), .ePub, and .mobi/Kindle.</li>
+                      <li><strong>The gorgeous paperback book</strong> &#8212; Optional add-on for $10 USD + shipping.</li>
+                  </ul>
+
+                  <div class="super-vertical-top-margin">
+                    <a class="btn btn-primary buy-button" data-title="Hello Web Design Videos" data-category="Hello Web Design" data-price="79" href="https://gum.co/hwd-videos">Buy the video package for $79</a>
+                    <!--<p><small><em>You'll be redirected to withcoach.com to finish your purchase.</em></small></p>-->
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-lg-offset-1 col-lg-7 col-md-8">
+          <div class="package-container paperback-area">
+              <div class="text-center" style="margin-bottom: 1em;">
+                  <img src="{% static '/images/icons/toc.png' %}" alt="" height="50" />
+                  <h3><span class="highlight">The Paperback (eBook included)</span></h3>
+              </div>
+              <div class="row">
+                  <div class="col-md-5">
+                      <img src="{% static 'images/hwd/1.jpg' %}" alt="Hello Web Design paperback" />
+                  </div>
+                  <div class="col-md-7">
+                      <p>Learn better with a physical book? I got you! <strong>This package contains the eBook</strong> (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
+                  </div>
+                  <div class="text-center">
+                      <a class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="29.95" href="https://gum.co/hwd-pb">Buy for $29.95</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 package-container">
+          <div class="text-center" style="margin-bottom: 1em;">
+              <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
+              <h3>Just the eBook</h3>
+          </div>
+          <p><strong>The digital book</strong>, lovingly designed by Tracy herself. Comes in PDF, .mobi, and .ePub formats.</p>
+          <div class="text-center">
+              <script src="https://gumroad.com/js/gumroad.js"></script>
+              <a class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95" href="https://gum.co/hwd-ebook">Buy for $14.95</a>
+              <!--<p style="line-height:1.2; margin-top: 10px;"><small><em>You'll be redirected to withcoach.com to finish your purchase.</em></small></p>-->
+          </div>
+      </div>
+  </div>
+
+  {# The FAQ area #}
+  <div class="row">
+    <h1 class="text-center super-vertical-top-margin">Frequently Asked Questions</h1>
+    <dl class="col-md-8 col-md-offset-2">
+      <dt>What will I learn?</dt>
+      <dd><b><i>Hello Web Design</i> teaches visual and user experience fundamentals, specifically focusing on web-based design.</b> The goal is to help developers, in one brief book, feel comfortable jumping in and doing design themselves.</dd>
+
+      <dt>Does this involve code?</dt>
+      <dd><b>Absolutely no code.</b> No HTML, no CSS, no nothin'. <i>Hello Web Design</i> focuses on what you can see (and how to make it pretty) and why user experience is important (because you want what you build to be easy to use.) It's all about how to design and what to know, but not how to actually implement the design. Maybe in an upcoming book?</dd>
+
+      <dt>How does <i>Hello Web Design</i> differ from other design books and courses?</dt>
+      <dd><b><i>Hello Web Design</i> is deliberately short and the tone is friendly and informal with a bit of silliness mixed in.</b> Theory is touched on, but the focus is on shortcuts and real-world examples. Absolutely no bs or stodgy explanations. In a nutshell, it's small (in a good way), to the point, with lots of examples, and fun to read.</dd>
+
+      <dt>What if I don't like it?</dt>
+      <dd>That's cool! <b>Just let me know within 60 days</b> of ordering the book and I'll refund you in full.</dd>
+    </dl>
+  </div>
+
+  {# The about the author area #}
+  {% comment %}
+  <div class="row about-author">
+    <div class="col-md-7 col-md-offset-1">
+      <h3>Hi, I'm Tracy!</h3>
+      <p>I'm a developer/designer/entreprenerd living in Toronto, Canada. I wear a lot of hats, and being able to design <em>and</em> develop my own apps has allowed me to build my own projects swiftly and try out a lot of things without having to hire someone externally. I love what I do, and I want to help others do it all too! I love teaching beginner web skills and hope to create more designer+dev folk in the world.
+    </div>
+    <div class="col-md-3">
+        <img src="{% static '/images/me.png' %}" alt="Tracy Osborn, author of Hello Web Books" />
+    </div>
+  </div>
+  {% endcomment %}
+
+  <hr style="margin: 2em 5em;"/>
+
+  {# Remind people to buy again #}
+  <div class="row super-vertical-margin">
+    <div class="col-sm-6 col-md-4 col-md-offset-2 text-center">
       <h3>Ready to buy?</h3>
       <p><i>Hello Web Design</i> is available as a video course, paperback book, or eBooks.</p>
-      <a href="#hwd-packages" class="btn btn-large btn-primary">Order the book</a>
+      <a href="#hwd-packages" class="btn btn-large btn-primary">Buy today</a>
     </div>
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 text-center">
       <h3>Need more time?</h3>
       <p>Get the sample and a free email course with design tips by signing up below.</p>
-      <a rel="ck_modal" href="#ck_modal" data-loc="Jumbotron" class="btn btn-large btn-secondary">Get free sample and email course</a>
+      <a rel="ck_modal" href="#ck_modal" data-loc="Jumbotron" class="btn btn-large btn-secondary">Get free sample</a>
     </div>
   </div>
-
-  <hr/>
-
 </div>
 
-<div class="container">
-    <div class="text-center">
-        <blockquote>
-            <p>This may have been my favorite talk of the convention. What I loved most was that Tracy didn't waste time talking about meaningless theory. She told me exactly why my website was shite to look at, and even more importantly, how to fix it.</p>
-            <cite>&#8212; Mark Knapik at PHP[Tek] in May 2017</cite>
-        </blockquote>
-    </div>
-
-</div>
-
-<div class="container">
-
-    <div>
-        <div class="text-center">
-            <img src="{% static '/images/icons/lamp.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
-            <h2 class="design-headline">What you'll learn</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Walkthrough the stages of design</h3>
-                <p>Learn the steps of designing to help you go from idea, to blank paper, to prototypes, to launched project.</p>
-            </div>
-            <div class="col-md-4">
-                <h3>Shortcuts on choosing colors</h3>
-                <p>Forget choosing colors randomly on a color wheel &nbsp; find out the best shortcuts to get you a great color palette fast.</p>
-            </div>
-            <div class="col-md-4">
-                <h3>The basics of fonts</h3>
-                <p>Learn the differences between fonts, basic typography, and where to find (and narrow down) great typefaces.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Demystifying white space</h3>
-                <p>You know it's important, but how to use it? We'll go through where white space can help your design the most.</p>
-            </div>
-            <div class="col-md-4">
-                <h3>Where to find images and icons</h3>
-                <p>Great imagery can make a design. Learn some easy tips on how to use imagery and great resources on where to find it.</p>
-            </div>
-            <div class="col-md-4">
-                <h3>The importance of user experience</h3>
-                <p>Design isn't how it looks &nbsp; it's how it works. Learn how your visual design ties into the user-experience.</p>
-            </div>
-        </div>
-        <p><h3 class="text-center">And more!</h3></p>
-    </div>
-
-    <div class="table-of-contents content-block">
-        <div class="text-center">
-            <img src="{% static '/images/icons/toc.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
-        </div>
-        <h2 class="text-center design-headline" style="margin-bottom: 10px; margin-top: 1em;">Table of Contents</h2>
-        <p style="text-align: center; color: #999; font-size: 1.2rem; font-style:italic; margin-bottom: 2em;">Five chapters, two mega sections, 170 pages, over a hundred examples and shortcuts.</p>
-        <ul class="list-unstyled">
-            <li><span>0.0.</span> Introduction</li>
-            <li><span>1.0.</span> If you only read one chapter, make it this one</li>
-            <li>
-                <span>2.0.</span> Theory and Design Principles
-                <ul class="list-unstyled">
-                    <li><span>2.1.</span> Grid</li>
-                    <li><span>2.2.</span> Color</li>
-                    <li><span>2.3.</span> Typography</li>
-                    <li><span>2.4.</span> White Space</li>
-                    <li><span>2.5.</span> Layout &amp; Hierarchy</li>
-                    <li><span>2.6.</span> Content</li>
-                    <li><span>2.7.</span> User Experience</li>
-                    <li><span>2.8.</span> Images and Imagery</li>
-                    <li><span>2.9.</span> Extra Tidbits</li>
-                </ul>
-            </li>
-            <li>
-                <span>3.0.</span> The Process and Training Your Design Intuition
-                <ul class="list-unstyled">
-                    <li><span>3.1.</span> Finding Inspiration</li>
-                    <li><span>3.2.</span> Planning</li>
-                    <li><span>3.3.</span> Prototypes</li>
-                    <li><span>3.4.</span> Getting Feedback</li>
-                    <li><span>3.5.</span> Coding the Site</li>
-                </ul>
-            </li>
-            <li><span>4.0.</span> Reassurances</li>
-            <li><span>5.0.</span> Additional Resources</li>
-        </ul>
-    </div>
-
-    <div class="row" id="hwd-packages">
-        <h2 class="text-center design-headline">Packages available</h2>
-
-        <div class="col-lg-10 col-lg-offset-1 col-md-12 package-container">
-            <div class="text-center" style="margin-bottom: 1em;">
-                <img src="{% static '/images/icons/video.png' %}" alt="" height="50" class="text-center" />
-                <h3>The Videos + eBooks</h3>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div style="margin-left: 20px">
-                        <a href="https://hellowebbooks.withcoach.com/courses/hello-web-design-video-course/9122-videos/20258-introduction" title="Buy on Coach">
-                            <img src="{% static '/images/products/videopreview.jpg' %}" alt="Preview of the Hello Web Design videos"/>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-8">
-
-                    <p><strong>Learn web design fundamentals and shortcuts with the complete <em>Hello Web Design</em> package.</strong> Aimed at developers, programmers, marketers &#8212; anyone who isn't a designer &#8212; the <em>Hello Web Design</em> books and screencasts will help anyone get confident to start doing design themselves.</p>
-
-                    <p>Package contains:</p>
-
-                    <ul>
-                        <li><strong>17 videos and screencasts</strong> &#8212; go through the book with the author, Tracy, introducing you to each chapter and screencasting all recommendations from the book.</li>
-                        <li>Hosted on the Coach platform so you can keep track of your progress.</li>
-                        <li><strong>The eBook in three formats</strong> &#8212; the PDF (designed by Tracy), .ePub, and .mobi/Kindle.</li>
-                    </ul>
-
-                    <div class="super-vertical-top-margin">
-                      <a class="btn btn-primary buy-button" data-title="Hello Web Design Videos" data-category="Hello Web Design" data-price="79" href="https://gum.co/hwd-videos">Buy the video package for $79</a>
-                      <!--<p><small><em>You'll be redirected to withcoach.com to finish your purchase.</em></small></p>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-offset-1 col-lg-7 col-md-8">
-            <div class="package-container" style="margin-left: -.9375rem; padding-left: .9375rem;">
-                <div class="text-center" style="margin-bottom: 1em;">
-                    <img src="{% static '/images/icons/toc.png' %}" alt="" height="50" />
-                    <h3>The Paperback (eBook included)</h3>
-                </div>
-                <div class="row">
-                    <div class="col-md-5">
-                        <img src="{% static 'images/hwd/1.jpg' %}" alt="Hello Web Design paperback" />
-                    </div>
-                    <div class="col-md-7">
-                        <p>Learn better with a physical book? I got you! <strong>This package contains the eBook</strong> (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
-                    </div>
-                    <div class="text-center">
-                        <a class="btn btn-cta buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="29.95" href="https://gum.co/hwd-pb">Buy for $29.95</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 package-container">
-            <div class="text-center" style="margin-bottom: 1em;">
-                <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
-                <h3>Just the eBook</h3>
-            </div>
-            <p><strong>The digital book</strong>, lovingly designed by Tracy herself. Comes in PDF, .mobi, and .ePub formats.</p>
-            <div class="text-center">
-                <script src="https://gumroad.com/js/gumroad.js"></script>
-                <a class="btn btn-cta buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95" href="https://gum.co/hwd-ebook">Buy for $14.95</a>
-                <!--<p style="line-height:1.2; margin-top: 10px;"><small><em>You'll be redirected to withcoach.com to finish your purchase.</em></small></p>-->
-            </div>
-        </div>
-    </div>
-  </div>
-
-  
 {% include 'includes/newsletter.html' with book_name="Hello Web Design" form_id="298216" %}
 {% include 'includes/convertkit-modal.html' with book_name="Hello Web Design" book_image="https://s3.amazonaws.com/convertkit/subscription_forms/images/005/110/304/standard/IMG_6545-xsmall.jpg?1511098015" form_id="298477" %}
 

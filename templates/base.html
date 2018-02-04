@@ -53,22 +53,36 @@
     {% block content %}
     {% endblock content %}
 
-    <div id="footer" class="container text-center">
+    <div id="footer" class="container">
         <nav>
-            <ul class="list-inline list-unstyled">
-                <li class="hidden-md-up"><a href="{% url '/faq.html' %}">FAQ</a></li>
-                <li class="hidden-sm-up"><a href="{% url '/news.html' %}">Blog</a></li>
-                <li><a href="{% url '/workshops.html' %}">Workshops</a></li>
-                <li class="hidden-md-up"><a href="{% url '/press.html' %}">Press</a></li>
-                <li><a href="{% url '/donate.html' %}">Donate</a></li>
-                <li><a href="//discuss.hellowebapp.com">Discuss</a></li>
-                <li><a href="{% url '/privacy-policy.html' %}">Privacy Policy</a></li>
-                <li><a href="{% url '/contact.html' %}">Contact</a></li>
-                <li><a href="{% url '/setup.html' %}">Setup</a></li>
-                <li><a href="{% url '/order.html' %}">Order</a></li>
+            <ul class="list-unstyled">
+              <li>Products
+                <ul class="list-unstyled">
+                  <li><a href="{% url '/learn-design.html' %}">Hello Web Design</a></li>
+                  <li><a href="{% url '/learn-django.html' %}">Hello Web App</a></li>
+                  <li><a href="{% url '/order.html' %}">Order</a></li>
+                  <li><a href="{% url '/donate.html' %}">Donate</a></li>
+                  <li><a href="{% url '/workshops.html' %}">Workshops</a></li>
+                </ul>
+              </li>
+              <li>Discussion
+                <ul class="list-unstyled">
+                  <li><a href="{% url '/news.html' %}">Blog</a></li>
+                  <li><a href="//discuss.hellowebapp.com">Discuss</a></li>
+                  <li><a href="{% url '/setup.html' %}">Django Setup</a></li>
+                </ul>
+              </li>
+              <li>About
+                <ul class="list-unstyled">
+                  <li><a href="{% url '/faq.html' %}">FAQ</a></li>
+                  <li><a href="{% url '/press.html' %}">Press</a></li>
+                  <li><a href="{% url '/privacy-policy.html' %}">Privacy Policy</a></li>
+                  <li><a href="{% url '/contact.html' %}">Contact</a></li>
+                </ul>
+              </li>
             </ul>
         </nav>
-
+        <p class="copy">Hello Web Books by Tracy Osborn, &copy; {% now "Y" %}</p>
         <ul class="list-inline social-media">
             <li><a href="//twitter.com/hellowebbooks"><i class="fa fa-twitter"></i></a></li>
             <li><a href="//facebook.com/hellowebapp"><i class="fa fa-facebook"></i></a></li>
@@ -76,7 +90,6 @@
             <li><a href="mailto:tracy@hellowebapp.com"><i class="fa fa-envelope"></i></a></li>
             <li><a href="/rss.xml"><i class="fa fa-rss"></i></a></li>
         </ul>
-        <p class="copy">Hello Web Books by Tracy Osborn, &copy; {% now "Y" %}</p>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

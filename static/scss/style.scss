@@ -23,6 +23,7 @@ $gray-lightisher:            #aaa !default;
 $gray-superlight:            #e1e1e1;
 $default-banner:             #eceeef;
 $highlight:                  #FFFBCA;
+$blanchedalmond:             #ffebcd;
 
 $link-color:                 #498D90;
 $button-color:               #dab238;
@@ -32,7 +33,7 @@ $btn-font-weight:            400 !default;
 $btn-padding-x:              1.2rem;
 $btn-padding-y:              1rem;
 
-// bootstrap and font-awesome 
+// bootstrap and font-awesome
 @import "bootstrap";
 @import "font-awesome";
 @import "convertkit";
@@ -41,9 +42,9 @@ html {
     border-top: 5px solid $brand-secondary;
 }
 
-body { 
-    background-color: #fff; 
-    font-weight: 400; 
+body {
+    background-color: #fff;
+    font-weight: 400;
     font-size: 1.2rem;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -56,7 +57,7 @@ body {
     }
 }
 
-h1 { 
+h1 {
     //text-rendering: optimizeLegibility;
     //-webkit-font-smoothing: antialiased;
     font-weight: 700;
@@ -88,7 +89,7 @@ h5 {
 }
 
 p {
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
 }
 
 img { max-width: 100%; }
@@ -99,7 +100,7 @@ pre {
     margin-bottom: 2em;
     margin-top: -1em;
     overflow: initial;
-    code { 
+    code {
         font-size: 1rem;
     }
     code:first-line { line-height: 0px; }
@@ -111,13 +112,19 @@ thead {
 
 dt {
     color: $headings-color;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.5rem;
     font-style: italic;
 }
 dd {
     margin-top: 0.5em;
     margin-bottom: 2em;
+}
+
+hr {
+  border-color: $blanchedalmond;
+  border-width: 5px;
+  margin: 5em 5em;
 }
 
 .vertical-margin {
@@ -135,8 +142,19 @@ dd {
     margin-bottom: 1em;
 }
 
+.content-block {
+    max-width: 800px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 .clear { clear: both; }
-.social-media a { color: $body-color; }
+.social-media a {
+  color: $body-color;
+  &:hover {
+    color: $link-color;
+  }
+}
 span.highlight { background-color: $highlight; }
 
 .small-sans {
@@ -197,6 +215,20 @@ figure.video {
             }
         }
     }
+}
+
+#footer {
+  margin-top: 2em;
+  nav ul li {
+    font-weight: bold;
+    float: left;
+    margin-right: 4em;
+    li {
+      font-weight: normal;
+      float: none;
+      margin-right: 0;
+    }
+  }
 }
 
 // order landing page
@@ -358,7 +390,7 @@ figure.video {
             position: relative;
             top: 4px;
         }
-        .category { 
+        .category {
             font-style: italic;
             font-size: 1rem;
             a { color: #666; }
@@ -404,7 +436,6 @@ figure.video {
         }
     }
 }
-
 
 #post, #tutorial {
     figure {
@@ -502,6 +533,112 @@ figure.video {
     .jumbotron {
         background: url(../images/heros/hwd-sketch.png) top center no-repeat;
     }
+    .table-of-contents {
+        > ul {
+            li {
+                color: #111;
+                font-weight: bold;
+                font-size: 1.7rem;
+                line-height: 1.8;
+                ul {
+                    -moz-column-count: 2;
+                    -webkit-column-count: 2;
+                    column-count: 2;
+                    margin: 0.5em 0;
+                }
+                li {
+                    border-bottom: 0;
+                    color: $body-color;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-left: 60px;
+                    font-style: italic;
+                    font-size: 1.5rem;
+                    font-weight: normal;
+                    span {
+                        color: #999;
+                        font-size: 1.3rem;
+                        font-style: normal;
+                        font-weight: bold;
+                        display: inline-block;
+                        width: 40px;
+                    }
+                }
+                ul > li {
+                }
+            }
+            &> li > span {
+                width: 50px;
+                display: inline-block;
+                color: $button-color;
+            }
+        }
+    }
+    blockquote {
+        text-align: left;
+        border-left: 0;
+        margin: 5em 0;
+        padding-left: 4em;
+        background: url(../images/icons/quote.png) top left no-repeat;
+        p {
+            font-size: 2rem;
+        }
+        cite {
+            display: block;
+            font-style: normal;
+            @extend .small-sans;
+        }
+    }
+    #book-banner {
+        background: url(../images/hwd/book-banner.jpg) top center no-repeat;
+        height: 190px;
+        margin-top: 5em;
+        margin-bottom: 2em;
+    }
+    #hwd-packages {
+        margin-top: 3em;
+        .col-sm-4 {
+            margin: 1em 0 3em 0;
+        }
+        h3 {
+            font-size: 2rem;
+            margin-top: 0;
+            font-style: normal;
+        }
+        img {
+            margin-bottom: 1em;
+        }
+        .package-container {
+            //border: 1px solid #e1e1e1;
+            //border-radius: 5px;
+            //padding-top: 1em;
+            //padding-bottom: 1em;
+            margin-bottom: 1em;
+        }
+        .video-area {
+            border-bottom: 5px solid #f9f7ee;
+            padding-bottom: 3em;
+            margin-bottom: 3em;
+            h3 {
+                margin-bottom: 0.5em;
+            }
+        }
+        .paperback-area {
+            border-right: 5px solid #f9f7ee;
+            padding-right: 2em;
+        }
+    }
+}
+
+.quiet {
+    @extend .small-sans;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 3em;
+}
+
+.about-author {
+    background-color: #333;
 }
 
 // Misc
@@ -511,13 +648,13 @@ figure.video {
     border-width: 0;
     font-weight: 600;
 }
-.hwa .btn { 
+.hwa .btn {
     background-color: #d3bc1e;
     &:hover {
         background-color: darken(#d3bc1e, 10%);
     }
 }
-.hwd .btn { 
+.hwd .btn {
     background-color: $hwd;
     &:hover {
         background-color: darken($hwd, 10%);
