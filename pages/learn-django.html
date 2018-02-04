@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Learn how to build your first web app - {{ block.super }}{% endblock %}
+{% block title %}Learn How to Build a Web App with Django - {{ block.super }}{% endblock %}
 
 {% block analytics %}
 analytics.page("Original book landing page");
@@ -13,23 +13,87 @@ analytics.page("Original book landing page");
 <div class="jumbotron">
     <h1><span class="hl"><span>Learn how to </span></span><span class="hl"><span>build a web app</span></span></h1>
     <h2><strong>Design and build your own custom web app using Python and Django.</strong> Tailored for non-programmers, written by a designer.</h2>
-    <a href="{% url '/order.html' %}" class="btn btn-primary">Jump to buying options</a>
+    <a href="#hwa-packages" class="btn btn-primary">Jump to buying options</a>
 </div>
 
 <div class="container">
+    <hr/>
+
+    {# Introduction area #}
     <div class="text-center content-block">
         <h2>Have you ever wanted to develop your own web product?</h2>
         <p>Not just a basic HTML &amp; CSS website design,<br/> but rather a complete functional web app with a database and user support.</p>
 
         <p><strong>Your side project. Your lifestyle business. Your future startup.</strong></p>
 
-        <p>Hello Web App teaches the basics of web app programming using Python and Django. In less than 150 pages, you'll learn how to choose a project, set up a database, create your templates, and launch your app.</p>
+        <p>Hello Web App teaches the basics of web app programming using Python and Django. You'll learn how to choose a project, set up a database, create your templates, and launch your app.</p>
 
-        <p><a href="{% url '/tutorial.html' %}" class="btn btn-secondary free-sample-link" data-loc="After intro">Read the book online for free</a></p>
+        {# <p><a href="{% url '/tutorial.html' %}" class="btn btn-secondary free-sample-link" data-loc="After intro">Read the book online for free</a></p> #}
+    </div>
+
+    <hr/>
+
+    {# The video and features area #}
+    <div class="row">
+      <div class="col-md-8">
+        <figure class="video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Re_G20COq7s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </figure>
+      </div>
+      <div class="col-md-4">
+        <h3>Features include</h3>
+        <ul>
+          <li><b>28</b> videos and screencasts.</li>
+          <li><b>Two</b> eBooks.</li>
+          <li><b>Three eBook formats for each</b>: PDF, ePub, and .mobi/Kindle.</li>
+          <li><b>Paperbacks optionally included.</b></li>
+          <li><b>An easily customizable tutorial.</b></li>
+          <li><b>Everything you need</b> to build your first web app today.</li>
+        </ul>
+      </div>
+    </div>
+
+    {# The big column features area #}
+    <div class="text-center super-vertical-top-margin">
+        <img src="{% static '/images/icons/lamp.png' %}" alt="" height="70" style="margin-top: 1.5em;"/>
+        <h2 class="design-headline">What you'll learn</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>How to build a web app with Django</h3>
+            <p>Django is the easiest way to launch a web app with users, registration, and dynamic objects.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>How to use the Django admin</h3>
+            <p>The best part about Django! Learn how to view and update your database using the Django admin.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Adding user registration</h3>
+            <p>Allow folks to sign up for your web app! Learn how to add registration and login pages.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>How to add payments with Stripe</h3>
+            <p>Want to start generating revenue? Learn in this quick-and-easy chapter on adding Stripe.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Launch your web app on Heroku</h3>
+            <p>Get your web app live on the internet for folks to see! Deployment made easy.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Easily customizable tutorial format</h3>
+            <p>Build something unique! By building something unique, you'll have more fun and learn Django faster.</p>
+        </div>
     </div>
 </div>
 
+{# Book banner area #}
+<div id="book-banner">
+</div>
+
 <div class="container">
+    {# Quotes area #}
     <div class="row quotes">
         <blockquote class="col-sm-4">
             <p>This is a fantastic guide for anyone who is not a developer and has an idea that they wish they could build. The format - “collection of things” - is incredibly flexible and gives you a fast and easy way to start “sketching” out your application without getting overwhelmed by a lot of technology.</p>
@@ -47,6 +111,7 @@ analytics.page("Original book landing page");
         </blockquote>
     </div>
 
+    {# The ToC area #}
     <div class="row table-of-contents content-block">
         <h2 class="text-center">Table of Contents</h2>
         <ul class="col-sm-6">
@@ -72,8 +137,8 @@ analytics.page("Original book landing page");
         </ul>
     </div>
 
-
-    <div class="row">
+    {# The buy area #}
+    <div class="row" id="hwa-packages">
         <h2 class="text-center vertical-margin" style="font-size: 3rem;">Buy the book</h2>
         <div class="col-sm-5">
             <img src="{% static 'images/products/original-videos.jpg' %}" alt="Hello Web App complete video package" />
@@ -93,11 +158,76 @@ analytics.page("Original book landing page");
         </div>
     </div>
 
+    <div class="col-lg-offset-1 col-lg-7 col-md-8">
+        <div class="package-container paperback-area">
+            <div class="text-center" style="margin-bottom: 1em;">
+                <img src="{% static '/images/icons/toc.png' %}" alt="" height="50" />
+                <h3><span class="highlight">The Paperback (eBook included)</span></h3>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{% static 'images/hwd/1.jpg' %}" alt="Hello Web Design paperback" />
+                </div>
+                <div class="col-md-7">
+                    <p>Learn better with a physical book? I got you! <strong>This package contains the eBook</strong> (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="29.95" href="https://gum.co/hwd-pb">Buy for $29.95</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-4 package-container">
+        <div class="text-center" style="margin-bottom: 1em;">
+            <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
+            <h3>Just the eBook</h3>
+        </div>
+        <p><strong>The digital book</strong>, lovingly designed by Tracy herself. Comes in PDF, .mobi, and .ePub formats.</p>
+        <div class="text-center">
+            <script src="https://gumroad.com/js/gumroad.js"></script>
+            <a class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95" href="https://gum.co/hwd-ebook">Buy for $14.95</a>
+            <!--<p style="line-height:1.2; margin-top: 10px;"><small><em>You'll be redirected to withcoach.com to finish your purchase.</em></small></p>-->
+        </div>
+    </div>
+
+    {# The FAQ area #}
+    <div class="row">
+      <h1 class="text-center super-vertical-top-margin">Frequently Asked Questions</h1>
+      <dl class="col-md-8 col-md-offset-2">
+        <dt>What will I learn?</dt>
+        <dd><b><i>Hello Web App</i> teaches beginner web app development for non-programmers.</b> Assuming no programming background, Part 1 walks you through developing your unique idea, creating your web app, and launching on Heroku. Part 2 teaches more intermediate Django concepts like working with multiple models/databases, adding payments with Stripe, more efficient coding techniques, and more.</dd>
+
+        <dt>Do I need to know Python?</dt>
+        <dd><b>Only a little</b>. I recommend going through the first few lessons of [Learn Python the Hard Way](https://learnpythonthehardway.org/book/) so you understand how programming logic works. That said, Python is a delightfully easy-to-read language so if you're ambitious, you can go through Hello Web App without programming knowledge &#8212; you'll pickup the basic skills from the examples.</dd>
+
+        <dt>What does the tutorial cover?</dt>
+        <dd><b>You'll be building a "collection of things."</b> It's a super generic format that you can update to build something unique. For example, you could build a blog (as a blog is a collection of posts), a LinkedIn-clone (a collection of employment data), or a directory (a collection of profiles). By making something unique, you'll remember what you learn and hopefully be excited to learn more after you finish the course.</dd>
+
+        <dt>How does <i>Hello Web App</i> differ from other programming books and courses?</dt>
+        <dd><b><i>Hello Web App</i> isn't here to teach you how to become a back-end engineer &#8212; the goal is to help you build a web app quickly and easily. I want to give you that feeling of accomplishment as fast as possible! No theory, no "why" or "how". The goal is to show you how easy it can be to build a web app, and there are plenty of other tutorials and resources to tell you how things are working under the hood for after you're finished with this course.</dd>
+
+        <dt>What if I don't like it?</dt>
+        <dd>That's cool! <b>Just let me know within 60 days</b> of ordering the book and I'll refund you in full.</dd>
+      </dl>
+    </div>
+
+    <hr style="margin: 2em 5em;"/>
+
+    {# Remind people to buy again #}
     <div class="row super-vertical-margin">
-        <p class="text-center"><a href="{% url '/order.html' %}" class="btn btn-secondary">See all buying options here, starting at $14.95</a></p>
+      <div class="col-sm-6 col-md-4 col-md-offset-2 text-center">
+        <h3>Ready to buy?</h3>
+        <p><i>Hello Web App</i> is available as a video course, paperback book, or eBooks.</p>
+        <a href="#hwa-packages" class="btn btn-large btn-primary">Buy today</a>
+      </div>
+      <div class="col-sm-6 col-md-4 text-center">
+        <h3>Need more time?</h3>
+        <p>Get the sample signing up below.</p>
+        <a rel="ck_modal" href="#ck_modal" data-loc="Jumbotron" class="btn btn-large btn-secondary">Get free sample</a>
+      </div>
     </div>
 </div>
-
 
 {% include 'includes/newsletter.html' with book_name="Hello Web App" form_id="298473" %}
 {% include 'includes/convertkit-modal.html' with book_name="Hello Web App" book_image="https://s3.amazonaws.com/convertkit/subscription_forms/images/005/110/499/standard/IMG_6404-lowres.jpg?1511130784" form_id="298672" %}

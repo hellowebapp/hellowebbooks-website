@@ -193,9 +193,12 @@ figure.video {
     .logo {
         img {
             max-width: 300px;
+            display: inline-block;
         }
         p {
             font-size: 0.7rem;
+            display: inline-block;
+            margin-left: 10px;
         }
     }
     nav {
@@ -229,6 +232,54 @@ figure.video {
       margin-right: 0;
     }
   }
+}
+
+// home
+#home {
+    hr { margin: 4em 5em; }
+    .packages {
+        margin-bottom: 2.5rem;
+        h4 a {
+            color: #111;
+            text-decoration: none;
+            background-image: none;
+            font-size: 2rem;
+            font-weight: normal;
+            text-transform: none;
+            letter-spacing: 0;
+            margin-bottom: 0.5em;
+            &:hover {
+                color: $link-color;
+            }
+        }
+        h5 {
+            font-weight: 400;
+            color: #888;
+            margin-bottom: 1em;
+        }
+        .btn {
+            color: #fff;
+            border-width: 0;
+        }
+        .hwa .btn {
+            background-color: #d3bc1e;
+            &:hover {
+                background-color: darken(#d3bc1e, 10%);
+            }
+        }
+        .hwd .btn {
+            background-color: $hwd;
+            &:hover {
+                background-color: darken($hwd, 10%);
+            }
+        }
+        .hwaic .btn {
+            background-color: $hwaic;
+            &:hover {
+                background-color: darken($hwaic, 10%);
+            }
+        }
+    }
 }
 
 // order landing page
@@ -512,6 +563,19 @@ figure.video {
             margin-top: 2em;
             line-height: 1.6;
             text-shadow: 0 0 10px #fff;
+        }
+    }
+}
+
+#home {
+    .jumbotron {
+        h1 span.hl {
+            transform: scale(1) rotate(-1deg) skew(-20deg);
+            margin-bottom: 20px;
+            span {
+                transform: scale(1.3) rotate(1deg) skew(20deg);
+                margin-top: 20px;
+            }
         }
     }
 }
