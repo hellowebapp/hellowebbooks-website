@@ -21,7 +21,7 @@ analytics.page("Order");
     Choose which books you want
     {% endcomment %}
     <div class="row packages choose-package">
-        <div class="col-md-3 text-center">
+        <div class="col-md-6 text-center">
             <a href="#hwd">
                 <img src="{% static '/images/products/hwd-books.jpg' %}" alt="Hello Web Design"/>
             </a>
@@ -30,15 +30,16 @@ analytics.page("Order");
             <a href="#hwd" class="btn btn-secondary">Choose package</a>
             <p><small>Starting at $14.95</small></p>
         </div>
-        <div class="col-md-3 text-center">
-            <a href="#original">
-                <img src="{% static '/images/products/original-square.jpg' %}" alt="Hello Web App original"/>
+        <div class="col-md-6 text-center">
+            <a href="#both">
+                <img src="{% static '/images/products/both-books.jpg' %}" alt="Hello Web App"/>
             </a>
             <h3>Hello Web App</h3>
-            <p>Start building your first Django web app. From project ideation to launching on Heroku.</p>
+            <p>Everything you need to build and grow a web app. Create a web app and make it a success.</p>
             <a href="#original" class="btn btn-secondary">Choose package</a>
             <p><small>Starting at $14.95</small></p>
         </div>
+        {% comment %}
         <div class="col-md-3 text-center">
             <a href="#ic">
                 <img src="{% static '/images/products/ic-square.jpg' %}" alt="Hello Web App Intermediate Concepts"/>
@@ -57,12 +58,13 @@ analytics.page("Order");
             <a href="#both" class="btn btn-secondary">Choose package</a>
             <p><small>Starting at $24.95</small></p>
         </div>
-        </div>
+        {% endcomment %}
+    </div>
+
     <hr/>
 
     {% comment %}
     Original - choose which package you want
-    {% endcomment %}
     <div class="row packages sub-packages" id="original" name="original">
         <a name="original" />
         <div class="intro text-center">
@@ -95,14 +97,14 @@ analytics.page("Order");
             <a href="https://gum.co/hellowebapp-ebook" class="btn btn-secondary buy-button" data-category="Hello Web App: Original" data-title="Original eBooks" data-price="14.95">Buy for $14.95</a>
         </div>
     </div>
+    {% endcomment %}
 
     {% comment %}
     Both - choose which package you want
     {% endcomment %}
     <div class="row packages sub-packages" id="both" name="both">
-        <a name="both" />
         <div class="intro text-center">
-            <h2>Now, choose your combo Hello Web App package</h2>
+            <h2>Now, choose your Hello Web App package</h2>
             <p>Get everything you need to launch a your first web app and then add intermediate features like an API, customer payments, and more.</p>
         </div>
         <div class="col-md-4 text-center">
@@ -134,7 +136,6 @@ analytics.page("Order");
 
     {% comment %}
     IC - choose which package you want
-    {% endcomment %}
     <div class="row packages sub-packages" id="ic" name="ic">
         <a name="ic" />
         <div class="intro text-center">
@@ -167,12 +168,12 @@ analytics.page("Order");
             <a href="https://gum.co/hwa-ic-ebooks" class="btn btn-secondary buy-button" data-category="Hello Web App: IC" data-title="Intermediate Concepts eBooks" data-price="14.95">Buy for $14.95</a>
         </div>
     </div>
+    {% endcomment %}
 
     {% comment %}
     HWD - choose which package you want
     {% endcomment %}
     <div class="row packages sub-packages" id="hwd" name="hwd">
-        <a name="hwd" />
         <div class="intro text-center">
             <h2>Now, choose your Hello Web Design package</h2>
             <p>Beginner design books assume you want to become an expert designer. What if you want to learn just enough to complement your existing work? Hello Web Design will teach you the basics about design (no history!) and give you shortcuts so you can immediately become a better designer</p>

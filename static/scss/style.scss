@@ -241,17 +241,19 @@ figure.video {
     hr { margin: 4em 5em; }
     .packages {
         margin-bottom: 2.5rem;
-        h4 a {
-            color: #111;
-            text-decoration: none;
-            background-image: none;
-            font-size: 2rem;
-            font-weight: normal;
-            text-transform: none;
-            letter-spacing: 0;
+        h4 {
             margin-bottom: 0.5em;
-            &:hover {
-                color: $link-color;
+            a {
+                color: #111;
+                text-decoration: none;
+                background-image: none;
+                font-size: 2rem;
+                font-weight: bold;
+                text-transform: none;
+                letter-spacing: 0;
+                &:hover {
+                    color: $link-color;
+                }
             }
         }
         h5 {

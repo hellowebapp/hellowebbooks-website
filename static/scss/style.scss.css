@@ -3991,17 +3991,18 @@ figure.video {
 
 #home .packages {
   margin-bottom: 2.5rem; }
-  #home .packages h4 a {
-    color: #111;
-    text-decoration: none;
-    background-image: none;
-    font-size: 2rem;
-    font-weight: normal;
-    text-transform: none;
-    letter-spacing: 0;
+  #home .packages h4 {
     margin-bottom: 0.5em; }
-    #home .packages h4 a:hover {
-      color: #498D90; }
+    #home .packages h4 a {
+      color: #111;
+      text-decoration: none;
+      background-image: none;
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: none;
+      letter-spacing: 0; }
+      #home .packages h4 a:hover {
+        color: #498D90; }
   #home .packages h5 {
     font-weight: 400;
     color: #888;
