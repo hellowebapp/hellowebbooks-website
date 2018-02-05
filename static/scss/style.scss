@@ -127,6 +127,10 @@ hr {
   margin: 5em 5em;
 }
 
+@include media-breakpoint-down(sm) {
+    hr { margin: 2em 2em; }
+}
+
 .vertical-margin {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -186,6 +190,12 @@ figure.video {
     }
 }
 
+@include media-breakpoint-down(sm) {
+    .btn {
+        white-space: inherit;
+    }
+}
+
 // global elements
 #main-nav {
     margin-top: 1em;
@@ -222,6 +232,20 @@ figure.video {
     }
 }
 
+@include media-breakpoint-down(md) {
+    #main-nav {
+        margin-bottom: 1em;
+        .logo {
+            text-align: center;
+            p { margin-bottom: 0.5em; }
+        }
+        nav {
+            text-align: center;
+            li { padding: 0 1em; }
+        }
+    }
+}
+
 #footer {
   margin-top: 2em;
   nav ul li {
@@ -234,6 +258,18 @@ figure.video {
       margin-right: 0;
     }
   }
+}
+
+@include media-breakpoint-down(sm) {
+    #footer nav > ul > li {
+        min-height: 160px;
+        margin-bottom: 1em;
+        margin-right: 1em;
+    }
+    .footer-extra {
+        clear: left;
+        p.copy { margin-bottom: 0.5em; }
+    }
 }
 
 // home
@@ -286,6 +322,12 @@ figure.video {
     }
 }
 
+@include media-breakpoint-down(sm) {
+    #home hr {
+        margin: 2em;
+    }
+}
+
 // order landing page
 #order {
     .jumbotron {
@@ -294,6 +336,9 @@ figure.video {
         height: 15em;
     }
     .packages {
+        > div {
+            margin-bottom: 1em;
+        }
         h3 {
             margin: 15px 0 0 0;
         }
@@ -330,7 +375,6 @@ figure.video {
 }
 
 // courses page
-
 .courses h2 {
     a {
         color: $body-color;
@@ -341,7 +385,6 @@ figure.video {
 }
 
 // all posts page
-
 .blog-home-header {
     p {
         margin-bottom: 0.5em;
@@ -371,6 +414,7 @@ figure.video {
             object-fit: cover;
             height: 129px;
             width: 100%;
+            margin-bottom: 1em;
         }
         aside.date, aside.category {
             display: inline-block;
@@ -489,6 +533,13 @@ figure.video {
                 }
             }
         }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #post header h1 {
+        margin-top: 0.5em;
+        font-size: 2rem;
     }
 }
 
@@ -676,6 +727,7 @@ figure.video {
 #original {
     .jumbotron {
         background: url(../images/heros/hwa-sketch.jpg) top center no-repeat;
+        background-size: cover;
         h1 span.hl {
             transform: scale(1) rotate(-1deg) skew(-20deg);
             span {
@@ -697,12 +749,83 @@ figure.video {
     .blockquote p {
         font-size: 1.6rem;
     }
+}
 
+@include media-breakpoint-down(lg) {
+    #original, #design, #home {
+        .jumbotron {
+            padding: 1em;
+            h1 {
+                overflow: hidden;
+                font-size: 2rem;
+                padding-bottom: 10px;
+                line-height: 1.8;
+                span.hl {
+                    transform: scale(1.2) rotate(-1deg) skew(-20deg);
+                    span {
+                        transform: scale(1.8) rotate(1deg) skew(20deg);
+                    }
+                }
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .product-page blockquote {
+        p { font-size: 1.4rem; }
+        cite { font-size: 0.8rem; }
+    }
+    .product-page .table-of-contents>ul li {
+        font-size: 1.3rem;
+        line-height: 1.4;
+        margin-top: 0.5em;
+        li {
+            font-size: 1.1rem;
+            margin-left: 0;
+            margin-top: 0.5em;
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+    .product-page #buy-packages .paperback-area {
+        padding-right: 0;
+        border-right: 0;
+        border-bottom: 5px solid #f9f7ee;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    #original, #design, #home {
+        .jumbotron {
+            padding: 1em;
+            h1 {
+                overflow: hidden;
+                font-size: 2rem;
+                padding-bottom: 10px;
+                line-height: 1.1;
+                span.hl {
+                    transform: scale(1) rotate(-1deg) skew(-20deg);
+                    span {
+                        transform: scale(1.3) rotate(1deg) skew(20deg);
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #design {
     .jumbotron {
         background: url(../images/heros/hwd-sketch.png) top center no-repeat;
+        background-size: cover;
     }
     #book-banner {
         background: url(../images/hwd/book-banner.jpg) top center no-repeat;
@@ -724,7 +847,6 @@ figure.video {
 }
 
 // Misc
-
 .hwa .btn, .hwd .btn {
     color: #fff;
     border-width: 0;
