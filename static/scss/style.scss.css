@@ -4049,9 +4049,9 @@ figure.video {
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 3em; }
 
-#order #original, #order #ic, #order #both, #order #hwd {
+#order #original, #order #ic, #order #both, #order #hwd, #order #hwa, #order #all {
   display: none; }
-  #order #original:target, #order #ic:target, #order #both:target, #order #hwd:target {
+  #order #original:target, #order #ic:target, #order #both:target, #order #hwd:target, #order #hwa:target, #order #all:target {
     display: block; }
 
 #order figure.video {
