@@ -4327,6 +4327,11 @@ figure.video {
     display: block;
     font-style: normal; }
 
+.product-page #book-banner {
+  height: 190px;
+  margin-top: 5em;
+  margin-bottom: 2em; }
+
 .product-page #buy-packages {
   margin-top: 3em; }
   .product-page #buy-packages .col-sm-4 {
@@ -4375,6 +4380,16 @@ figure.video {
 
 #original .blockquote p {
   font-size: 1.6rem; }
+
+#original #book-banner {
+  background: url(../images/original/book-banner.jpg) top center no-repeat; }
+
+#design .jumbotron {
+  background: url(../images/heros/hwd-sketch.png) top center no-repeat;
+  background-size: cover; }
+
+#design #book-banner {
+  background: url(../images/hwd/book-banner.jpg) top center no-repeat; }
 
 @media (max-width: 74.9em) {
   #original .jumbotron, #design .jumbotron, #home .jumbotron {
@@ -4426,16 +4441,6 @@ figure.video {
         #original .jumbotron h1 span.hl span, #design .jumbotron h1 span.hl span, #home .jumbotron h1 span.hl span {
           transform: scale(1.3) rotate(1deg) skew(20deg);
           margin-top: 20px; } }
-
-#design .jumbotron {
-  background: url(../images/heros/hwd-sketch.png) top center no-repeat;
-  background-size: cover; }
-
-#design #book-banner {
-  background: url(../images/hwd/book-banner.jpg) top center no-repeat;
-  height: 190px;
-  margin-top: 5em;
-  margin-bottom: 2em; }
 
 .quiet {
   color: #666;
