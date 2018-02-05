@@ -196,9 +196,10 @@ figure.video {
             display: inline-block;
         }
         p {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             display: inline-block;
             margin-left: 10px;
+            color: #666;
         }
     }
     nav {
@@ -208,6 +209,7 @@ figure.video {
             padding-left: 1.5em;
         }
         a {
+            font-weight: bold;
             font-size: 0.8rem;
             letter-spacing: 0.1em;
             color: #111;
@@ -565,38 +567,6 @@ figure.video {
             text-shadow: 0 0 10px #fff;
         }
     }
-}
-
-#home {
-    .jumbotron {
-        h1 span.hl {
-            transform: scale(1) rotate(-1deg) skew(-20deg);
-            margin-bottom: 20px;
-            span {
-                transform: scale(1.3) rotate(1deg) skew(20deg);
-                margin-top: 20px;
-            }
-        }
-    }
-}
-
-#original {
-    .jumbotron {
-        background: url(../images/heros/hwa-sketch.jpg) top center no-repeat;
-        h1 span.hl {
-            transform: scale(1) rotate(-1deg) skew(-20deg);
-            span {
-                transform: scale(1.3) rotate(1deg) skew(20deg);
-                margin-top: 20px;
-            }
-        }
-    }
-}
-
-#design {
-    .jumbotron {
-        background: url(../images/heros/hwd-sketch.png) top center no-repeat;
-    }
     .table-of-contents {
         > ul {
             li {
@@ -608,7 +578,7 @@ figure.video {
                     -moz-column-count: 2;
                     -webkit-column-count: 2;
                     column-count: 2;
-                    margin: 0.5em 0;
+                    margin: 0 0 0.5em 0;
                 }
                 li {
                     border-bottom: 0;
@@ -653,13 +623,7 @@ figure.video {
             @extend .small-sans;
         }
     }
-    #book-banner {
-        background: url(../images/hwd/book-banner.jpg) top center no-repeat;
-        height: 190px;
-        margin-top: 5em;
-        margin-bottom: 2em;
-    }
-    #hwd-packages {
+    #buy-packages {
         margin-top: 3em;
         .col-sm-4 {
             margin: 1em 0 3em 0;
@@ -691,6 +655,58 @@ figure.video {
             border-right: 5px solid #f9f7ee;
             padding-right: 2em;
         }
+    }
+}
+
+#home {
+    .jumbotron {
+        h1 span.hl {
+            transform: scale(1) rotate(-1deg) skew(-20deg);
+            margin-bottom: 20px;
+            span {
+                transform: scale(1.3) rotate(1deg) skew(20deg);
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+#original {
+    .jumbotron {
+        background: url(../images/heros/hwa-sketch.jpg) top center no-repeat;
+        h1 span.hl {
+            transform: scale(1) rotate(-1deg) skew(-20deg);
+            span {
+                transform: scale(1.3) rotate(1deg) skew(20deg);
+                margin-top: 20px;
+            }
+        }
+    }
+    .table-of-contents {
+        ul li span {
+            width: auto;
+        }
+        > ul li li {
+            list-style-type: circle;
+            margin: 0.5em 0 0.5em 2em;
+            line-height: 1.4;
+        }
+    }
+    .blockquote p {
+        font-size: 1.6rem;
+    }
+
+}
+
+#design {
+    .jumbotron {
+        background: url(../images/heros/hwd-sketch.png) top center no-repeat;
+    }
+    #book-banner {
+        background: url(../images/hwd/book-banner.jpg) top center no-repeat;
+        height: 190px;
+        margin-top: 5em;
+        margin-bottom: 2em;
     }
 }
 

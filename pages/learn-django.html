@@ -93,7 +93,13 @@ analytics.page("Original book landing page");
 </div>
 
 <div class="container">
+    <blockquote>
+        <p>After reading and working through this book, <strong>I had a functioning prototype of a fairly complex app within 3 weeks.</strong> It really does help in a concrete, practical way. And I love its optimism—the idea that you don’t have to spend years becoming a seasoned programmer to build an interactive web app that’s decent.</p>
+        <cite>&#8212;Blake W.</cite>
+    </blockquote>
+
     {# Quotes area #}
+    {% comment %}
     <div class="row quotes">
         <blockquote class="col-sm-4">
             <p>This is a fantastic guide for anyone who is not a developer and has an idea that they wish they could build. The format - “collection of things” - is incredibly flexible and gives you a fast and easy way to start “sketching” out your application without getting overwhelmed by a lot of technology.</p>
@@ -110,84 +116,123 @@ analytics.page("Original book landing page");
             <footer>Julian S.</footer>
         </blockquote>
     </div>
+    {% endcomment %}
+
+    <hr/>
 
     {# The ToC area #}
-    <div class="row table-of-contents content-block">
-        <h2 class="text-center">Table of Contents</h2>
-        <ul class="col-sm-6">
-            <li>Introduction</li>
-            <li>What We’re Building</li>
-            <li>Prerequisites</li>
-            <li>Getting Started</li>
-            <li>Setting up your Templates</li>
-            <li>Fun with Template Tags</li>
-            <li>Adding Dynamic Data</li>
-            <li>Displaying Dynamic Information in the Templates</li>
-            <li>Setting up Individual Object Pages</li>
-        </ul>
-        <ul class="col-sm-5 col-sm-offset-1">
-            <li>Forms.py Funsies</li>
-            <li>Adding a Registration Page</li>
-            <li>Setting up Basic Browse Pages</li>
-            <li>Quick Hits: 404 Pages, requirements.txt, and Testing</li>
-            <li>Deploying your Web App</li>
-            <li>What To Do If Your App is Broken</li>
-            <li>Important Things to Know</li>
-            <li>Moving Forward</li>
+    <div class="table-of-contents content-block">
+        <div class="text-center">
+            <img src="{% static '/images/icons/toc.png' %}" alt="" height="70" />
+        </div>
+        <h2 class="text-center design-headline" style="margin-bottom: 10px; margin-top: 1em;">Complete package covers these topics:</h2>
+        <p style="text-align: center; color: #999; font-size: 1.2rem; font-style:italic; margin-bottom: 2em;">Two books, 317 pages, 17 videos, over a hundred examples and shortcuts.</p>
+        <ul class="list-unstyled">
+            <li><span>Part 1:</span> Step-by-Step Tutorial
+                <ul class="list-unstyled">
+                    <li>What We’re Building</li>
+                    <li>Prerequisites</li>
+                    <li>Getting Started</li>
+                    <li>Setting up your Templates</li>
+                    <li>Fun with Template Tags</li>
+                    <li>Adding Dynamic Data</li>
+                    <li>Displaying Dynamic Information in the Templates</li>
+                    <li>Setting up Individual Object Pages</li>
+                    <li>Forms.py Funsies</li>
+                    <li>Adding a Registration Page</li>
+                    <li>Setting up Basic Browse Pages</li>
+                    <li>Quick Hits: 404 Pages, requirements.txt, and Testing</li>
+                    <li>Deploying your Web App</li>
+                    <li>What To Do If Your App is Broken</li>
+                    <li>Important Things to Know</li>
+                    <li>Moving Forward</li>
+                </ul>
+            </li>
+            <li><span>Part 2:</span> Intermediate Concepts
+                <ul class="list-unstyled">
+                    <li>Creating a Contact Form and Working with Custom Forms</li>
+                    <li>Adding a New Model</li>
+                    <li>Adding Easy Admin Emails, Helpers, Sitemaps, and More</li>
+                    <li>Adding User-Uploaded Images</li>
+                    <li>Editing and Resizing Images</li>
+                    <li>Setting Up Django Messages for Alerts</li>
+                    <li>Front-End Fun: Adding Gulp, Sass, and Bootstrap</li>
+                    <li>Reading Source Code And Setting Up a Form to Edit User Email Addresses</li>
+                    <li>Adding Payments with Stripe</li>
+                    <li>Adding an API</li>
+                    <li>Working with Sessions</li>
+                    <li>Creating Your Own Scripts and a Bit About Cron Jobs</li>
+                    <li>Database Pitfalls</li>
+                    <li>Additional Information and Resources</li>
+                </ul>
+            </li>
         </ul>
     </div>
 
     {# The buy area #}
-    <div class="row" id="hwa-packages">
-        <h2 class="text-center vertical-margin" style="font-size: 3rem;">Buy the book</h2>
-        <div class="col-sm-5">
-            <img src="{% static 'images/products/original-videos.jpg' %}" alt="Hello Web App complete video package" />
-        </div>
-        <div class="col-sm-7">
-            <h3 style="font-size: 2rem;">The Complete Hello Web App Package</h3>
-            <p>This package contains the entire Hello Web App series &#8212; the paperback books, the videos, and the eBooks. Learn how to build, grow, and monetize your web app all in one purchase.</p>
-            <h4>Full contents:</h4>
-            <ul>
-                <li>Three eBook files &#8212; PDF, .mobi, and .ePub.</li>
-                <li>15 videos &#8212; screencasts walking you through all chapters of the book plus four bonus beginner videos.</li>
-                <li>The gorgeously designed paperback book.</li>
-            </ul>
-            <p class="text-center vertical-margin">
-                <a href="//gum.co/complete-hwa-pb" class="btn btn-primary buy-button" data-title="Hello Web App Video Paperback package" data-price="89">Buy for $89</a>
-            </p>
-        </div>
-    </div>
-
-    <div class="col-lg-offset-1 col-lg-7 col-md-8">
-        <div class="package-container paperback-area">
+    <div class="row" id="buy-packages">
+        {# <h2 class="text-center vertical-margin" style="font-size: 3rem;">Buy the book</h2> #}
+        <div class="col-lg-10 col-lg-offset-1 col-md-12 package-container video-area">
             <div class="text-center" style="margin-bottom: 1em;">
-                <img src="{% static '/images/icons/toc.png' %}" alt="" height="50" />
-                <h3><span class="highlight">The Paperback (eBook included)</span></h3>
+                <img src="{% static '/images/icons/video.png' %}" alt="" height="50" />
+                <h3><span class="highlight">The Videos + eBooks</span></h3>
+                <p class="quiet">Optional paperbacks for $20 USD + shipping extra</p>
             </div>
-            <div class="row">
-                <div class="col-md-5">
-                    <img src="{% static 'images/hwd/1.jpg' %}" alt="Hello Web Design paperback" />
-                </div>
-                <div class="col-md-7">
-                    <p>Learn better with a physical book? I got you! <strong>This package contains the eBook</strong> (in all three formats) <strong>plus the paperback book</strong>. Shipping extra.</p>
-                </div>
-                <div class="text-center">
-                    <a class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="29.95" href="https://gum.co/hwd-pb">Buy for $29.95</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-lg-3 col-md-4 package-container">
-        <div class="text-center" style="margin-bottom: 1em;">
-            <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
-            <h3>Just the eBook</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div style="margin-left: 20px">
+                        <a href="https://hellowebbooks.podia.com/hello-web-app-video-course" title="Buy on Podia">
+                            <img src="{% static 'images/products/original-videos.jpg' %}" alt="Hello Web App complete video package" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p>This package contains the entire Hello Web App series &#8212; the paperback books, the videos, and the eBooks. Learn how to build, grow, and monetize your web app all in one purchase.</p>
+                    <h4>Full contents:</h4>
+                    <ul>
+                        <li>Three eBook files &#8212; PDF, .mobi, and .ePub.</li>
+                        <li>15 videos &#8212; screencasts walking you through all chapters of the book plus four bonus beginner videos.</li>
+                        <li>The gorgeously designed paperback book.</li>
+                    </ul>
+                    <div class="super-vertical-top-margin">
+                        <a href="//gum.co/complete-hwa-pb" class="btn btn-primary buy-button" data-title="Hello Web App Video Paperback package" data-price="89">Buy the full course for $89</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p><strong>The digital book</strong>, lovingly designed by Tracy herself. Comes in PDF, .mobi, and .ePub formats.</p>
-        <div class="text-center">
-            <script src="https://gumroad.com/js/gumroad.js"></script>
-            <a class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95" href="https://gum.co/hwd-ebook">Buy for $14.95</a>
-            <!--<p style="line-height:1.2; margin-top: 10px;"><small><em>You'll be redirected to withcoach.com to finish your purchase.</em></small></p>-->
+
+        <div class="col-lg-offset-1 col-lg-7 col-md-8">
+            <div class="package-container paperback-area">
+                <div class="text-center" style="margin-bottom: 1em;">
+                    <img src="{% static '/images/icons/toc.png' %}" alt="" height="50" />
+                    <h3><span class="highlight">The Paperbacks (eBooks included)</span></h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="{% static 'images/both/1-sm.jpg' %}" alt="Hello Web App paperbacks" />
+                    </div>
+                    <div class="col-md-7">
+                        <p>Learn better with a physical book? I got you! <strong>This package contains the eBooks</strong> (in all three formats) <strong>plus the paperback books</strong>. Shipping extra.</p>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="29.95" href="https://gum.co/hwd-pb">Buy for $29.95</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 package-container">
+            <div class="text-center" style="margin-bottom: 1em;">
+                <img src="{% static '/images/icons/ipad.png' %}" alt="" height="50" />
+                <h3>Just the eBooks</h3>
+            </div>
+            <p><strong>The digital books</strong>, lovingly designed by Tracy herself. Comes in PDF, .mobi, and .ePub formats for each.</p>
+            <div class="text-center">
+                <script src="https://gumroad.com/js/gumroad.js"></script>
+                <a class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95" href="https://gum.co/hwd-ebook">Buy for $14.95</a>
+                <!--<p style="line-height:1.2; margin-top: 10px;"><small><em>You'll be redirected to withcoach.com to finish your purchase.</em></small></p>-->
+            </div>
         </div>
     </div>
 
@@ -205,7 +250,7 @@ analytics.page("Original book landing page");
         <dd><b>You'll be building a "collection of things."</b> It's a super generic format that you can update to build something unique. For example, you could build a blog (as a blog is a collection of posts), a LinkedIn-clone (a collection of employment data), or a directory (a collection of profiles). By making something unique, you'll remember what you learn and hopefully be excited to learn more after you finish the course.</dd>
 
         <dt>How does <i>Hello Web App</i> differ from other programming books and courses?</dt>
-        <dd><b><i>Hello Web App</i> isn't here to teach you how to become a back-end engineer &#8212; the goal is to help you build a web app quickly and easily. I want to give you that feeling of accomplishment as fast as possible! No theory, no "why" or "how". The goal is to show you how easy it can be to build a web app, and there are plenty of other tutorials and resources to tell you how things are working under the hood for after you're finished with this course.</dd>
+        <dd><b><i>Hello Web App</i> isn't here to teach you how to become a back-end engineer &#8212; the goal is to help you build a web app quickly and easily.</b> I want to give you that feeling of accomplishment as fast as possible! No theory, no "why" or "how". The goal is to show you how easy it can be to build a web app, and there are plenty of other tutorials and resources to tell you how things are working under the hood for after you're finished with this course.</dd>
 
         <dt>What if I don't like it?</dt>
         <dd>That's cool! <b>Just let me know within 60 days</b> of ordering the book and I'll refund you in full.</dd>
@@ -218,7 +263,7 @@ analytics.page("Original book landing page");
     <div class="row super-vertical-margin">
       <div class="col-sm-6 col-md-4 col-md-offset-2 text-center">
         <h3>Ready to buy?</h3>
-        <p><i>Hello Web App</i> is available as a video course, paperback book, or eBooks.</p>
+        <p><i>Hello Web App</i> is available as a video course, paperback books, or eBooks.</p>
         <a href="#hwa-packages" class="btn btn-large btn-primary">Buy today</a>
       </div>
       <div class="col-sm-6 col-md-4 text-center">
