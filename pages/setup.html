@@ -108,7 +108,7 @@ instructions, you should have pip installed already.
 
 To check whether it's installed, open up your command line and run this *(don't
 include the* `$`*, it's an indicator that this command is being run in your
-command line utility)*: 
+command line utility)*:
 {% endfilter %}
 
 <pre><code class="sh">
@@ -127,7 +127,7 @@ this page](https://pip.pypa.io/en/stable/installing/).
 
 {% filter markdown %}
 When we start developing our Django apps, we want to make sure our projects are
-enclosed in "bubbles" known as virtual environments. 
+enclosed in "bubbles" known as virtual environments.
 
 For example, as of this writing, Django's current version is 1.9. When new
 versions of Django are released, they may not be backwards compatible with
@@ -181,7 +181,7 @@ of a folder.
 ### Start your virtual environment
 
 Now that you're within your empty project folder, create your virtual
-environment. 
+environment.
 {% endfilter %}
 
 <pre><code class="sh">
@@ -280,7 +280,7 @@ your environment activated):
 {% endfilter %}
 
 <pre><code class="sh">
-<span class="cmd">$</span> django-admin.py startproject hellowebapp .
+<span class="cmd">$</span> django-admin startproject hellowebapp .
 </code></pre>
 
 {% filter markdown %}
@@ -288,7 +288,7 @@ _(The `.` at the end is important, don't forget it!)_
 
 This is going to start a Django project in your currect directory.
 
-* `django-admin.py`: The script we'll be running.
+* `django-admin`: The script we'll be running.
 * `startproject`: The specific utility we're using.
 * `hellowebapp`: The name we're giving the project.
 * `.`: The location where we're starting the project, with `.` denoting the
@@ -329,11 +329,11 @@ In your top level folder (the one with *manage.py* in it), run this command:
 {% endfilter %}
 
 <pre><code class="sh">
-<span class="cmd">$</span> django-admin.py startapp collection
+<span class="cmd">$</span> django-admin startapp collection
 </code></pre>
 
 {% filter markdown %}
-Like before, `django-admin.py` is the script, `startapp` is the command, and
+Like before, `django-admin` is the script, `startapp` is the command, and
 `collection` is the name we're giving the app, which you can change if you wish.
 
 `startapp` will create an additional folder and a few files:
