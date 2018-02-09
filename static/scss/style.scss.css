@@ -4062,6 +4062,9 @@ figure.video {
   background-size: cover;
   height: 15em; }
 
+#order .choose-package {
+  margin-top: 3em; }
+
 #order .packages > div {
   margin-bottom: 1em; }
 

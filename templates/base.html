@@ -23,6 +23,14 @@
     <link rel="stylesheet" href="{% static '/scss/style.scss.css' %}?v=21">
     {% block header %}
     {% endblock header %}
+    <script type="text/javascript">
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+    analytics.load("RYGBe9lnLwGVU8NK5t6tN1SkDdDNL4SC");
+    {% block analytics %}
+    analytics.page()
+    {% endblock %}
+    }}();
+    </script>
     <meta name="google-site-verification" content="6qgsnShfjPXfY1ujiQBVnf-BK8dywp_atWp0bvz2Zb8" />
     <meta name="google-site-verification" content="UCY_UR08IOIkky9jBQ0kYwnCGrrUA-S_nQ9IcD5cVOc" />
     <meta name="p:domain_verify" content="082cf97b49f140588b479c2098ce4765"/>
