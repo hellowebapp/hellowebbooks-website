@@ -344,27 +344,12 @@ figure.video {
         }
         h3 {
             margin: 15px 0 0 0;
+            font-size: 1.8rem;
         }
         p {
             margin: 5px 0 10px 0;
             font-size: 1.2rem;
         }
-        .intro {
-            margin-bottom: 2em;
-            h2 {
-                margin-bottom: 5px;
-                margin-top: 0.5em;
-            }
-            p {
-                max-width: 700px;
-                margin: 0 auto;
-            }
-        }
-    }
-    .sub-packages {
-        margin-bottom: 3em;
-        border-bottom: 1px solid $gray-superlight;
-        padding-bottom: 3em;
     }
     #original, #ic, #both, #hwd, #hwa, #all {
         display: none;
@@ -684,38 +669,35 @@ figure.video {
         margin-top: 5em;
         margin-bottom: 2em;
     }
-    #buy-packages {
-        margin-top: 3em;
-        .col-sm-4 {
-            margin: 1em 0 3em 0;
-        }
+}
+
+.buy-packages {
+    margin-top: 3em;
+    .col-sm-4 {
+        margin: 1em 0 3em 0;
+    }
+    h3 {
+        font-size: 2rem;
+        margin-top: 0;
+        font-style: normal;
+    }
+    img {
+        margin-bottom: 1em;
+    }
+    .package-container {
+        margin-bottom: 1em;
+    }
+    .video-area {
+        border-bottom: 5px solid #f9f7ee;
+        padding-bottom: 3em;
+        margin-bottom: 3em;
         h3 {
-            font-size: 2rem;
-            margin-top: 0;
-            font-style: normal;
+            margin-bottom: 0.5em;
         }
-        img {
-            margin-bottom: 1em;
-        }
-        .package-container {
-            //border: 1px solid #e1e1e1;
-            //border-radius: 5px;
-            //padding-top: 1em;
-            //padding-bottom: 1em;
-            margin-bottom: 1em;
-        }
-        .video-area {
-            border-bottom: 5px solid #f9f7ee;
-            padding-bottom: 3em;
-            margin-bottom: 3em;
-            h3 {
-                margin-bottom: 0.5em;
-            }
-        }
-        .paperback-area {
-            border-right: 5px solid #f9f7ee;
-            padding-right: 2em;
-        }
+    }
+    .paperback-area {
+        border-right: 5px solid #f9f7ee;
+        padding-right: 2em;
     }
 }
 
@@ -814,7 +796,7 @@ figure.video {
             }
         }
     }
-    .product-page #buy-packages .paperback-area {
+    .buy-packages .paperback-area {
         padding-right: 0;
         border-right: 0;
         border-bottom: 5px solid #f9f7ee;
