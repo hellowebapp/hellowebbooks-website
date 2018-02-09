@@ -1687,16 +1687,16 @@ fieldset[disabled] a.btn {
     border-color: #dab238; }
 
 .btn-secondary {
-  color: #daa520;
+  color: #b5891b;
   background-color: #fafad2;
   border-color: #fafad2; }
   .btn-secondary:focus, .btn-secondary.focus, .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
-    color: #daa520;
+    color: #b5891b;
     background-color: #f5f5a4;
     border-color: #f4f49b; }
   .btn-secondary:hover {
-    color: #daa520;
+    color: #b5891b;
     background-color: #f5f5a4;
     border-color: #f4f49b; }
   .btn-secondary:active, .btn-secondary.active,
