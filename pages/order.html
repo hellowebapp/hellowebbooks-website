@@ -11,10 +11,10 @@ analytics.page("Order");
 {% endblock %}
 
 {% block content %}
-<div class="jumbotron"></div>
+{# <div class="jumbotron"></div> #}
 
 <div class="container">
-    <h1 class="text-center">Order</h1>
+    <h1 class="text-center"><span class="highlight">Order</span></h1>
     <p class="text-center">Ready to buy? Choose which package you want below!</p>
 
     {% comment %}
@@ -23,29 +23,29 @@ analytics.page("Order");
     <div class="row packages choose-package">
         <div class="col-md-4 text-center">
             <a href="#hwd">
-                <img src="{% static '/images/products/hwd-books.jpg' %}" alt="Hello Web Design"/>
+                <img src="{% static '/images/hwd/new-square.jpg' %}" alt="Hello Web Design"/>
             </a>
             <h3>Hello Web Design</h3>
-            <p>Learn design fundamentals, a tiny bit of theory, and shortcuts to help you learn design.</p>
+            <p>Learn design fundamentals, a tiny bit of theory, and a ton of shortcuts to help you learn design.</p>
             <a href="#hwd" class="btn btn-secondary">Choose package</a>
             {# <p><small>Starting at $14.95</small></p> #}
         </div>
         <div class="col-md-4 text-center">
             <a href="#all">
-                <img src="{% static '/images/products/both-books.jpg' %}" alt="Hello Web App"/>
+                <img src="{% static '/images/all/new-square.jpg' %}" alt="Hello Web App"/>
             </a>
             <h3>Combo Pack</h3>
             <p>Build and design your side project. Includes both <i>Hello Web App</i> and <i>Hello Web Design</i>.</p>
-            <a href="#original" class="btn btn-primary">Choose package</a>
+            <a href="#all" class="btn btn-primary">Choose package</a>
             {# <p><small>Starting at $34.95</small></p> #}
         </div>
         <div class="col-md-4 text-center">
             <a href="#hwa">
-                <img src="{% static '/images/products/both-books.jpg' %}" alt="Hello Web App"/>
+                <img src="{% static '/images/both/new-square.jpg' %}" alt="Hello Web App"/>
             </a>
             <h3>Hello Web App</h3>
-            <p>Everything you need to build and grow a web app. Create a web app and make it a success.</p>
-            <a href="#original" class="btn btn-secondary">Choose package</a>
+            <p>Everything you need to build and grow your first web app. Create a web app and make it a success.</p>
+            <a href="#hwa" class="btn btn-secondary">Choose package</a>
             {# <p><small>Starting at $24.95</small></p> #}
         </div>
         {% comment %}
@@ -118,18 +118,18 @@ analytics.page("Order");
         </div>
         <div class="col-md-4 text-center">
             <a href="https://gum.co/double-hwa-pb">
-                <img src="{% static '/images/products/both-paperback.jpg' %}" alt="Hello Web App combo paperback package"/>
+                <img src="{% static '/images/products/both-paperback.jpg' %}" alt="Hello Web App paperback package"/>
             </a>
-            <h3>Combo Paperback Package</h3>
-            <p>All six eBook files (PDF, .mobi, and .ePub) as well as both beautifully designed paperback books.</p>
+            <h3>Paperback Package</h3>
+            <p>Both eBooks (PDF, .mobi, and .ePub for each) as well as both beautifully designed paperback books.</p>
             <a href="https://gum.co/double-hwa-pb" class="btn btn-secondary buy-button" data-category="Both Hello Web App Books" data-title="Double Paperbacks" data-price="49.95">Buy for $49.95</a>
         </div>
         <div class="col-md-4 text-center">
             <a href="https://gum.co/double-hwa-video">
-                <img src="{% static '/images/products/both-videos.jpg' %}" alt="Hello Web App combo video package"/>
+                <img src="{% static '/images/products/both-videos.jpg' %}" alt="Hello Web App video package"/>
             </a>
-            <h3>Combo Video Package</h3>
-            <p>All six eBook files <em>and</em> twenty screencasts and videos, walking you through every chapter of both books.</p>
+            <h3>Video Package</h3>
+            <p>Both eBooks <em>and</em> twenty screencasts and videos, walking you through every chapter of both books.</p>
             <a href="https://gum.co/double-hwa-video" class="btn btn-primary buy-button" data-category="Both Hello Web App Books" data-title="Double Videos" data-price="124">Buy for $124</a>
             <p><small>Add both paperbacks for $20 + shipping</small></p>
         </div>
@@ -137,8 +137,8 @@ analytics.page("Order");
             <a href="https://gum.co/double-hwa-ebook">
                 <img src="{% static '/images/products/both-ebook.jpg' %}" alt="Hello Web App combo ebook package"/>
             </a>
-            <h3>Combo eBook Package</h3>
-            <p>Six eBook files (custom designed PDF, .mobi, and .ePub for each book) to get you started on your web app journey.</p>
+            <h3>eBook Package</h3>
+            <p>Both eBooks (custom designed PDF, .mobi, and .ePub for each book) to get you started on your web app journey.</p>
             <a href="https://gum.co/double-hwa-ebook" class="btn btn-secondary buy-button" data-category="Both Hello Web App Books" data-title="Double eBooks" data-price="24.95">Buy for $24.95</a>
         </div>
     </div>
@@ -192,7 +192,7 @@ analytics.page("Order");
                 <img src="{% static '/images/products/hwd-paperback.jpg' %}" alt="Hello Web Design paperback package"/>
             </a>
             <h3>Paperback Package</h3>
-            <p>All three eBook files (PDF, .mobi, and .ePub) as well as the beautifully designed paperback book.</p>
+            <p>The eBook (PDF, .mobi, and .ePub formats) as well as the beautifully designed paperback book.</p>
             <a href="https://gum.co/hwd-pb" class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="29.95">Buy for $29.95</a>
         </div>
         <div class="col-md-4 text-center">
@@ -200,15 +200,15 @@ analytics.page("Order");
                 <img src="{% static '/images/products/hwd-videos.jpg' %}" alt="Hello Web Design video package"/>
             </a>
             <h3>Video Package</h3>
-            <p>All eBook files <em>and</em> 17 screencasts and videos, walking you through every chapter of the book.</p>
+            <p>The eBook (in all three formats) <em>and</em> 17 screencasts and videos, walking you through every chapter of the book.</p>
             <a href="https://hellowebbooks.withcoach.com/hello-web-design-video-course" class="btn btn-primary buy-button" data-category="Hello Web Design"  data-title="Hello Web Design Videos" data-price="79">Buy for $79</a>
         </div>
         <div class="col-md-4 text-center">
             <a href="https://gum.co/hwd-ebook">
-                <img src="{% static '/images/products/hwd-ebook.jpg' %}" alt="Hello Web Design ebook package"/>
+                <img src="{% static '/images/hwd/cropped.jpg' %}" alt="Hello Web Design ebook package"/>
             </a>
             <h3>eBook Package</h3>
-            <p>Three eBook files (custom designed PDF, .mobi, and .ePub) to help you take your web design skills to the next level.</p>
+            <p>The eBook in three formats (custom designed PDF, .mobi, and .ePub) to help you take your web design skills to the next level.</p>
             <a href="https://gum.co/hwd-ebook" class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95">Buy for $14.95</a>
         </div>
     </div>
@@ -216,33 +216,33 @@ analytics.page("Order");
     {% comment %}
     Both HWA and HWD - choose which package you want
     {% endcomment %}
-    <div class="row packages sub-packages" id="both" name="both">
+    <div class="row packages sub-packages" id="all" name="all">
         <div class="intro text-center">
             <h2>Now, choose your Combo Pack package</h2>
             <p>Build and launch your side project, from design to code. Includes both <i>Hello Web App</i> (to teach you web development with Python and Django) and <i>Hello Web Design</i> (to teach your web design fundamentals and shortcuts.)</p>
         </div>
         <div class="col-md-4 text-center">
             <a href="https://gum.co/hwd-pb">
-                <img src="{% static '/images/products/hwd-paperback.jpg' %}" alt="Hello Web Design paperback package"/>
+                <img src="{% static '/images/all/new-square.jpg' %}" alt="Hello Web Books paperback package"/>
             </a>
             <h3>Paperback Package</h3>
-            <p>All three eBook files (PDF, .mobi, and .ePub) as well as the beautifully designed paperback book.</p>
+            <p>All three eBooks (PDF, .mobi, and .ePub for each) as well as the beautifully designed paperback books.</p>
             <a href="https://gum.co/hwd-pb" class="btn btn-secondary buy-button" data-title="Hello Web Design Paperback" data-category="Hello Web Design" data-price="29.95">Buy for $29.95</a>
         </div>
         <div class="col-md-4 text-center">
             <a href="https://hellowebbooks.withcoach.com/hello-web-design-video-course">
-                <img src="{% static '/images/products/hwd-videos.jpg' %}" alt="Hello Web Design video package"/>
+                <img src="{% static '/images/products/hwd-videos.jpg' %}" alt="Hello Web Books video package"/>
             </a>
             <h3>Video Package</h3>
-            <p>All eBook files <em>and</em> 17 screencasts and videos, walking you through every chapter of the book.</p>
+            <p>All three eBooks <em>and</em> 45 screencasts/videos, walking you all three books.</p>
             <a href="https://hellowebbooks.withcoach.com/hello-web-design-video-course" class="btn btn-primary buy-button" data-category="Hello Web Design"  data-title="Hello Web Design Videos" data-price="79">Buy for $79</a>
         </div>
         <div class="col-md-4 text-center">
             <a href="https://gum.co/hwd-ebook">
-                <img src="{% static '/images/products/hwd-ebook.jpg' %}" alt="Hello Web Design ebook package"/>
+                <img src="{% static '/images/all/all.jpg' %}" alt="Hello Web Books combo ebook package"/>
             </a>
             <h3>eBook Package</h3>
-            <p>Three eBook files (custom designed PDF, .mobi, and .ePub) to help you take your web design skills to the next level.</p>
+            <p>All three eBooks in custom designed PDF, .mobi, and .ePub formats.</p>
             <a href="https://gum.co/hwd-ebook" class="btn btn-secondary buy-button" data-title="Hello Web Design eBooks" data-category="Hello Web Design" data-price="14.95">Buy for $14.95</a>
         </div>
     </div>
