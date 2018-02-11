@@ -12,15 +12,17 @@ analytics.page("Books and Courses");
     <p>I love to teach beginner web skills and have two major book/courses out so far:</p>
 
     <div class="row">
-        <div class="col-sm-6 hwd">
+        <div class="col-sm-5 col-sm-offset-1 hwd">
             <h2><a href="{% url '/learn-design.html' %}"><i>Hello Web Design</i></a></h2>
-            <p>Design shortcuts and fundamentals aimed for programmers, developers, marketers, and non-designers. Learn just enough design to be dangerous.</p>
+            <img src="{% static '/images/original/banner.png' %}" alt="Hello Web App" />
+            <p><strong>Design shortcuts and fundamentals</strong> aimed for programmers, developers, marketers, and non-designers. Learn just enough design to be dangerous.</p>
             <p><a href="{% url '/learn-design.html' %}" class="btn btn-secondary">More about <i>Hello Web Design</i></a></p>
         </div>
 
-        <div class="col-sm-6 hwa">
+        <div class="col-sm-5 hwa">
             <h2><a href="{% url '/learn-django.html' %}"><i>Hello Web App</i></a></h2>
-            <p>Want to build your first web app? Hello Web App walks you through building and launching a simple web app using Python and Django.</p>
+            <img src="{% static '/images/original/banner.png' %}" alt="Hello Web App" />
+            <p><strong>Want to build your first web app?</strong> Hello Web App walks you through building and launching a simple web app using Python and Django.</p>
             <p><a href="{% url '/learn-django.html' %}" class="btn btn-secondary">More about <i>Hello Web App</i></a></p>
         </div>
     </div>
