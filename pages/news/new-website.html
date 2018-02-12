@@ -1,34 +1,36 @@
-title: Hello Web App has a new website!
+title: New Hello Web Books Website!
 # headline: An introduction
-excerpt: New website, hey! I was using Squarespace before, which was perfectly fine for a no-time-to-build-a-website website. But as Hello Web App grew and I wanted more and more to build it into a legitimate, on-going side project
-author: Tracy Osborn 
-featuredimage: /images/blog/2016/1/17/1.png
-date: 17-1-2016
+excerpt: After a few months of work, I'm super excited to release the new Hello Web Books website design to the world! When I originally designed this website, I stepped out of my comfort zone and added a lot of photos, banners, fonts, and colors - I'm terrible at designing the "little details" so I relied on a lot of extra things to make the website feel more polished. In this design, I stripped most of that out.
+author: Tracy Osborn
+featuredimage: /images/blog/2018/new-website.png
+date: 13-2-2018
 category: announcements
-featured: False
+featured: True
 
 {% extends "post.html" %}
 {% block body %}
 
-<figure class="caption">
-    <img src="/static/images/blog/2016/1/17/1.png" alt="" style="border: 1px solid #e1e1e1;"/>
-    <figcaption>Featuring a pretty photo I took at the Hackbright + Hello Web App workshop last year.</figcaption>
+<p>After a few <strike>weeks</strike> months of work, I'm super excited to release the new Hello Web Books website design to the world!</p>
+
+<figure class="caption video" style="padding-bottom: 50%;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Re_G20COq7s?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=allowfullscreen></iframe>
+    <figcaption>Video/vlog of this post. In it, I go through a bit of why I updated everything and before/after screens.</figcaption>
 </figure>
 
-{% filter markdown %}
-New website, hey!
+<p>In <a href="https://hellowebbooks.com/learn-design"><i>Hello Web Design</i></a>, one of my biggest points for a nicer looking website design is to <em>reduce clutter</em>. And then I'd come back to this website and get annoyed at past-me for creating such a clutter-y website.</p>
 
-I was using Squarespace before, which was perfectly fine for a no-time-to-build-a-website website. But as Hello Web App grew and I wanted more and more to build it into a legitimate, on-going side project, Squarespace hindered me. It was too much effort to make new designs (as I was constrained to specific layouts and styles) and I couldn't add custom analytics. I was spending too much time overriting CSS.
+<p>When I originally designed this website, I stepped out of my comfort zone and added a <em>lot</em> of photos, banners, fonts, and colors &#8212; I'm terrible at designing the "little details" so I relied on a lot of extra <em>things</em> to make the website feel more polished.</p>
 
-So, what's a web designer to do? Build a site from scratch finally, of course.
+<p><strong>In this design, I stripped most of that out.</strong> No more Typekit (oh man do I love Freight Text Pro but Typekit was just a bit too slow for me), no more custom fonts (Mrs Onion was fun, but in the end, a bit hard to read) &#8212; all hail <a href="https://fonts.google.com/specimen/Lato">Lato</a>, the only typeface used now. It's plain, but pretty, and comes with tons of weights.</p>
 
-I'm using the static site generator [Cactus](https://github.com/koenbok/cactus), which uses Django. I decided to go with a generator using a language I'm familiar with, rather than one in a different language (like the often-recommended [Hugo](https://gohugo.io/) which is written in Go).
+<p><strong>The <a href="https://hellowebbooks.com/#packages">landing pages</a> for the books also have been improved.</strong> A lot of the imagery has been removed and a lot more text content added, like FAQs and more descriptions of the package contents.</p>
 
-I'm also using [Sass](http://sass-lang.com/) (new to me as I used to be on the LESS bandwagon) and [Bootstrap 4](http://getbootstrap.com/) to help me get the responsiveness and grid right.
+<p>Last but not least, I've increased prices on all my products. This was a hard decision, but the last couple years I've had <em>really</em> low income for the amount of work I put into the videos/books. I've been severely undercharging for the amount of work I've put in. Of course, existing buyers will still get all product updates for free.</p>
 
-There are quite a bit of pieces still missing, but it's better than before! Please [email me](mailto:tracy@hellowebapp.com) if you see anything wonky.
+<p>Things aren't done though! I am <em>thisclose</em> to launching my next announcement but not quite yet, which is why <i>Hello Web App</i> isn't available to be ordered right now (it might be a big obvious what the announcement is about). Gotta get my ducks in a row before I can turn that back on. I know this website has some bugs and kinks to work out, so I'm launching it sooner rather than later.</p>
 
-Now that the new website is out, I *should* be more forthcoming with new blog posts (esp. since I owe quite a few from the Kickstarter campaign). Stay tuned!
-{% endfilter %}
+<p>On the topic of bugs! <strong>If you see anything wonky, please let me know!</strong> I appreciate anyone who can help me test and debug the website.</p>
+
+<p><strong>What do you think? See anything you like or dislike?</strong> Let me know in the comments below or on <a href="https://twitter.com/limedaring">Twitter</a>!</p>
 
 {% endblock body %}

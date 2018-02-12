@@ -2646,6 +2646,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fa-facebook:before {
   content: "\f09a"; }
 
+.fa-instagram:before {
+  content: "\f16d"; }
+
 .fa-github:before {
   content: "\f09b"; }
 
