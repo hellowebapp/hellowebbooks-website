@@ -4353,7 +4353,7 @@ figure.video {
 
 #original .jumbotron {
   background: url(../images/heros/hwa-sketch.jpg) top center no-repeat;
-  background-size: cover; }
+  background-size: contain; }
   #original .jumbotron h1 span.hl {
     transform: scale(1) rotate(-1deg) skew(-20deg); }
     #original .jumbotron h1 span.hl span {
@@ -4376,7 +4376,7 @@ figure.video {
 
 #design .jumbotron {
   background: url(../images/heros/hwd-sketch.png) top center no-repeat;
-  background-size: cover; }
+  padding-bottom: 4.5rem; }
 
 #design #book-banner {
   background: url(../images/hwd/book-banner.jpg) top center no-repeat; }
@@ -4397,6 +4397,8 @@ figure.video {
       font-size: 1.2rem; } }
 
 @media (max-width: 47.9em) {
+  #original .jumbotron, #design .jumbotron {
+    background-size: cover; }
   .product-page blockquote p {
     font-size: 1.4rem; }
   .product-page blockquote cite {
