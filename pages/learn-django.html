@@ -42,7 +42,7 @@ analytics.page("Original book landing page");
       </div>
       <div class="col-md-4">
         <h3>Features include</h3>
-        <ul style="font-size:1.2rem;">
+        <ul style="font-size:1.2rem;"   >
           <li><b>28</b> videos and screencasts.</li>
           <li><b>Two</b> eBooks.</li>
           <li><b>Three eBook formats for each</b>: PDF, ePub, and .mobi/Kindle.</li>
@@ -172,7 +172,12 @@ analytics.page("Original book landing page");
     {# The buy area #}
     <div class="row buy-packages" id="hwa-packages">
         {# <h2 class="text-center vertical-margin" style="font-size: 3rem;">Buy the book</h2> #}
-        {% include 'includes/product/hwa.html' %}
+        <div class="col-md-10 col-md-offset-1 col-sm-12" style="text-align: center; background-color: #FFFDED; border: 5px solid #FFFBCA; border-radius: 15px; padding: 2em;">
+            <h2 style="margin-top:0.5em;">Buying options</h2>
+            <p class="small-sans" style="font-size:1rem; margin-bottom:0;">February 13, 2018</p>
+            <p>Stay tuned! Big announcement regarding <i>Hello Web App</i> coming soon. ♥</p>
+        </div>
+        {#}{% include 'includes/product/hwa.html' %}#}
     </div>
 
     {# The FAQ area #}
