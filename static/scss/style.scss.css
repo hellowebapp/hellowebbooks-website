@@ -3999,7 +3999,8 @@ figure.video {
         padding: 0 1em; } }
 
 #footer {
-  margin-top: 2em; }
+  margin-top: 2em;
+  margin-bottom: 2em; }
   #footer nav ul li {
     font-weight: bold;
     float: left;
