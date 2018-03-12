@@ -1,7 +1,7 @@
 title: Tutorial: How To Set Up a Contact Form With Django
 # headline: An introduction
 excerpt: This tutorial is intended as a follow-on to my book, Hello Web App, which teaches the basics of web app development — from ideation to deployment. In this walkthrough, we're going to build something relatively easy: a simple contact form where your users can enter their name, email address, and message, and your website will email you the message (with the user's email as the reply-to.)
-author: Tracy Osborn 
+author: Tracy Osborn
 featuredimage: /images/blog/2015/6/10/download.png
 date: 10-6-2015
 category: tutorial
@@ -11,13 +11,17 @@ featured: True
 {% block body %}
 
 {% filter markdown %}
-*This tutorial is intended as a follow-on to my book, _[Hello Web App](https://hellowebbooks.com/learn-django/)_, which teaches the basics of web app development — from ideation to deployment. [You can order the book here (starting at $14.95).](https://hellowebbooks.com/order/)*
+*This tutorial is intended as a follow-on to my book, [Hello Web App](https://hellowebbooks.com/learn-django/), which teaches the basics of web app development — from ideation to deployment. [You can order the book here (starting at $14.95).](https://hellowebbooks.com/order/)*
 
 In this walkthrough, we're going to build something relatively easy: **a simple contact form where your users can enter their name, email address, and message**, and your website will email you the message (with the user's email as the reply-to.)
 
 ## Set up the URL
 
-Pretty much every new feature that'll go into your web app will go through the same process: set up the URL, set up the logic, set up the template. For the URL, we're going to set up a simple page under contact, so: *http://localhost.com/contact/*. Add the below to your *urls.py*:
+Pretty much every new feature that'll go into your web app will go through the same process: set up the URL, set up the logic, set up the template. For the URL, we're going to set up a simple page under contact, so: *http://localhost.com/contact/*.
+
+_*Hint:* "collection" is the name of the specific Django app we set up in the [Hello Web App tutorial](https://hellowebbooks.com/learn-django/). Replace it with the name of your own web app._
+
+Add the below to your *urls.py*:
 
 {% endfilter %}
 <p class="code-page">urls.py</p>
@@ -45,14 +49,14 @@ from collection.forms import ContactForm
 # add to your views
 def contact(request):
     form_class = ContactForm
-    
+
     return render(request, 'contact.html', {
         'form': form_class,
     })
 </code></pre>
 
 {% filter markdown %}
-We're just grabbing a form (which we haven't defined yet) and passing it over into the template (which we haven't created yet.) 
+We're just grabbing a form (which we haven't defined yet) and passing it over into the template (which we haven't created yet.)
 
 ## Set up the form
 
@@ -84,7 +88,7 @@ All those form fields were grabbed from [Django's Form fields documentation](htt
 
 ## Create the template
 
-Now we need to create the *template.html* page to display the contact form on our website. We're going to extend the base layout we created in the _[Hello Web App](https://hellowebbooks.com/learn-django/)_ tutorial, and then create the form using the form passed in from our view. 
+Now we need to create the *template.html* page to display the contact form on our website. We're going to extend the base layout we created in the _[Hello Web App](https://hellowebbooks.com/learn-django/)_ tutorial, and then create the form using the form passed in from our view.
 
 {% endfilter %}
 <p class="code-page">contact.html</p>
@@ -123,11 +127,11 @@ This will be redundant for you if you've finished the _[Hello Web App](https://h
 <p class="code-page">settings.py</p>
 <pre><code class="python">
 EMAIL_BACKEND =
-  'django.core.mail.backends.console.EmailBackend' 
+  'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False 
+EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 </code></pre>
 
@@ -166,9 +170,9 @@ def contact(request):
             , '')
             form_content = request.POST.get('content', '')
 
-            # Email the profile with the 
+            # Email the profile with the
             # contact information
-            template = 
+            template =
                 get_template('contact_template.txt')
             context = Context({
                 'contact_name': contact_name,
@@ -232,7 +236,7 @@ Content:
 {% filter markdown %}
 ## Improve the form (optional)
 
-In the screenshot of the form above, we can see that the labels of the form aren't very "pretty" — for example, just saying "Contact name" which is very impersonal. 
+In the screenshot of the form above, we can see that the labels of the form aren't very "pretty" — for example, just saying "Contact name" which is very impersonal.
 
 Django creates these names automatically from your field names, but we can set our own pretty label names in the form definition in *forms.py*. Update your code to the below:
 
@@ -252,7 +256,7 @@ class ContactForm(forms.Form):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.fields['contact_name'].label = "Your name:"
         self.fields['contact_email'].label = "Your email:"
-        self.fields['content'].label = 
+        self.fields['content'].label =
             "What do you want to say?"
 </code></pre>
 
@@ -279,7 +283,7 @@ Once we've reloaded our form, we can see the new labels:
 
 The local email server will output "emails" to your local server, so you can confirm everything is working locally — but when your web app is live, you obviously want those emails to actually land in your email inbox, rather than the server output.
 
-You can do this by setting up something like [Sendgrid](https://sendgrid.com/) or [Mandrill](http://mandrill.com/) — freemium email servers where you should just need to sign up for an account, and set the details of your account in your settings.py. 
+You can do this by setting up something like [Sendgrid](https://sendgrid.com/) or [Mandrill](http://mandrill.com/) — freemium email servers where you should just need to sign up for an account, and set the details of your account in your settings.py.
 
 [Sendgrid has a great short walkthrough here.](https://sendgrid.com/docs/Integrate/Frameworks/django.html) If you're at the point in _[Hello Web App](https://hellowebbooks.com/learn-django/)_ where we've set up a production settings file, you can stick the email server stuff in there, and keep your local/test emails (using the Django console) in your normal *settings.py* file. This way you can "send emails" as you're developing your app, but you don't have to worry about going over the daily email limit that these email delivery products have in their freemium accounts.
 
