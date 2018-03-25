@@ -1690,16 +1690,16 @@ fieldset[disabled] a.btn {
 .btn-secondary {
   color: #b5891b;
   background-color: #fafad2;
-  border-color: #fafad2; }
+  border-color: #f2deaa; }
   .btn-secondary:focus, .btn-secondary.focus, .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
     color: #b5891b;
     background-color: #f5f5a4;
-    border-color: #f4f49b; }
+    border-color: #eac974; }
   .btn-secondary:hover {
     color: #b5891b;
     background-color: #f5f5a4;
-    border-color: #f4f49b; }
+    border-color: #eac974; }
   .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
     background-image: none; }
@@ -1707,11 +1707,11 @@ fieldset[disabled] a.btn {
   fieldset[disabled] .btn-secondary:focus,
   fieldset[disabled] .btn-secondary.focus {
     background-color: #fafad2;
-    border-color: #fafad2; }
+    border-color: #f2deaa; }
   .btn-secondary.disabled:hover, .btn-secondary:disabled:hover,
   fieldset[disabled] .btn-secondary:hover {
     background-color: #fafad2;
-    border-color: #fafad2; }
+    border-color: #f2deaa; }
 
 .btn-info {
   color: #fff;
@@ -1840,19 +1840,19 @@ fieldset[disabled] a.btn {
     border-color: #ead38e; }
 
 .btn-secondary-outline {
-  color: #fafad2;
+  color: #f2deaa;
   background-image: none;
   background-color: transparent;
-  border-color: #fafad2; }
+  border-color: #f2deaa; }
   .btn-secondary-outline:focus, .btn-secondary-outline.focus, .btn-secondary-outline:active, .btn-secondary-outline.active,
   .open > .btn-secondary-outline.dropdown-toggle {
     color: #fff;
-    background-color: #fafad2;
-    border-color: #fafad2; }
+    background-color: #f2deaa;
+    border-color: #f2deaa; }
   .btn-secondary-outline:hover {
     color: #fff;
-    background-color: #fafad2;
-    border-color: #fafad2; }
+    background-color: #f2deaa;
+    border-color: #f2deaa; }
   .btn-secondary-outline.disabled:focus, .btn-secondary-outline.disabled.focus, .btn-secondary-outline:disabled:focus, .btn-secondary-outline:disabled.focus,
   fieldset[disabled] .btn-secondary-outline:focus,
   fieldset[disabled] .btn-secondary-outline.focus {
@@ -4385,6 +4385,30 @@ figure.video {
 #design #book-banner {
   background: url(../images/hwd/book-banner.jpg) top center no-repeat; }
 
+#cmd-line .jumbotron {
+  padding-bottom: 2rem;
+  text-align: left; }
+  #cmd-line .jumbotron h1 {
+    max-width: none;
+    margin-left: 0;
+    font-size: 5rem; }
+    #cmd-line .jumbotron h1 span.hl {
+      transform: initial; }
+      #cmd-line .jumbotron h1 span.hl span {
+        transform: initial; }
+  #cmd-line .jumbotron h2 {
+    max-width: none;
+    margin: 1em 0; }
+  #cmd-line .jumbotron p {
+    color: #818a91; }
+
+#cmd-line .toc-area li {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.05em; }
+
 @media (max-width: 74.9em) {
   #original .jumbotron, #design .jumbotron, #home .jumbotron {
     padding: 1em; }
@@ -4436,7 +4460,23 @@ figure.video {
         transform: scale(1) rotate(-1deg) skew(-20deg); }
         #original .jumbotron h1 span.hl span, #design .jumbotron h1 span.hl span, #home .jumbotron h1 span.hl span {
           transform: scale(1.3) rotate(1deg) skew(20deg);
-          margin-top: 20px; } }
+          margin-top: 20px; }
+  #cmd-line .jumbotron {
+    padding: 1em; }
+    #cmd-line .jumbotron h1 {
+      font-size: 2rem;
+      padding-bottom: 10px;
+      line-height: 1.1; }
+    #cmd-line .jumbotron h2 {
+      margin-top: 0;
+      font-size: 1.2rem; }
+    #cmd-line .jumbotron .btn {
+      margin-bottom: 5px; }
+    #cmd-line .jumbotron .col-md-4 {
+      text-align: center;
+      margin-bottom: 20px; }
+    #cmd-line .jumbotron img {
+      max-height: 200px; } }
 
 .quiet {
   color: #666;

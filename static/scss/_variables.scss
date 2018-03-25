@@ -222,7 +222,7 @@ $btn-primary-border:             $btn-primary-bg !default;
 
 $btn-secondary-color:            #b5891b !default;
 $btn-secondary-bg:               #fafad2 !default;
-$btn-secondary-border:           #fafad2 !default;
+$btn-secondary-border:           lighten(#b5891b, 40%) !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
