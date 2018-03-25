@@ -1787,16 +1787,16 @@ fieldset[disabled] a.btn {
 .btn-secondary {
   color: #b5891b;
   background-color: #fafad2;
-  border-color: #fafad2; }
+  border-color: #f2deaa; }
   .btn-secondary:focus, .btn-secondary.focus, .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
     color: #b5891b;
     background-color: #f5f5a4;
-    border-color: #f4f49b; }
+    border-color: #eac974; }
   .btn-secondary:hover {
     color: #b5891b;
     background-color: #f5f5a4;
-    border-color: #f4f49b; }
+    border-color: #eac974; }
   .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
     background-image: none; }
@@ -1804,11 +1804,11 @@ fieldset[disabled] a.btn {
   fieldset[disabled] .btn-secondary:focus,
   fieldset[disabled] .btn-secondary.focus {
     background-color: #fafad2;
-    border-color: #fafad2; }
+    border-color: #f2deaa; }
   .btn-secondary.disabled:hover, .btn-secondary:disabled:hover,
   fieldset[disabled] .btn-secondary:hover {
     background-color: #fafad2;
-    border-color: #fafad2; }
+    border-color: #f2deaa; }
 
 .btn-info {
   color: #fff;
@@ -1937,19 +1937,19 @@ fieldset[disabled] a.btn {
     border-color: #ead38e; }
 
 .btn-secondary-outline {
-  color: #fafad2;
+  color: #f2deaa;
   background-image: none;
   background-color: transparent;
-  border-color: #fafad2; }
+  border-color: #f2deaa; }
   .btn-secondary-outline:focus, .btn-secondary-outline.focus, .btn-secondary-outline:active, .btn-secondary-outline.active,
   .open > .btn-secondary-outline.dropdown-toggle {
     color: #fff;
-    background-color: #fafad2;
-    border-color: #fafad2; }
+    background-color: #f2deaa;
+    border-color: #f2deaa; }
   .btn-secondary-outline:hover {
     color: #fff;
-    background-color: #fafad2;
-    border-color: #fafad2; }
+    background-color: #f2deaa;
+    border-color: #f2deaa; }
   .btn-secondary-outline.disabled:focus, .btn-secondary-outline.disabled.focus, .btn-secondary-outline:disabled:focus, .btn-secondary-outline:disabled.focus,
   fieldset[disabled] .btn-secondary-outline:focus,
   fieldset[disabled] .btn-secondary-outline.focus {
