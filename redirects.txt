@@ -8,8 +8,8 @@
 /web-design/ /learn-design/;
 /install-django https://hellowebapp.com/setup/#setup-django;
 /install-python https://hellowebapp.com/setup/;
-/cmd-line-pdf https://drive.google.com/open?id=1_2LTtR6f5bFCC5wjFZc9ILA7vmru7ShK
-/cmd-line-printable https://drive.google.com/open?id=1iyRoPey5YTuTRCFNixfJSWDYzpi8M7hB
+/cmd-line-pdf https://goo.gl/LLGswY
+/cmd-line-printable https://goo.gl/B38FeX
 /01 http://amzn.to/1qUIE8o;
 /1 http://amzn.to/1qUIE8o;
 /2 http://learn.shayhowe.com/html-css/;
