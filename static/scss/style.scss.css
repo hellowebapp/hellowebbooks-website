@@ -4512,6 +4512,10 @@ figure.video {
   text-align: center;
   background-color: #CB4A65;
   border-bottom: 5px solid #DF617E; }
+  #nagger p a {
+    color: #fff; }
+    #nagger p a:hover {
+      text-decoration: none; }
   #nagger .nagger-close a {
     cursor: pointer;
     border: 2px solid #DF617E;
