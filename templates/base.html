@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" href="{% static '/images/favicons/favicon-96x96.png' %}" sizes="96x96">
     <link rel="icon" type="image/png" href="{% static '/images/favicons/favicon-16x16.png' %}" sizes="16x16">
     <link rel="canonical" href="{{ CURRENT_PAGE.absolute_final_url }}" />
-    <link rel="stylesheet" href="{% static '/scss/style.scss.css' %}?v=25">
+    <link rel="stylesheet" href="{% static '/scss/style.scss.css' %}?v=26">
     <meta property="og:locale" content="en_CA" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Hello Web Books" />
@@ -109,6 +109,16 @@
         </div>
     </div>
 
+    <div id="nagger" class="hidden-md-down">
+        <div id="nagger-wrap">
+            <p>Learn how to build a web app! Support the <i>Hello Web App</i> Kickstarter, ending on Mar 30 2018. &nbsp;
+            <a href="https://www.kickstarter.com/projects/1868398473/hello-web-app-20-build-your-first-web-app-with-dja" title="Hello Web App Kickstarter" class="btn btn-primary btn-sm" target="_blank">See on Kickstarter</a></p>
+        </div>
+        <div class="nagger-close">
+            <a title="Close this notification">x</a>
+        </div>
+    </div>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script async src="https://assets.convertkit.com/assets/CKJS4.js?v=21"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
@@ -119,6 +129,32 @@
             families: ['Lato:400,400italic,700,700italic']
         }
       });
+
+        //if(is_nagger_enabled()) {
+        //    $("html").addClass("body-nagger");
+        //    $("#nagger").show();
+        //    $(".nagger-close").show();
+        //}
+
+        function disable_nagger() {
+            //localStorage.setItem('enable-nagger', '0');
+            $("#nagger").slideUp();
+        }
+
+        //function is_nagger_enabled() {
+        //   return localStorage.getItem('enable-nagger') != '0';
+        //}
+
+        $(".nagger-close a").click(function() {
+            $(".nagger-close").hide();
+            disable_nagger();
+            $("html").animate({
+                'marginTop' : "-=40px"
+            });
+
+            return false;
+        });
+
     </script>
 
     {% block scripts %}
@@ -129,8 +165,5 @@
 /* custom configuration goes here (www.olark.com/documentation) */
 olark.identify('4642-727-10-3831');</script>
 <!-- end olark code -->
-
-<script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='9a14dacdacbfdadc55e3c698a997a4027ceb4aedf1c12bc52acdae56178ac7c3';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
-
 </body>
 </html>
