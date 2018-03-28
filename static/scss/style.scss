@@ -957,7 +957,16 @@ html {
 }
 
 @include media-breakpoint-down(md) {
-    html {
-        padding-top: 0;
+}
+
+@include media-breakpoint-down(md) {
+    #nagger-wrap { margin-top: 3px; }
+    #nagger p {
+        a {
+            font-size: 1rem;
+        }
+        a.btn {
+            font-size: 0.65rem;
+        }
     }
 }

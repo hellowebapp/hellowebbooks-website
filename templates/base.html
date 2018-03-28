@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" href="{% static '/images/favicons/favicon-96x96.png' %}" sizes="96x96">
     <link rel="icon" type="image/png" href="{% static '/images/favicons/favicon-16x16.png' %}" sizes="16x16">
     <link rel="canonical" href="{{ CURRENT_PAGE.absolute_final_url }}" />
-    <link rel="stylesheet" href="{% static '/scss/style.scss.css' %}?v=28">
+    <link rel="stylesheet" href="{% static '/scss/style.scss.css' %}?v=29">
     <meta property="og:locale" content="en_CA" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Hello Web Books" />
@@ -109,10 +109,10 @@
         </div>
     </div>
 
-    <div id="nagger" class="hidden-md-down">
+    <div id="nagger">
         <div id="nagger-wrap">
-            <p><a target="_blank" href="https://www.kickstarter.com/projects/1868398473/hello-web-app-20-build-your-first-web-app-with-dja">Learn how to build a web app! Support the <i>Hello Web App</i> Kickstarter, ending on Mar 30 2018.</a> &nbsp;
-            <a href="https://www.kickstarter.com/projects/1868398473/hello-web-app-20-build-your-first-web-app-with-dja" title="Hello Web App Kickstarter" class="btn btn-primary btn-sm" target="_blank">See on Kickstarter</a></p>
+            <p><a target="_blank" href="https://www.kickstarter.com/projects/1868398473/hello-web-app-20-build-your-first-web-app-with-dja">Learn how to build a web app!<span class="hidden-lg-down"> Support the <i>Hello Web App</i> Kickstarter, ending on Mar 30 2018.</span></a> &nbsp;
+            <a href="https://www.kickstarter.com/projects/1868398473/hello-web-app-20-build-your-first-web-app-with-dja" title="Hello Web App Kickstarter" class="btn btn-primary btn-sm" target="_blank"><span class="hidden-md-down">See on Kickstarter</span><span class="visible-md-down">Pre-order</span></a></p>
         </div>
         <div class="nagger-close">
             <a title="Close this notification">x</a>

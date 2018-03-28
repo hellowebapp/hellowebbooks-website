@@ -4534,5 +4534,9 @@ html {
   padding-top: 40px; }
 
 @media (max-width: 61.9em) {
-  html {
-    padding-top: 0; } }
+  #nagger-wrap {
+    margin-top: 3px; }
+  #nagger p a {
+    font-size: 1rem; }
+  #nagger p a.btn {
+    font-size: 0.65rem; } }
