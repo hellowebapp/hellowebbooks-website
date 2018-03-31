@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" href="{% static '/images/favicons/favicon-96x96.png' %}" sizes="96x96">
     <link rel="icon" type="image/png" href="{% static '/images/favicons/favicon-16x16.png' %}" sizes="16x16">
     <link rel="canonical" href="{{ CURRENT_PAGE.absolute_final_url }}" />
-    <link rel="stylesheet" href="{% static '/scss/style.scss.css' %}?v=29">
+    <link rel="stylesheet" href="{% static '/scss/style.scss.css' %}?v=30">
     <meta property="og:locale" content="en_CA" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Hello Web Books" />
@@ -109,6 +109,7 @@
         </div>
     </div>
 
+    {% comment %}
     <div id="nagger">
         <div id="nagger-wrap">
             <p><a target="_blank" href="https://www.kickstarter.com/projects/1868398473/hello-web-app-20-build-your-first-web-app-with-dja">Learn how to build a web app!<span class="hidden-lg-down"> Support the <i>Hello Web App</i> Kickstarter, ending on Mar 30 2018.</span></a> &nbsp;
@@ -118,6 +119,7 @@
             <a title="Close this notification">x</a>
         </div>
     </div>
+    {% endcomment %}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script async src="https://assets.convertkit.com/assets/CKJS4.js?v=21"></script>
@@ -136,24 +138,24 @@
         //    $(".nagger-close").show();
         //}
 
-        function disable_nagger() {
+        //function disable_nagger() {
             //localStorage.setItem('enable-nagger', '0');
-            $("#nagger").slideUp();
-        }
+            //$("#nagger").slideUp();
+        //}
 
         //function is_nagger_enabled() {
         //   return localStorage.getItem('enable-nagger') != '0';
         //}
 
-        $(".nagger-close a").click(function() {
-            $(".nagger-close").hide();
-            disable_nagger();
-            $("html").animate({
-                'marginTop' : "-=40px"
-            });
+        //$(".nagger-close a").click(function() {
+        //    $(".nagger-close").hide();
+        //    disable_nagger();
+        //    $("html").animate({
+        //        'marginTop' : "-=40px"
+        //    });
 
-            return false;
-        });
+        //    return false;
+        //});
 
     </script>
 
