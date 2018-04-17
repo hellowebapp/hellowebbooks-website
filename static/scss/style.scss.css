@@ -4501,42 +4501,57 @@ figure.video {
   .hwd .btn:hover {
     background-color: #496d71; }
 
+/*
 #nagger {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 46px;
-  color: #fff;
-  text-align: center;
-  background-color: #CB4A65;
-  border-bottom: 5px solid #DF617E; }
-  #nagger p a {
-    color: #fff; }
-    #nagger p a:hover {
-      text-decoration: none; }
-  #nagger .nagger-close a {
-    cursor: pointer;
-    border: 2px solid #DF617E;
-    background-color: #CB4A65;
+    padding-top: 5px;
+    padding-bottom: 5px;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 0;
+    width: 100%;
+    height: 46px;
     color: #fff;
-    font-weight: bold;
-    padding: 2px;
-    background-color: ligten(#ffffff, 90%); }
-    #nagger .nagger-close a:hover {
-      text-decoration: none; }
+    text-align: center;
+    background-color:#CB4A65;
+    border-bottom:5px solid #DF617E;
+    p a {
+        color: #fff;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .nagger-close a {
+        cursor: pointer;
+        border: 2px solid #DF617E;
+        background-color: #CB4A65;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: #fff;
+        font-weight: bold;
+        padding: 2px;
+        background-color: ligten(#ffffff, 90%);
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
 
 html {
-  padding-top: 40px; }
+    padding-top: 40px;
+}
 
-@media (max-width: 61.9em) {
-  #nagger-wrap {
-    margin-top: 3px; }
-  #nagger p a {
-    font-size: 1rem; }
-  #nagger p a.btn {
-    font-size: 0.65rem; } }
+@include media-breakpoint-down(md) {
+}
+
+@include media-breakpoint-down(md) {
+    #nagger-wrap { margin-top: 3px; }
+    #nagger p {
+        a {
+            font-size: 1rem;
+        }
+        a.btn {
+            font-size: 0.65rem;
+        }
+    }
+}
+*/
