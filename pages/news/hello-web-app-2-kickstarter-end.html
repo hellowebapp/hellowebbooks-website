@@ -1,0 +1,35 @@
+title: Hello Web App 2.0's Kickstarter was successful! Thank you.
+# headline: An introduction
+excerpt: The new Hello Web App just finished its Kickstarter campaign making over 200% of goal! Thank you so much to everyone who backed the campaign, shared it with friends and family, and supported the re-release of my first book.
+author: Tracy Osborn
+featuredimage: /images/blog/2018/03/ks.png
+date: 31-3-2018
+category: announcements
+featured: True
+
+{% extends "post.html" %}
+{% block body %}
+
+<figure class="caption video" style="padding-bottom: 50%;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l8QgJGuq8_4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+    <figcaption>Video thank you!</figcaption>
+</figure>
+
+{% filter markdown %}
+The new _[Hello Web App](https://hellowebbooks.com/learn-django)_ just finished its [Kickstarter campaign](https://www.kickstarter.com/projects/1868398473/hello-web-app-20-build-your-first-web-app-with-dja/) making over 200% of goal!
+
+{% endfilter %}
+<figure class="full">
+    <a href="https://www.kickstarter.com/projects/1868398473/hello-web-app-20-build-your-first-web-app-with-dja"><img src="/static/images/blog/2018/03/ks.png" alt="Hello Web App 2.0 on Kickstarter"/></a>
+    <figcaption>Super duper awesome.</figcaption>
+</figure>
+
+{% filter markdown %}
+Thank you _so much_ to everyone who backed the campaign, shared it with friends and family, and supported the re-release of my first book.
+
+The files have been at the printer for awhile already, so I should be getting the paperbacks soon to send out to everyone. I'm also finishing up the videos and will be releasing the digital packages super soon.
+
+Thank you again! Super excited to get this out. 🎉
+{% endfilter %}
+
+{% endblock body %}
