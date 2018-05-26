@@ -3931,7 +3931,7 @@ hr {
 span.highlight {
   background-color: #FFFBCA; }
 
-.small-sans, .sub-categories h3, .blog-newsletter h3, .product-page blockquote cite, .quiet {
+.small-sans, .sub-categories h3, .blog-newsletter h3, .books-avail h3, .product-page blockquote cite, .quiet {
   text-transform: uppercase;
   letter-spacing: 0.1em; }
 
@@ -4131,24 +4131,24 @@ figure.video {
   margin-top: 3em;
   margin-bottom: 5em; }
 
-.sub-categories h2, .blog-newsletter h2 {
+.sub-categories h2, .blog-newsletter h2, .books-avail h2 {
   font-size: 1.5rem; }
 
-.sub-categories h3, .blog-newsletter h3 {
+.sub-categories h3, .blog-newsletter h3, .books-avail h3 {
   font-style: normal;
   font-size: 1rem; }
-  .sub-categories h3 a, .blog-newsletter h3 a {
+  .sub-categories h3 a, .blog-newsletter h3 a, .books-avail h3 a {
     color: #333; }
-    .sub-categories h3 a:hover, .blog-newsletter h3 a:hover {
+    .sub-categories h3 a:hover, .blog-newsletter h3 a:hover, .books-avail h3 a:hover {
       text-decoration: none; }
 
-.sub-categories ul, .blog-newsletter ul {
+.sub-categories ul, .blog-newsletter ul, .books-avail ul {
   margin-bottom: 2.5em; }
 
-.sub-categories li, .blog-newsletter li {
+.sub-categories li, .sub-categories p, .blog-newsletter li, .blog-newsletter p, .books-avail li, .books-avail p {
   font-size: 1rem;
   margin-bottom: 1em;
-  line-height: 1.1; }
+  line-height: 1.3; }
 
 #post header h1 {
   margin-top: 1.5em; }
