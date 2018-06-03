@@ -67,6 +67,10 @@ def preBuild(site):
                 logging.warning("Date format not correct for page %s, should be dd-mm-yy\n%s" % (page.path, e))
                 continue
 
+            if postContext['date'] > datetime.datetime.now():
+                # Post is meant to be published in the future
+                continue
+
             POSTS.append(postContext)
 
     # Sort the posts by date
