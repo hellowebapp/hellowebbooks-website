@@ -491,6 +491,13 @@ figure.video {
         img {
             border: 1px solid #e1e1e1;
         }
+        blockquote {
+            margin: 0 0 1rem;
+            border-left: 5px solid $hwd;
+            padding-left: 15px;
+            margin-left: -20px;
+            font-style: italic;
+        }
     }
     #post-meta {
         border-top: 1px solid $gray-lighter;
