@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% block title %}Learn Web Design Fundamentals and Shortcuts with Hello Web Design - {{ block.super }}{% endblock %}
 
+{% block header %}
+    <meta property="og:url" content="https://hellowebbooks.com/learn-design/">
+    <meta property="og:title" content="Learn Web Design Fundamentals and Shortcuts with Hello Web Design">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+          name="description" content="Beginner design books assume you want to become an expert designer. What if you want to learn just enough to complement your existing work? Hello Web Design will teach you the basics about design (no history!) and give you shortcuts so you can immediately become a better designer.">
+    <meta name="twitter:site" content="@hellowebbooks" />
+    <meta name="twitter:image"
+          property="og:image" content="https://hellowebbooks.com/static/images/hwd/twitter-banner.jpg">
+    <meta name="twitter:card" content="summary">
+{% endblock %}
+
 {% block analytics %}
 analytics.page("Hello Web Design book landing page");
 {% endblock %}
@@ -12,7 +24,7 @@ analytics.page("Hello Web Design book landing page");
 {% block content %}
 <div class="jumbotron">
     <h1><span class="hl"><span>Learn design</span></span></h1>
-    <h2>Written for programmers and non-designers, this <strong>brief but information-packed book and course</strong> will help you feel comfortable doing design.</h2>
+    <h2>Written for programmers and non-designers, this <strong>brief but  information-packed book and course</strong> will help you feel comfortable doing design.</h2>
     <a href="#hwd-packages" class="btn btn-primary">Jump to buying options</a>
 </div>
 
