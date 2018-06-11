@@ -552,6 +552,7 @@ figure.video {
 
 // setup and tutorials page
 #setup, #tutorial {
+    .toc > li { margin-bottom: 1em; }
     .toc li li {
         font-style: italic;
         font-size: 80%;
