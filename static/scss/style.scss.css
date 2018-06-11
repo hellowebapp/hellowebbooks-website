@@ -4227,6 +4227,9 @@ figure.video {
     color: #818a91;
     padding-top: 0.5em; }
 
+#setup .toc > li, #tutorial .toc > li {
+  margin-bottom: 1em; }
+
 #setup .toc li li, #tutorial .toc li li {
   font-style: italic;
   font-size: 80%;

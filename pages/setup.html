@@ -21,44 +21,40 @@ analytics.page("Setup");
             <h3 style="margin-top:0;">Table of Contents</h3>
             <ol class="list-unstyled toc">
                 <li><a href="#install-python">Install Python</a>
-                    {% comment %}
                     <ol class="list-unstyled">
                         <li>
                             <a href="#install-pip">Install pip</a>
                         </li>
                     </ol>
-                    {% endcomment %}
                 </li>
                 <li><a href="#install-virtualenv">Install Virtualenv</a></li>
                 <li><a href="#setup-django">Set up Django</a>
-                    {% comment %}
                     <ol class="list-unstyled">
                         <li>
-                            <a href="#install-pip">Start your Virtualenv</a>
+                            <a href="#start-virtualenv">Start your Virtualenv</a>
                         </li>
                         <li>
-                            <a href="#install-pip">Install Django</a>
+                            <a href="#install-django">Install Django</a>
                         </li>
                         <li>
-                            <a href="#install-pip">Start git</a>
+                            <a href="#start-git">Start git</a>
                         </li>
                         <li>
-                            <a href="#install-pip">Start your project</a>
+                            <a href="#start-project">Start your project</a>
                         </li>
                         <li>
-                            <a href="#install-pip">Create an app</a>
+                            <a href="#create-app">Create an app</a>
                         </li>
                         <li>
-                            <a href="#install-pip">Add your app to your settings</a>
+                            <a href="#app-settings">Add your app to your settings</a>
                         </li>
                         <li>
-                            <a href="#install-pip">Set up your database</a>
+                            <a href="#setup-database">Set up your database</a>
                         </li>
                         <li>
-                            <a href="#install-pip">Start your local server</a>
+                            <a href="#start-server">Start your local server</a>
                         </li>
                     </ol>
-                    {% endcomment %}
                 </li>
             </ol>
         </div>
@@ -66,7 +62,7 @@ analytics.page("Setup");
         <div class="col-md-9">
             <p>Hey friends! Let's get your computers set up so you can run the <a href="{% url '/order.html' %}">Hello Web App tutorial</a>. This page might look long but it should be fairly simple. Just a lot of steps. One of the hardest parts about web app development is installation (the other is deployment) so once we're through this challenging beginning bit, everything will get a lot easier.</p>
 
-            <p>(Why didn't I include these instructions in the book? Here, I can
+            <p>(Why don't I include these instructions in the book? Here, I can
 update whenever I need since the programming ecosystem changes a lot.  This
 way, the books won't go out of date as quickly!)</p>
 
@@ -76,19 +72,22 @@ way, the books won't go out of date as quickly!)</p>
 
     <div class="row">
          <div class="col-md-9 col-md-push-3">
-            <h2 id="install-python" style="margin-top: 0;">1. Install Python</h2>
+           <h2 id="command-line" style="margin-top: 0;">Optional: Get Comfortable with Command Line</h2>
+
+           <p>Are you new to development? I wrote a <a href="https://hellowebbooks.com/learn-command-line">fun, short zine</a> to introduce using the command line for beginners. We'll be using the command line a lot throughout the book so, if you're new to using the command line, I recommend checking out the zine first (comes in printable, online, and other versions): <a href="https://hellowebbooks.com/learn-command-line">https://hellowebbooks.com/learn-command-line</a></p>
+
+            <h2 id="install-python">1. Install Python</h2>
 
 {% filter markdown %}
 Unfortunately, unlike making web pages with HTML, we need to install Python before our computers can run the files that we're building.
 
-Head over to these links to install **Python 3.4** onto your computer:
+Head over to these links to install **Python 3** onto your computer:
 
 * [Mac OSX](http://docs.python-guide.org/en/latest/starting/install3/osx/)
 * [Windows](http://docs.python-guide.org/en/latest/starting/install3/win/)
 * [Linux](http://docs.python-guide.org/en/latest/starting/install3/linux/)
 
-Windows users, make sure you follow the instructions to install [Git for Windows](https://git-for-windows.github.io/) to give yourself the ability to use UNIX commands used in the books (like `touch`) in your command line. (Alternatively, enable Bash Shell, [instructions here](https://www.laptopmag.com/articles/use-bash-shell-windows-10).)
-
+Windows users, I highly encourage you to use the [Linux Subsystem for Windows](https://www.laptopmag.com/articles/use-bash-shell-windows-10) to give yourself the ability to use UNIX commands used in the books (like `touch`) in your command line.
 {% endfilter %}
 
 <h3 id="install-pip">Do you have pip installed?</h3>
@@ -121,7 +120,7 @@ this page](https://pip.pypa.io/en/stable/installing/).
 When we start developing our Django apps, we want to make sure our projects are
 enclosed in "bubbles" known as virtual environments.
 
-For example, as of this writing, Django's current version is 1.9. When new
+For example, as of this writing, Django's current version is 2.0. When new
 versions of Django are released, they may not be backwards compatible with
 previous versions of Django.
 
@@ -132,7 +131,7 @@ your projects to make sure they don't break.
 
 **With a virtual environment, every project can have a separate version of
 Django and other plugins that you install.** You can install Django 1.9 on one
-project, and down the line, start another project with Django 1.10. Every
+project, and down the line, start another project with Django 2.0. Every
 project can work off of whatever version of whatever you install, keeping them
 separate from each other. This is very important when you're programming.
 
@@ -169,9 +168,11 @@ directories into that folder. If you ever get lost, your terminal should show
 which directory you're in, and running `ls` (on Mac or Linux, `dir` on Windows),
 will list out the contents of the folder you're in. Use `cd ..` to back up out
 of a folder.
+{% endfilter %}
 
-### Start your virtual environment
+<h3 id="start-virtualenv">Start your virtual environment</h3>
 
+{% filter markdown %}
 Now that you're within your empty project folder, create your virtual
 environment.
 {% endfilter %}
@@ -204,7 +205,11 @@ will be different.)
 Now you're in your bubble, so we can start installing project-specific utilities.
 If you ever need to deactivate your environment, run `deactivate`.
 
-### Install Django
+{% endfilter %}
+
+<h3 id="install-django">Install Django</h3>
+
+{% filter markdown %}
 
 Finally, it's Django time! We'll use pip to install Django, so run this in your
 command line, making sure you're in your project folder and the virtual
@@ -226,7 +231,7 @@ releases a new version that this tutorial doesn't cover.
 
     <div class="row">
         <div class="col-md-9 col-md-push-3">
-            <h3 style="margin-top: 0;">Start git</h3>
+            <h3 style="margin-top: 0;" id="start-git">Start git</h3>
 {% filter markdown %}
 We also want to start our version control system. Now that we're in our project
 folder, run this command to start git:
@@ -260,11 +265,9 @@ here](https://github.com/limedaring/HelloWebApp/tree/master/git-tips).
     <div class="row">
         <div class="col-md-9 col-md-offset-3">
 
+<h3 id="start-project">Start your Django project</h3>
 
 {% filter markdown %}
-
-
-### Start your Django project
 
 We installed Django, now we can use Django to build all the starting files we
 need for our web app. In your command line (again, in your project folder with
@@ -311,8 +314,11 @@ The *myhellowebapp* folder is your top level directory.
   soon.
 * *wsgi.py*: Not needed at this point until you deploy your project.
 
-### Create a Django app
+{% endfilter %}
 
+<h3 id="create-app">Create your Django app</h3>
+
+{% filter markdown %}
 A project can run many apps (all doing something distinct), but we're just going
 to focus on having one for now, which is all you'll need for a very long
 time.
@@ -365,7 +371,7 @@ all later when we specifically start working with all those files.
 
     <div class="row">
         <div class="col-md-9 col-md-push-3">
-            <h3 style="margin-top: 0;">Add your new app to your settings file</h3>
+            <h3 style="margin-top: 0;" id="app-settings">Add your new app to your settings file</h3>
 {% filter markdown %}
 
 We need to tell the project that we've added an app to it — it doesn't find it
@@ -395,9 +401,9 @@ INSTALLED_APPS = (
     <div class="row">
         <div class="col-md-9 col-md-offset-3">
 
-{% filter markdown %}
-### Set up your database
+<h3 id="setup-database">Set up your database</h3>
 
+{% filter markdown %}
 Django has some fancypants utilities built in to keep your database (where
 all your dynamic information is stored) managable. We need to run the initial
 migration before we start the app, so in your top level folder (the one with *manage.py* in it), type this in:
@@ -412,8 +418,11 @@ It's going to create your database automatically for you and port over some
 information. Don't worry about understanding this just yet — we'll go over
 databases and migrations a bit more in the "Adding Dynamic Data" chapter of
 Hello Web App.
+{% endfilter %}
 
-### Start your local server
+<h3 id="start-server">Start your local server</h3>
+
+{% filter markdown %}
 
 Want to see if everything worked? In your terminal, head over to your top level
 myhellowebapp folder (make sure you're in the same directory as *manage.py*)
@@ -435,7 +444,7 @@ Validating models...
 
 0 errors found
 March 26, 2014 - 15:50:53
-Django version 1.7.8, using settings 'mysite.settings'
+Django version 2.0.8, using settings 'mysite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 </code></pre>
