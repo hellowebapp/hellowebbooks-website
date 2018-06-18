@@ -24,13 +24,20 @@ analytics.page("Original book landing page");
 
 {% block content %}
 <div class="jumbotron">
-    <h1><span class="hl"><span>Learn how to </span></span><span class="hl"><span>build a web app</span></span></h1>
-    <h2><strong>Design and build your own custom web app using Python and Django.</strong> Tailored for non-programmers, written by a designer.</h2>
-    <a href="#hwa-packages" class="btn btn-primary">Jump to buying options</a>
+    <div class="container">
+        <div class="col-md-4">
+            <img src="{% static '/images/both/headline-graphic.png' %}" alt="Learn web app development with Hello Web App" />
+        </div>
+        <div class="col-md-8">
+            <h1><span class="hl"><span>Learn how to </span></span><span class="hl"><span>build a web app</span></span></h1>
+            <h2><strong>Design and build your own custom web app using Python and Django.</strong> Tailored for non-programmers, written by a designer.</h2>
+            <a href="#hwa-packages" class="btn btn-primary">Jump to buying options</a>
+        </div>
+    </div>
 </div>
 
 <div class="container">
-    <hr/>
+    <hr style="margin-top:3em;"/>
 
     {# Introduction area #}
     <div class="text-center content-block">

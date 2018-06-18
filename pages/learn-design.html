@@ -24,13 +24,20 @@ analytics.page("Hello Web Design book landing page");
 
 {% block content %}
 <div class="jumbotron">
-    <h1><span class="hl"><span>Learn design</span></span></h1>
-    <h2>Written for programmers and non-designers, this <strong>brief but  information-packed book and course</strong> will help you feel comfortable doing design.</h2>
-    <a href="#hwd-packages" class="btn btn-primary">Jump to buying options</a>
+    <div class="container">
+        <div class="col-md-4">
+            <img src="{% static '/images/hwd/headline-graphic.png' %}" alt="Learn design with Hello Web Design" />
+        </div>
+        <div class="col-md-8">
+            <h1><span class="hl"><span>Learn design</span></span></h1>
+            <h2>Written for programmers and non-designers, this <strong>brief but  information-packed book and course</strong> will help you feel comfortable doing design.</h2>
+            <a href="#hwd-packages" class="btn btn-primary">Jump to buying options</a>
+        </div>
+    </div>
 </div>
 
 <div class="container">
-  <hr/>
+  <hr style="margin-top:3em;"/>
 
   {# The introduction area #}
   <div class="row">
