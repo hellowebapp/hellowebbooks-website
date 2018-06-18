@@ -4366,7 +4366,6 @@ figure.video {
     margin-top: 20px; }
 
 #original .jumbotron {
-  background: url(../images/heros/hwa-sketch.jpg) top center no-repeat;
   background-size: contain; }
   #original .jumbotron h1 span.hl {
     transform: scale(1) rotate(-1deg) skew(-20deg); }
@@ -4389,8 +4388,8 @@ figure.video {
   background: url(../images/original/book-banner.jpg) top center no-repeat; }
 
 #design .jumbotron {
-  background: url(../images/heros/hwd-sketch.png) top center no-repeat;
-  padding-bottom: 4.5rem; }
+  padding-bottom: 0rem;
+  padding-top: 2rem; }
 
 #design #book-banner {
   background: url(../images/hwd/book-banner.jpg) top center no-repeat; }
