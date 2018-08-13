@@ -3448,7 +3448,25 @@ a.bg-danger:focus, a.bg-danger:hover {
   .newsletter p.no-spam {
     position: relative;
     top: 15px;
-    z-index: 1; }
+    z-index: 1;
+    clear: both; }
+  .newsletter input {
+    color: #333; }
+  .newsletter .inputgroup {
+    width: 33%;
+    float: left;
+    text-align: left; }
+    .newsletter .inputgroup input {
+      float: none !important;
+      width: 90% !important; }
+    .newsletter .inputgroup button.subscribe_button {
+      width: 100% !important; }
+
+@media (max-width: 61.9em) {
+  .newsletter .inputgroup {
+    width: 100%; }
+  .newsletter label {
+    margin-top: 10px; } }
 
 /* max width 500 */
 .newsletter .ck_form.ck_naked.width500 .ck_subscribe_button {

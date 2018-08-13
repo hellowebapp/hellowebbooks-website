@@ -21,19 +21,28 @@
                           <p>There was an error submitting your subscription. Please try again.</p>
                         </div>
                       </div>
-                      <div class="ck_control_group ck_email_field_group">
-                        <label class="ck_label" for="ck_emailField" style="display: none">Email Address</label>
-                        <input type="text" name="first_name" class="ck_first_name" id="ck_firstNameField" placeholder="First Name">
-                        <input type="email" name="email" class="ck_email_address" id="ck_emailField" placeholder="Email Address" required>
-                      </div>
-                      <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
-                        <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
-                      </div>
+                      <!--<div class="ck_control_group ck_email_field_group">-->
+                        <!--<label class="ck_label" for="ck_emailField">Email Address</label>-->
+                        <div class="inputgroup">
+                            <label for="ck_email_address">First Name</label>
+                            <input type="text" name="first_name" class="ck_first_name" id="ck_firstNameField" placeholder="Your name">
+                        </div>
+                        <div class="inputgroup">
+                            <label for="ck_email_address">Email Address</label>
+                            <input type="email" name="email" class="ck_email_address" id="ck_emailField" placeholder="name@example.com" required>
+                        </div>
+                      <!--</div>-->
+                      <div class="inputgroup">
+                          <label style="visibility:hidden;" aria-hidden="true" style="margin-top:0;">Submit Button</label>
+                          <div class="ck_control_group ck_captcha2_h_field_group ck-captcha2-h" style="position: absolute !important;left: -999em !important;">
+                            <input type="text" name="captcha2_h" class="ck-captcha2-h" id="ck_captcha2_h" placeholder="We use this field to detect spam bots. If you fill this in, you will be marked as a spammer.">
+                          </div>
 
 
-                      <button class="subscribe_button ck_subscribe_button btn btn-primary fields" id="ck_subscribe_button">
-                        Subscribe
-                      </button>
+                          <button class="subscribe_button ck_subscribe_button btn btn-primary fields" id="ck_subscribe_button">
+                            Subscribe
+                          </button>
+                      </div>
                     </form>
                     <p class="no-spam"><small>No spam, I promise. Unsubscribe at any time.</small></p>
                   </div>

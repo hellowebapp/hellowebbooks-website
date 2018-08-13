@@ -109,6 +109,29 @@
         position: relative;
         top: 15px;
         z-index: 1;
+        clear:both;
+    }
+    input { color: #333; }
+    .inputgroup {
+        width: 33%;
+        float: left;
+        text-align: left;
+        input {
+            float:none !important;
+            width: 90% !important;
+        }
+        button.subscribe_button {
+            width: 100% !important;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .newsletter .inputgroup {
+        width: 100%;
+    }
+    .newsletter label {
+        margin-top: 1em;
     }
 }
 
