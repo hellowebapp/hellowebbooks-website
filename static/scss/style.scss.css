@@ -3466,7 +3466,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   .newsletter .inputgroup {
     width: 100%; }
   .newsletter label {
-    margin-top: 10px; } }
+    margin-top: 1em; } }
 
 /* max width 500 */
 .newsletter .ck_form.ck_naked.width500 .ck_subscribe_button {
